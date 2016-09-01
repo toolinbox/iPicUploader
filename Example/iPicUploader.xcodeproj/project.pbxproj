@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		968A23EE1D7812B30024A923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23ED1D7812B30024A923 /* AppDelegate.swift */; };
 		968A23F01D7812B30024A923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A23EF1D7812B30024A923 /* Assets.xcassets */; };
 		968A23F31D7812B30024A923 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968A23F11D7812B30024A923 /* MainMenu.xib */; };
 		968A23FA1D7813470024A923 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23F81D7813470024A923 /* MainWindowController.swift */; };
 		968A23FB1D7813470024A923 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968A23F91D7813470024A923 /* MainWindowController.xib */; };
-		968A24071D7819C70024A923 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968A24061D7819C70024A923 /* iPicUploader.framework */; };
-		9A496087F4C77533E636F8CF /* Pods_iPicUploader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */; };
+		968A24401D7822F90024A923 /* Pods_iPicUploaderExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968A243F1D7822F90024A923 /* Pods_iPicUploaderExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +20,8 @@
 		41B69D21F86BAD4FC9B0207C /* Pods-iPicUploader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploader_Tests/Pods-iPicUploader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		52DEF03819EB113379CEC352 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5DEAC66BA4EE5B8F92151772 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* iPicUploader_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPicUploader_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		602ED34BF9D06E5D4C48D645 /* Pods-iPicUploaderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploaderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7713B8BC4B035FAADBF02F93 /* Pods-iPicUploaderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploaderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.release.xcconfig"; sourceTree = "<group>"; };
 		8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPicUploader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A23EB1D7812B30024A923 /* iPicUploaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPicUploaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A23ED1D7812B30024A923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,23 +31,17 @@
 		968A23F81D7813470024A923 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		968A23F91D7813470024A923 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		968A24061D7819C70024A923 /* iPicUploader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iPicUploader.framework; path = "Pods/../build/Debug-iphoneos/iPicUploader/iPicUploader.framework"; sourceTree = "<group>"; };
+		968A243F1D7822F90024A923 /* Pods_iPicUploaderExample.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_iPicUploaderExample.framework; path = Pods/../build/Debug/Pods_iPicUploaderExample.framework; sourceTree = "<group>"; };
+		A774072AA871C7B3C4A7EA04 /* Pods_iPicUploaderExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPicUploaderExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD98DCBCCB7F276E6F7DFBB4 /* Pods-iPicUploader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploader_Tests/Pods-iPicUploader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A496087F4C77533E636F8CF /* Pods_iPicUploader_Tests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		968A23E81D7812B30024A923 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				968A24071D7819C70024A923 /* iPicUploader.framework in Frameworks */,
+				968A24401D7822F90024A923 /* Pods_iPicUploaderExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +53,6 @@
 			children = (
 				968A23EC1D7812B30024A923 /* iPicUploaderExample */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				B3E1EF5DE2959120977B5C0D /* Pods */,
 				A323D05D5D9A451A99A62C33 /* Frameworks */,
@@ -72,27 +62,9 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE51AFB9204008FA782 /* iPicUploader_Tests.xctest */,
 				968A23EB1D7812B30024A923 /* iPicUploaderExample.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
@@ -121,8 +93,10 @@
 		A323D05D5D9A451A99A62C33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				968A243F1D7822F90024A923 /* Pods_iPicUploaderExample.framework */,
 				968A24061D7819C70024A923 /* iPicUploader.framework */,
 				8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */,
+				A774072AA871C7B3C4A7EA04 /* Pods_iPicUploaderExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +106,8 @@
 			children = (
 				FD98DCBCCB7F276E6F7DFBB4 /* Pods-iPicUploader_Tests.debug.xcconfig */,
 				41B69D21F86BAD4FC9B0207C /* Pods-iPicUploader_Tests.release.xcconfig */,
+				602ED34BF9D06E5D4C48D645 /* Pods-iPicUploaderExample.debug.xcconfig */,
+				7713B8BC4B035FAADBF02F93 /* Pods-iPicUploaderExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -139,33 +115,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACE41AFB9204008FA782 /* iPicUploader_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "iPicUploader_Tests" */;
-			buildPhases = (
-				A05B57FF9918B662CF5DBFD2 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				E73BB2A84217ABD388D95B6B /* [CP] Embed Pods Frameworks */,
-				5A2D8C4AE3DF95847F2565DE /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = iPicUploader_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* iPicUploader_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		968A23EA1D7812B30024A923 /* iPicUploaderExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 968A23F71D7812B30024A923 /* Build configuration list for PBXNativeTarget "iPicUploaderExample" */;
 			buildPhases = (
+				FA9A559DDDA8486C3BACFCB5 /* [CP] Check Pods Manifest.lock */,
 				968A23E71D7812B30024A923 /* Sources */,
 				968A23E81D7812B30024A923 /* Frameworks */,
 				968A23E91D7812B30024A923 /* Resources */,
+				E9E570F1AA055B20683A61EB /* [CP] Embed Pods Frameworks */,
+				B721DDFEF5256D7FBA704E2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,10 +145,6 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 607FACCF1AFB9204008FA782;
-					};
 					968A23EA1D7812B30024A923 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -208,20 +163,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACE41AFB9204008FA782 /* iPicUploader_Tests */,
 				968A23EA1D7812B30024A923 /* iPicUploaderExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		607FACE31AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		968A23E91D7812B30024A923 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,7 +182,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A2D8C4AE3DF95847F2565DE /* [CP] Copy Pods Resources */ = {
+		B721DDFEF5256D7FBA704E2F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,10 +194,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPicUploader_Tests/Pods-iPicUploader_Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A05B57FF9918B662CF5DBFD2 /* [CP] Check Pods Manifest.lock */ = {
+		E9E570F1AA055B20683A61EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9A559DDDA8486C3BACFCB5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,32 +227,9 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E73BB2A84217ABD388D95B6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPicUploader_Tests/Pods-iPicUploader_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		607FACE11AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		968A23E71D7812B30024A923 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,42 +335,9 @@
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD98DCBCCB7F276E6F7DFBB4 /* Pods-iPicUploader_Tests.debug.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		607FACF41AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41B69D21F86BAD4FC9B0207C /* Pods-iPicUploader_Tests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		968A23F51D7812B30024A923 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 602ED34BF9D06E5D4C48D645 /* Pods-iPicUploaderExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -441,6 +347,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/iPicUploader",
+					"$(PROJECT_DIR)/build/Debug",
 				);
 				INFOPLIST_FILE = iPicUploaderExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -453,6 +360,7 @@
 		};
 		968A23F61D7812B30024A923 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7713B8BC4B035FAADBF02F93 /* Pods-iPicUploaderExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -461,6 +369,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/iPicUploader",
+					"$(PROJECT_DIR)/build/Debug",
 				);
 				INFOPLIST_FILE = iPicUploaderExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -483,15 +392,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "iPicUploader_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		968A23F71D7812B30024A923 /* Build configuration list for PBXNativeTarget "iPicUploaderExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -499,6 +399,7 @@
 				968A23F61D7812B30024A923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
