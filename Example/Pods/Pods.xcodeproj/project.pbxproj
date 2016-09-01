@@ -15,6 +15,7 @@
 		6015FEE7AF444E0A3B338EFDD20E816A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 		96402E241D786CF8008E5256 /* iPicUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96402E231D786CF8008E5256 /* iPicUploaderTests.swift */; };
 		96402E261D786CF8008E5256 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */; };
+		96402E2D1D78718B008E5256 /* iPicImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96402E2C1D78718B008E5256 /* iPicImageTests.swift */; };
 		B9EDF9C63CC9267212A781B075530110 /* iPicPasteboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966CD549484CF3BD155DAEB86A3D7CF /* iPicPasteboardHelper.swift */; };
 		C3CFDA4084245FFD7D88807E4F329933 /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
 		CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
@@ -59,6 +60,7 @@
 		96402E211D786CF8008E5256 /* iPicUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPicUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96402E231D786CF8008E5256 /* iPicUploaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPicUploaderTests.swift; sourceTree = "<group>"; };
 		96402E251D786CF8008E5256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96402E2C1D78718B008E5256 /* iPicImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageTests.swift; sourceTree = "<group>"; };
 		A6D0DCF86077F1C45CC553605670A3AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98ABF7E90A3F61BFF6E72E8E53A3A23 /* Pods-iPicUploaderExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPicUploaderExample-dummy.m"; sourceTree = "<group>"; };
 		D225E0E6D8E6E9A6CC1FD8630457D35C /* Pods-iPicUploaderExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploaderExample-frameworks.sh"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		96402E221D786CF8008E5256 /* iPicUploaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				96402E2C1D78718B008E5256 /* iPicImageTests.swift */,
 				96402E231D786CF8008E5256 /* iPicUploaderTests.swift */,
 				96402E251D786CF8008E5256 /* Info.plist */,
 			);
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96402E2D1D78718B008E5256 /* iPicImageTests.swift in Sources */,
 				96402E241D786CF8008E5256 /* iPicUploaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
