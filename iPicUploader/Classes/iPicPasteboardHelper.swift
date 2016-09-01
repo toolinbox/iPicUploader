@@ -10,6 +10,9 @@ import Cocoa
 
 public typealias iPicPasteboardHandler = ((NSPasteboard) -> Void)
 
+public let PasteboardTypeiPicImage = "net.toolinbox.pasteboard.ipic.iPicImage"
+public let PasteboardTypeiPicUploadResult = "net.toolinbox.ipic.pasteboard.iPicUploadResult"
+
 public class iPicPasteboardHelper {
   
   private let pasteboard = NSPasteboard.generalPasteboard()
@@ -19,9 +22,6 @@ public class iPicPasteboardHelper {
   private var pasteboardChangedCount = 0
   
   public var handler: iPicPasteboardHandler?
-  
-  private let iPicUploadPasteboardType = "net.toolinbox.ipic.pasteboard.upload.request"
-  private let iPicUploadResultPasteboardType = "net.toolinbox.ipic.pasteboard.upload.result"
   
   // MARK: Public Method
   
@@ -53,7 +53,7 @@ public class iPicPasteboardHelper {
   }
   
   public func parseUploadResult(pasteboard: NSPasteboard) -> iPicUploadResult? {
-    if let type = pasteboard.availableTypeFromArray([iPicUploadResultPasteboardType]) {
+    if let type = pasteboard.availableTypeFromArray([PasteboardTypeiPicUploadResult]) {
       if let data = pasteboard.dataForType(type) {
         NSKeyedUnarchiver.setClass(iPicUploadResult.self, forClassName: iPicUploadResult.sharedClassName)
         return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? iPicUploadResult
@@ -79,7 +79,7 @@ public class iPicPasteboardHelper {
     
     NSKeyedArchiver.setClassName(iPicImage.sharedClassName, forClass: iPicImage.self)
     let data = NSKeyedArchiver.archivedDataWithRootObject(image)
-    pasteboardItem.setData(data, forType: iPicUploadPasteboardType)
+    pasteboardItem.setData(data, forType: PasteboardTypeiPicImage)
     
     return pasteboardItem
   }
