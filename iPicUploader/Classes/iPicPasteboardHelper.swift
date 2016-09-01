@@ -1,5 +1,5 @@
 //
-//  PasteboardHelper.swift
+//  iPicPasteboardHelper.swift
 //  iPic
 //
 //  Created by Jason Zheng on 8/19/16.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-public typealias PasteboardHandler = ((NSPasteboard) -> Void)
+public typealias iPicPasteboardHandler = ((NSPasteboard) -> Void)
 
 public class iPicPasteboardHelper {
   
@@ -18,7 +18,7 @@ public class iPicPasteboardHelper {
   private var pasteboardObservingTimerInterval: NSTimeInterval = 0.75
   private var pasteboardChangedCount = 0
   
-  public var handler: PasteboardHandler?
+  public var handler: iPicPasteboardHandler?
   
   private let iPicUploadPasteboardType = "net.toolinbox.ipic.pasteboard.upload.request"
   private let iPicUploadResultPasteboardType = "net.toolinbox.ipic.pasteboard.upload.result"
