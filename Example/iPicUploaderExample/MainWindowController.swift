@@ -20,7 +20,7 @@ class MainWindowController: NSWindowController {
     let fileList = [
       "/Users/jason/Downloads/1.jpg",
 //      "/Users/jason/Downloads/TestSource/中文.jpg",
-//      "/Users/jason/Downloads/TestSource/中文ファ한국~!@#$%^&*()_+`/=[]/\\{}|;,.&%< >?'\".jpg",
+//      "/Users/jason/Downloads/TestSource/中文ファ한국~!@#$%^&*()_+`=[]{}|;,.&%< >'.jpg",
 //      "/Users/jason/Downloads/TestSource/Big.png",
     ]
     for imageFilePath in fileList {
