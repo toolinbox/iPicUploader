@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		968A23EE1D7812B30024A923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23ED1D7812B30024A923 /* AppDelegate.swift */; };
+		968A23F01D7812B30024A923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A23EF1D7812B30024A923 /* Assets.xcassets */; };
+		968A23F31D7812B30024A923 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968A23F11D7812B30024A923 /* MainMenu.xib */; };
 		9A496087F4C77533E636F8CF /* Pods_iPicUploader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +23,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPicUploader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A23EB1D7812B30024A923 /* iPicUploaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPicUploaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A23ED1D7812B30024A923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		968A23EF1D7812B30024A923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		968A23F21D7812B30024A923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		968A23F41D7812B30024A923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD98DCBCCB7F276E6F7DFBB4 /* Pods-iPicUploader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploader_Tests/Pods-iPicUploader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -32,12 +40,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		968A23E81D7812B30024A923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				968A23EC1D7812B30024A923 /* iPicUploaderExample */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -50,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE51AFB9204008FA782 /* iPicUploader_Tests.xctest */,
+				968A23EB1D7812B30024A923 /* iPicUploaderExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +96,17 @@
 				52DEF03819EB113379CEC352 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		968A23EC1D7812B30024A923 /* iPicUploaderExample */ = {
+			isa = PBXGroup;
+			children = (
+				968A23ED1D7812B30024A923 /* AppDelegate.swift */,
+				968A23EF1D7812B30024A923 /* Assets.xcassets */,
+				968A23F11D7812B30024A923 /* MainMenu.xib */,
+				968A23F41D7812B30024A923 /* Info.plist */,
+			);
+			path = iPicUploaderExample;
 			sourceTree = "<group>";
 		};
 		A323D05D5D9A451A99A62C33 /* Frameworks */ = {
@@ -121,19 +149,39 @@
 			productReference = 607FACE51AFB9204008FA782 /* iPicUploader_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		968A23EA1D7812B30024A923 /* iPicUploaderExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968A23F71D7812B30024A923 /* Build configuration list for PBXNativeTarget "iPicUploaderExample" */;
+			buildPhases = (
+				968A23E71D7812B30024A923 /* Sources */,
+				968A23E81D7812B30024A923 /* Frameworks */,
+				968A23E91D7812B30024A923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPicUploaderExample;
+			productName = iPicUploaderExample;
+			productReference = 968A23EB1D7812B30024A923 /* iPicUploaderExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					968A23EA1D7812B30024A923 = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -151,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				607FACE41AFB9204008FA782 /* iPicUploader_Tests */,
+				968A23EA1D7812B30024A923 /* iPicUploaderExample */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +209,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A23E91D7812B30024A923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A23F01D7812B30024A923 /* Assets.xcassets in Resources */,
+				968A23F31D7812B30024A923 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +280,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		968A23E71D7812B30024A923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A23EE1D7812B30024A923 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		968A23F11D7812B30024A923 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				968A23F21D7812B30024A923 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -341,6 +418,39 @@
 			};
 			name = Release;
 		};
+		968A23F51D7812B30024A923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = iPicUploaderExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.iPicUploaderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		968A23F61D7812B30024A923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = iPicUploaderExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.iPicUploaderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -361,6 +471,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		968A23F71D7812B30024A923 /* Build configuration list for PBXNativeTarget "iPicUploaderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968A23F51D7812B30024A923 /* Debug */,
+				968A23F61D7812B30024A923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
