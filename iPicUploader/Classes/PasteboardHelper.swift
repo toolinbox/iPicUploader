@@ -10,7 +10,7 @@ import Cocoa
 
 public typealias PasteboardHandler = ((NSPasteboard) -> Void)
 
-public class PasteboardHelper {
+public class iPicPasteboardHelper {
   
   private let pasteboard = NSPasteboard.generalPasteboard()
   
@@ -33,7 +33,7 @@ public class PasteboardHelper {
     pasteboardObservingTimer = NSTimer.scheduledTimerWithTimeInterval(
       pasteboardObservingTimerInterval,
       target: self,
-      selector: #selector(PasteboardHelper.observePasteboard),
+      selector: #selector(iPicPasteboardHelper.observePasteboard),
       userInfo: nil,
       repeats: true)
     pasteboardObservingTimer?.tolerance = pasteboardObservingTimerInterval * 0.3    

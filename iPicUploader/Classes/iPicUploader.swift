@@ -20,7 +20,7 @@ public class iPicUploader {
   private var pendingImages = [String: iPicImage]()
   private let pendingImagesLocker = NSRecursiveLock()
   
-  private var pasteboardHelper = PasteboardHelper()
+  private var pasteboardHelper = iPicPasteboardHelper()
   
   // TODO Change it back to 30 after debug.
   private let uploadTimeoutSeconds: NSTimeInterval = 300
