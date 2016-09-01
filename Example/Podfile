@@ -1,0 +1,6 @@
+use_frameworks!
+target 'iPicUploader_Tests' do
+  pod 'iPicUploader', :path => '../'
+  
+  
+end
