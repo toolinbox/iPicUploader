@@ -1,0 +1,6 @@
+framework module iPicUploader {
+  umbrella header "iPicUploader-umbrella.h"
+
+  export *
+  module * { export * }
+}
