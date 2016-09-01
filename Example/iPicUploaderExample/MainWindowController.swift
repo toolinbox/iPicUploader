@@ -17,10 +17,22 @@ class MainWindowController: NSWindowController {
   override func windowDidLoad() {
     super.windowDidLoad()
     
-    let imageFilePath = "/Users/jason/Downloads/1.jpg"
-    iPic.uploadImage(imageFilePath) { (imageLink, error) in
-      print(imageLink)
-      print(error)
+    let fileList = [
+      "/Users/jason/Downloads/1.jpg",
+//      "/Users/jason/Downloads/TestSource/中文.jpg",
+//      "/Users/jason/Downloads/TestSource/中文ファ한국~!@#$%^&*()_+`/=[]/\\{}|;,.&%< >?'\".jpg",
+//      "/Users/jason/Downloads/TestSource/Big.png",
+    ]
+    for imageFilePath in fileList {
+      iPic.uploadImage(imageFilePath) { (imageLink, error) in
+        var result = (NSURL(string: imageFilePath)?.lastPathComponent ?? imageFilePath) + " "
+        if let imageLink = imageLink {
+          result += imageLink
+        } else if let error = error {
+          result += error.localizedDescription
+        }
+        print(result)
+      }
     }
   }
 }
