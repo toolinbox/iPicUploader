@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import iPicUploader
 
 class MainWindowController: NSWindowController {
   override var windowNibName: String? {
@@ -17,9 +18,9 @@ class MainWindowController: NSWindowController {
     super.windowDidLoad()
     
     let imageFilePath = "/Users/jason/Downloads/1.jpg"
-//    iPic.uploadImage(imageFilePath) { (imageLink, error) in
-//      print(imageLink)
-//      print(error)
-//    }
+    iPic.uploadImage(imageFilePath) { (imageLink, error) in
+      print(imageLink)
+      print(error)
+    }
   }
 }

@@ -8,28 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		157C798D0404E8B68DC0E98185A88070 /* Pods-iPicUploader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A82915BDD06F943FD1265A75DEB83C /* Pods-iPicUploader_Tests-dummy.m */; };
-		1D227178FEDAC56E83DA28F7E7089122 /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
 		60BDAA21EDD98113BC91417CFB8C203B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		74FECC86DE3C96C6A80180E80A9FB79E /* Pods-iPicUploader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFF55AD596B679CCD313C03C4FFE6861 /* Pods-iPicUploader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C6E44D04609D33F90520547F305F666 /* iPicUploader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AF51C505CF059A532A6864A0A6DA88 /* iPicUploader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C66C62BB323FE9037FF739204205FECB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484B66F9B945809BAEA5E32C67A8F16 /* ReplaceMe.swift */; };
-		DB0A18E240F8F22F3FCB25B297F98BE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		968A242E1D781AE10024A923 /* iPicUploader.h in Headers */ = {isa = PBXBuildFile; fileRef = 968A242D1D781AE10024A923 /* iPicUploader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		968A24341D781AFB0024A923 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968A24331D781AFB0024A923 /* Cocoa.framework */; };
+		968A24351D781BB80024A923 /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23FC1D7814D50024A923 /* iPicImage.swift */; };
+		968A24361D781BB80024A923 /* iPicUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23FD1D7814D50024A923 /* iPicUploader.swift */; };
+		968A24371D781BB80024A923 /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23FE1D7814D50024A923 /* iPicUploadHelper.swift */; };
+		968A24381D781BB80024A923 /* iPicUploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23FF1D7814D50024A923 /* iPicUploadResult.swift */; };
+		968A24391D781BB80024A923 /* PasteboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A24001D7814D50024A923 /* PasteboardHelper.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6D610E947AD0A9691CAE3ED6EDC9D7AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81C48D39BBC821ECE497EF08E0E91BF3;
-			remoteInfo = iPicUploader;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0CCA8D91391363E5CB705005978B4D58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1461B1208E7AF60133BB79C49DE3637C /* Pods_iPicUploader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPicUploader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32F4714753958875D4386255671570A2 /* iPicUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPicUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CFA2FF1FA094928C9406C2F947C014 /* iPicUploader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iPicUploader.modulemap; sourceTree = "<group>"; };
 		3F6A1D5814707835448E36592716BFE2 /* Pods-iPicUploader_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploader_Tests-resources.sh"; sourceTree = "<group>"; };
 		4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPicUploader-dummy.m"; sourceTree = "<group>"; };
@@ -38,11 +30,19 @@
 		6D7B43FBC53CA63A9AC062387F67B217 /* Pods-iPicUploader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPicUploader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		91BA8D784462F04B479A010284C42F4E /* Pods-iPicUploader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iPicUploader_Tests.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		968A23FC1D7814D50024A923 /* iPicImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImage.swift; sourceTree = "<group>"; };
+		968A23FD1D7814D50024A923 /* iPicUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicUploader.swift; sourceTree = "<group>"; };
+		968A23FE1D7814D50024A923 /* iPicUploadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
+		968A23FF1D7814D50024A923 /* iPicUploadResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicUploadResult.swift; sourceTree = "<group>"; };
+		968A24001D7814D50024A923 /* PasteboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardHelper.swift; sourceTree = "<group>"; };
+		968A242B1D781AE10024A923 /* iPicUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPicUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A242D1D781AE10024A923 /* iPicUploader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPicUploader.h; sourceTree = "<group>"; };
+		968A242F1D781AE10024A923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968A24331D781AFB0024A923 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A019118CD8FE3FFC362E65918AD8939A /* Pods-iPicUploader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPicUploader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A6D0DCF86077F1C45CC553605670A3AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFF55AD596B679CCD313C03C4FFE6861 /* Pods-iPicUploader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPicUploader_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B1A82915BDD06F943FD1265A75DEB83C /* Pods-iPicUploader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPicUploader_Tests-dummy.m"; sourceTree = "<group>"; };
-		B484B66F9B945809BAEA5E32C67A8F16 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iPicUploader.xcconfig; sourceTree = "<group>"; };
 		E00B3227792641966AC744192870C278 /* Pods-iPicUploader_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploader_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -51,11 +51,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9DF271463DEDAEA9F74F9DB6812F781B /* Frameworks */ = {
+		968A24271D781AE10024A923 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB0A18E240F8F22F3FCB25B297F98BE7 /* Foundation.framework in Frameworks */,
+				968A24341D781AFB0024A923 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +87,8 @@
 		15BE9D8D8D47E4FF25A27220A6A7C82A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32F4714753958875D4386255671570A2 /* iPicUploader.framework */,
 				1461B1208E7AF60133BB79C49DE3637C /* Pods_iPicUploader_Tests.framework */,
+				968A242B1D781AE10024A923 /* iPicUploader.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +142,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				8BD6619CD43C1AE999C2BDCABB64CE43 /* Development Pods */,
+				968A242C1D781AE10024A923 /* iPicUploader */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				15BE9D8D8D47E4FF25A27220A6A7C82A /* Products */,
 				2785A6E693EF7EFAE8D9DA9C7B070B3F /* Targets Support Files */,
@@ -156,6 +157,15 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		968A242C1D781AE10024A923 /* iPicUploader */ = {
+			isa = PBXGroup;
+			children = (
+				968A242D1D781AE10024A923 /* iPicUploader.h */,
+				968A242F1D781AE10024A923 /* Info.plist */,
+			);
+			path = iPicUploader;
+			sourceTree = "<group>";
+		};
 		B989DE857FCCCD4BB3DC3C40FFAC2A3A /* iPicUploader */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				968A24331D781AFB0024A923 /* Cocoa.framework */,
 				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
@@ -175,7 +186,11 @@
 		E88DEA4C6D2990C7DF564F306CDCCCF8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B484B66F9B945809BAEA5E32C67A8F16 /* ReplaceMe.swift */,
+				968A23FC1D7814D50024A923 /* iPicImage.swift */,
+				968A23FD1D7814D50024A923 /* iPicUploader.swift */,
+				968A23FE1D7814D50024A923 /* iPicUploadHelper.swift */,
+				968A23FF1D7814D50024A923 /* iPicUploadResult.swift */,
+				968A24001D7814D50024A923 /* PasteboardHelper.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,19 +198,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		968A24281D781AE10024A923 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A242E1D781AE10024A923 /* iPicUploader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C124695A12CCAEC6C826394768BAEE34 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				74FECC86DE3C96C6A80180E80A9FB79E /* Pods-iPicUploader_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2D787223A91A7A6DDB3C79E00E1BD0E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C6E44D04609D33F90520547F305F666 /* iPicUploader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,20 +228,20 @@
 			buildRules = (
 			);
 			dependencies = (
-				80D1DF16BF4041B6AE808F77A29767E3 /* PBXTargetDependency */,
 			);
 			name = "Pods-iPicUploader_Tests";
 			productName = "Pods-iPicUploader_Tests";
 			productReference = 1461B1208E7AF60133BB79C49DE3637C /* Pods_iPicUploader_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		81C48D39BBC821ECE497EF08E0E91BF3 /* iPicUploader */ = {
+		968A242A1D781AE10024A923 /* iPicUploader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4C3467508F559522C08A2420126F63D /* Build configuration list for PBXNativeTarget "iPicUploader" */;
+			buildConfigurationList = 968A24301D781AE10024A923 /* Build configuration list for PBXNativeTarget "iPicUploader" */;
 			buildPhases = (
-				9CE288BAC3308AFA55C24F38EABD6247 /* Sources */,
-				9DF271463DEDAEA9F74F9DB6812F781B /* Frameworks */,
-				E2D787223A91A7A6DDB3C79E00E1BD0E /* Headers */,
+				968A24261D781AE10024A923 /* Sources */,
+				968A24271D781AE10024A923 /* Frameworks */,
+				968A24281D781AE10024A923 /* Headers */,
+				968A24291D781AE10024A923 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +249,7 @@
 			);
 			name = iPicUploader;
 			productName = iPicUploader;
-			productReference = 32F4714753958875D4386255671570A2 /* iPicUploader.framework */;
+			productReference = 968A242B1D781AE10024A923 /* iPicUploader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -245,6 +260,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					968A242A1D781AE10024A923 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -252,17 +272,28 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 15BE9D8D8D47E4FF25A27220A6A7C82A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81C48D39BBC821ECE497EF08E0E91BF3 /* iPicUploader */,
+				968A242A1D781AE10024A923 /* iPicUploader */,
 				7DB6F56A5616016225170F04E474BFCC /* Pods-iPicUploader_Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		968A24291D781AE10024A923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A51F9CF543EBEE298BB2A7C8B9A23E0 /* Sources */ = {
@@ -273,25 +304,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CE288BAC3308AFA55C24F38EABD6247 /* Sources */ = {
+		968A24261D781AE10024A923 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D227178FEDAC56E83DA28F7E7089122 /* iPicUploader-dummy.m in Sources */,
-				C66C62BB323FE9037FF739204205FECB /* ReplaceMe.swift in Sources */,
+				968A24351D781BB80024A923 /* iPicImage.swift in Sources */,
+				968A24361D781BB80024A923 /* iPicUploader.swift in Sources */,
+				968A24371D781BB80024A923 /* iPicUploadHelper.swift in Sources */,
+				968A24381D781BB80024A923 /* iPicUploadResult.swift in Sources */,
+				968A24391D781BB80024A923 /* PasteboardHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		80D1DF16BF4041B6AE808F77A29767E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = iPicUploader;
-			target = 81C48D39BBC821ECE497EF08E0E91BF3 /* iPicUploader */;
-			targetProxy = 6D610E947AD0A9691CAE3ED6EDC9D7AF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00FD444CFAD4FF1524793727A2248E8D /* Debug */ = {
@@ -366,40 +391,13 @@
 			};
 			name = Release;
 		};
-		175291C38579796A9B40367613BCBAB1 /* Release */ = {
+		968A24311D781AE10024A923 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/iPicUploader/iPicUploader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iPicUploader/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iPicUploader/iPicUploader.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = iPicUploader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8DE660D36C4002437852D9D7FBF90D78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -407,23 +405,61 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/iPicUploader/iPicUploader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iPicUploader/Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = iPicUploader/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iPicUploader/iPicUploader.modulemap";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = iPicUploader;
-				SDKROOT = iphoneos;
+				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		968A24321D781AE10024A923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = iPicUploader/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -512,20 +548,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		968A24301D781AE10024A923 /* Build configuration list for PBXNativeTarget "iPicUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968A24311D781AE10024A923 /* Debug */,
+				968A24321D781AE10024A923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EE438D2F848D36666C6CE1CDD43E2B78 /* Build configuration list for PBXNativeTarget "Pods-iPicUploader_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00FD444CFAD4FF1524793727A2248E8D /* Debug */,
 				F33C504855379CB21056B60D1BFAB01B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4C3467508F559522C08A2420126F63D /* Build configuration list for PBXNativeTarget "iPicUploader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DE660D36C4002437852D9D7FBF90D78 /* Debug */,
-				175291C38579796A9B40367613BCBAB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

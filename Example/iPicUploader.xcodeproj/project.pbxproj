@@ -13,6 +13,7 @@
 		968A23F31D7812B30024A923 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968A23F11D7812B30024A923 /* MainMenu.xib */; };
 		968A23FA1D7813470024A923 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23F81D7813470024A923 /* MainWindowController.swift */; };
 		968A23FB1D7813470024A923 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968A23F91D7813470024A923 /* MainWindowController.xib */; };
+		968A24071D7819C70024A923 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968A24061D7819C70024A923 /* iPicUploader.framework */; };
 		9A496087F4C77533E636F8CF /* Pods_iPicUploader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		968A23F41D7812B30024A923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		968A23F81D7813470024A923 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		968A23F91D7813470024A923 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		968A24061D7819C70024A923 /* iPicUploader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iPicUploader.framework; path = "Pods/../build/Debug-iphoneos/iPicUploader/iPicUploader.framework"; sourceTree = "<group>"; };
 		FD98DCBCCB7F276E6F7DFBB4 /* Pods-iPicUploader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploader_Tests/Pods-iPicUploader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968A24071D7819C70024A923 /* iPicUploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,7 @@
 		A323D05D5D9A451A99A62C33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				968A24061D7819C70024A923 /* iPicUploader.framework */,
 				8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */,
 			);
 			name = Frameworks;
@@ -434,6 +438,10 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/iPicUploader",
+				);
 				INFOPLIST_FILE = iPicUploaderExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -450,6 +458,10 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/iPicUploader",
+				);
 				INFOPLIST_FILE = iPicUploaderExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
