@@ -10,12 +10,18 @@ import Cocoa
 
 public typealias iPicPasteboardHandler = ((NSPasteboard) -> Void)
 
-public let PasteboardTypeiPicImage = "net.toolinbox.pasteboard.ipic.iPicImage"
+public let iPicPasteboardName = "net.toolinbox.ipic.pasteboard"
+public let PasteboardTypeiPicImage = "net.toolinbox.ipic.pasteboard.iPicImage"
 public let PasteboardTypeiPicUploadResult = "net.toolinbox.ipic.pasteboard.iPicUploadResult"
 
+let iPicPasteboard = iPicPasteboardHelper.sharedInstance
+
 public class iPicPasteboardHelper {
+  // Singleton
+  static let sharedInstance = iPicPasteboardHelper()
+  private init() {}
   
-  private let pasteboard = NSPasteboard.generalPasteboard()
+  private let pasteboard = NSPasteboard(name: iPicPasteboardName)
   
   private weak var pasteboardObservingTimer: NSTimer?
   private var pasteboardObservingTimerInterval: NSTimeInterval = 0.75

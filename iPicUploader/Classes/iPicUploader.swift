@@ -14,13 +14,11 @@ public class iPicUploader {
   // Singleton
   public static let sharedInstance = iPicUploader()
   private init() {
-    pasteboardHelper.handler = dealWithUploadResult
+    iPicPasteboard.handler = dealWithUploadResult
   }
   
   private var pendingImages = [String: iPicImage]()
   private let pendingImagesLocker = NSRecursiveLock()
-  
-  private var pasteboardHelper = iPicPasteboardHelper()
   
   // TODO Change it back to 30 after debug.
   private let uploadTimeoutSeconds: NSTimeInterval = 300
@@ -49,7 +47,7 @@ public class iPicUploader {
     }
     
     // Start observing pasteboard.
-    pasteboardHelper.startObserving()
+    iPicPasteboard.startObserving()
     
     // Start upload.
     uploadPendingImages()
@@ -75,7 +73,7 @@ public class iPicUploader {
     }
     
     if let image = image {
-      pasteboardHelper.writeiPicImage(image)
+      iPicPasteboard.writeiPicImage(image)
     }
   }
   
@@ -99,7 +97,7 @@ public class iPicUploader {
     
     if hasNoPendingImages {
       // Stop pasteboard observing if has not pending images.
-      pasteboardHelper.stopObserving()
+      iPicPasteboard.stopObserving()
     } else {
       // Continue to upload other pending images.
       uploadPendingImages()
@@ -107,7 +105,7 @@ public class iPicUploader {
   }
   
   private func dealWithUploadResult(pasteboard: NSPasteboard) {
-    if let uploadResult = pasteboardHelper.parseUploadResult(pasteboard) {
+    if let uploadResult = iPicPasteboard.parseUploadResult(pasteboard) {
       finishUploadImage(uploadResult)
     }
   }
