@@ -35,32 +35,6 @@ class iPicImageView: NSImageView {
   
   var uploadHandler: iPicUploadHandler?
   
-  // MARK: Init
-  
-  override init(frame frameRect: NSRect) {
-    super.init(frame: frameRect)
-    
-    commonInit()
-  }
-  
-  required init?(coder: NSCoder) {
-    super.init(coder: coder)
-    
-    commonInit()
-  }
-  
-  private func commonInit() {
-    let types = [
-      NSPasteboardTypePDF,
-      NSPasteboardTypeTIFF,
-      NSPasteboardTypePNG,
-      NSPasteboardTypeRTF,
-      NSPasteboardTypeRTFD,
-      NSPasteboardTypeHTML,
-    ]
-    self.registerForDraggedTypes(types)
-  }
-  
   // MARK: - NSDraggingDestination
   
   override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
