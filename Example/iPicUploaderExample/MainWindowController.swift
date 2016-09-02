@@ -92,7 +92,7 @@ class MainWindowController: NSWindowController {
   }
   
   private func appendLink(link: String) {
-    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize() - 3)]
+    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize() - 2)]
     let resultStr = NSMutableAttributedString(string: link, attributes: fontAttr)
     let attrs = [NSLinkAttributeName: NSString(string: link)]
     resultStr.addAttributes(attrs, range: NSRange(0..<resultStr.length))
@@ -100,6 +100,7 @@ class MainWindowController: NSWindowController {
     uploadedIndex += 1
     resultTextView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\(uploadedIndex): "))
     resultTextView.textStorage?.appendAttributedString(resultStr)
+    resultTextView.scrollToEndOfDocument(self)
   }
   
   private func showAlert(message: String, information: String) {
