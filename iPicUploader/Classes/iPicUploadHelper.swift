@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class iPicUploadHelper {
+public class iPicUploadHelper {
   
   // MARK: Static Method
   
@@ -49,6 +49,36 @@ class iPicUploadHelper {
     let image = iPicImage(imageData: imageData)
     
     return (image, nil)
+  }
+  
+  static public func generateImagesFromPasteboard(pasteboard: NSPasteboard) -> [NSImage] {
+    var images = [NSImage]()
+    
+    if let pasteboardItems = pasteboard.pasteboardItems {
+      for pasteboardItem in pasteboardItems {
+        if let image = generateImageFromPasteboardItem(pasteboardItem) {
+          images.append(image)
+        }
+      }
+    }
+    
+    return images
+  }
+  
+  static private func generateImageFromPasteboardItem(pasteboardItem: NSPasteboardItem) -> NSImage? {
+    for type in pasteboardItem.types {
+      if let data = pasteboardItem.dataForType(type) {
+        if type == String(kUTTypeFileURL) {
+          let url = NSURL(dataRepresentation: data, relativeToURL: nil)
+          return NSImage(byReferencingURL: url)
+          
+        } else if let image = NSImage(data: data) {
+          return image
+        }
+      }
+    }
+    
+    return nil
   }
   
   static func imageDataOf(image: NSImage, type: NSBitmapImageFileType) -> NSData? {
