@@ -47,6 +47,11 @@ public class iPicUploader {
     doUploadImage(image, handler: handler)
   }
   
+  public func uploadImage(imageData: NSData, handler: iPicUploadHandler) {    
+    let image = iPicImage(imageData: imageData)
+    doUploadImage(image, handler: handler)
+  }
+  
   // MARK: Helper
   
   private func doUploadImage(image: iPicImage, handler: iPicUploadHandler) {
