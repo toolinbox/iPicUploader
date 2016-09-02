@@ -9,11 +9,10 @@
 import Cocoa
 import iPicUploader
 
-// TODO Add different image for different states
 enum iPicImageViewState: String {
-  case Normal = "NSTrashEmpty" //"NormalStateIcon"
-  case Dragging = "NSTrashFull" //"DraggingStateIcon"
-  case Uploading = "NSSynchronize" //"NSSynchronize"
+  case Normal = "NormalStateIcon"
+  case Dragging = "DraggingStateIcon"
+  case Uploading = "NSSynchronize"
   case Uploaded = "UploadedStateIcon"
 }
 
