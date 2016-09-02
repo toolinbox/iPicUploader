@@ -40,6 +40,16 @@ class MainWindowController: NSWindowController {
 //    test()
   }
   
+  // MARK: Action
+  
+  @IBAction func selectImageFiles(sender: NSButton!) {
+    
+  }
+  
+  @IBAction func pasteImages(sender: NSButton!) {
+    
+  }
+  
   // MARK: Helper
   
   private func uploadHandler(imageLink: String?, error: NSError?) {

@@ -17,40 +17,62 @@
         <window title="iPic Uploader" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="iPicUploaderExampleWindow" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="248" height="388"/>
+            <rect key="contentRect" x="196" y="240" width="248" height="338"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="248" height="388"/>
+                <rect key="frame" x="0.0" y="0.0" width="248" height="338"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bab-rM-GH2" customClass="iPicImageView" customModule="iPicUploaderExample" customModuleProvider="target">
-                        <rect key="frame" x="17" y="157" width="214" height="214"/>
+                        <rect key="frame" x="17" y="173" width="214" height="123"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="height" multiplier="1:1" id="BI7-kJ-y3j"/>
+                            <constraint firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="height" multiplier="16:9" id="BI7-kJ-y3j"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="E0z-12-L9d"/>
                         </constraints>
                         <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSUser" id="uQv-ci-xat"/>
                     </imageView>
-                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="f5g-Gr-GpX">
-                        <rect key="frame" x="20" y="149" width="208" height="5"/>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <font key="titleFont" metaFont="system"/>
-                    </box>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SnF-Me-SZx">
+                        <rect key="frame" x="18" y="301" width="212" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ways to Upload" id="k8M-pA-Ct6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAm-g9-g1G">
+                        <rect key="frame" x="14" y="138" width="220" height="32"/>
+                        <buttonCell key="cell" type="push" title="Select Image Files" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lor-NY-bxf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="selectImageFiles:" target="-2" id="2o6-g7-HOq"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XmK-LP-D55">
+                        <rect key="frame" x="14" y="109" width="220" height="32"/>
+                        <buttonCell key="cell" type="push" title="Copy Images and Paste Here" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="04h-XM-iBc">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="pasteImages:" target="-2" id="zE8-OL-tt0"/>
+                        </connections>
+                    </button>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-aJ-us6">
-                        <rect key="frame" x="20" y="20" width="208" height="123"/>
+                        <rect key="frame" x="20" y="20" width="208" height="86"/>
                         <clipView key="contentView" id="sRK-2g-5go">
-                            <rect key="frame" x="1" y="1" width="206" height="121"/>
+                            <rect key="frame" x="1" y="1" width="206" height="84"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="V1Z-Q2-J6L">
-                                    <rect key="frame" x="0.0" y="0.0" width="206" height="121"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="206" height="84"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="206" height="121"/>
+                                    <size key="minSize" width="206" height="84"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="206" height="121"/>
+                                    <size key="minSize" width="206" height="84"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <connections>
                                         <binding destination="-2" name="attributedString" keyPath="self.uploadResultString" id="Pbm-xp-gyg">
@@ -66,7 +88,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="LDN-NW-OD6"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Npo-9W-idy"/>
                         </constraints>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="r9q-fL-4Ef">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
@@ -79,22 +101,28 @@
                     </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="bab-rM-GH2" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="1Rt-Y4-R4S"/>
+                    <constraint firstItem="Ohd-aJ-us6" firstAttribute="top" secondItem="XmK-LP-D55" secondAttribute="bottom" constant="10" id="3TT-h8-2Fx"/>
                     <constraint firstAttribute="trailing" secondItem="bab-rM-GH2" secondAttribute="trailing" constant="20" id="6cZ-Si-bNq"/>
-                    <constraint firstItem="f5g-Gr-GpX" firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="width" id="Nce-Ia-rq6"/>
+                    <constraint firstItem="SnF-Me-SZx" firstAttribute="centerX" secondItem="bab-rM-GH2" secondAttribute="centerX" id="86e-q3-i5x"/>
+                    <constraint firstItem="SnF-Me-SZx" firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="width" id="Dd7-lU-lX9"/>
+                    <constraint firstItem="bab-rM-GH2" firstAttribute="top" secondItem="SnF-Me-SZx" secondAttribute="bottom" constant="8" id="PBr-Ne-Y4b"/>
                     <constraint firstItem="Ohd-aJ-us6" firstAttribute="centerX" secondItem="bab-rM-GH2" secondAttribute="centerX" id="Vcx-NN-I6B"/>
-                    <constraint firstItem="f5g-Gr-GpX" firstAttribute="top" secondItem="bab-rM-GH2" secondAttribute="bottom" constant="8" id="W40-Jh-efz"/>
+                    <constraint firstItem="XmK-LP-D55" firstAttribute="centerX" secondItem="bab-rM-GH2" secondAttribute="centerX" id="WdP-kr-aRX"/>
                     <constraint firstAttribute="bottom" secondItem="Ohd-aJ-us6" secondAttribute="bottom" constant="20" id="amg-uG-d9R"/>
+                    <constraint firstItem="SnF-Me-SZx" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="bnp-Nj-Lni"/>
+                    <constraint firstItem="XmK-LP-D55" firstAttribute="top" secondItem="jAm-g9-g1G" secondAttribute="bottom" constant="8" id="c3P-6X-5PD"/>
                     <constraint firstItem="bab-rM-GH2" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="dfs-Vf-xu1"/>
-                    <constraint firstItem="Ohd-aJ-us6" firstAttribute="top" secondItem="f5g-Gr-GpX" secondAttribute="bottom" constant="8" id="ikK-xL-1oO"/>
                     <constraint firstItem="Ohd-aJ-us6" firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="width" id="jV6-x7-8V5"/>
-                    <constraint firstItem="f5g-Gr-GpX" firstAttribute="centerX" secondItem="bab-rM-GH2" secondAttribute="centerX" id="tbd-g9-nWL"/>
+                    <constraint firstItem="XmK-LP-D55" firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="width" id="nRy-bK-teC"/>
+                    <constraint firstItem="jAm-g9-g1G" firstAttribute="top" secondItem="bab-rM-GH2" secondAttribute="bottom" constant="10" id="nYG-t7-Olt"/>
+                    <constraint firstItem="jAm-g9-g1G" firstAttribute="width" secondItem="bab-rM-GH2" secondAttribute="width" id="sRU-XJ-gUS"/>
+                    <constraint firstItem="jAm-g9-g1G" firstAttribute="centerX" secondItem="bab-rM-GH2" secondAttribute="centerX" id="z94-a8-xVy"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="131" y="397"/>
+            <point key="canvasLocation" x="133" y="323"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="zkX-ml-euR"/>
     </objects>
