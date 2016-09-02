@@ -60,7 +60,7 @@ class MainWindowController: NSWindowController {
   }
   
   private func appendLink(link: String) {
-    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize())]
+    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize() - 2)]
     let resultStr = NSMutableAttributedString(string: link, attributes: fontAttr)
     let attrs = [NSLinkAttributeName: NSString(string: link)]
     resultStr.addAttributes(attrs, range: NSRange(0..<resultStr.length))
