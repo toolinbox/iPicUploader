@@ -51,29 +51,31 @@ public class iPicUploadHelper {
     return (image, nil)
   }
   
-  static public func generateImagesFromPasteboard(pasteboard: NSPasteboard) -> [NSImage] {
-    var images = [NSImage]()
+  static public func generateImageDataListFrom(pasteboard: NSPasteboard) -> [NSData] {
+    var imageDataList = [NSData]()
     
     if let pasteboardItems = pasteboard.pasteboardItems {
       for pasteboardItem in pasteboardItems {
-        if let image = generateImageFromPasteboardItem(pasteboardItem) {
-          images.append(image)
+        if let imageData = generateImageDataFrom(pasteboardItem) {
+          imageDataList.append(imageData)
         }
       }
     }
     
-    return images
+    return imageDataList
   }
   
-  static private func generateImageFromPasteboardItem(pasteboardItem: NSPasteboardItem) -> NSImage? {
+  static private func generateImageDataFrom(pasteboardItem: NSPasteboardItem) -> NSData? {
     for type in pasteboardItem.types {
       if let data = pasteboardItem.dataForType(type) {
         if type == String(kUTTypeFileURL) {
           let url = NSURL(dataRepresentation: data, relativeToURL: nil)
-          return NSImage(byReferencingURL: url)
+          if let imageData = NSData(contentsOfURL: url), _ = NSImage(data: imageData) {
+            return imageData
+          }
           
-        } else if let image = NSImage(data: data) {
-          return image
+        } else if let _ = NSImage(data: data) {
+          return data
         }
       }
     }
