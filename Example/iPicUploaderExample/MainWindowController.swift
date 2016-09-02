@@ -23,6 +23,7 @@ class MainWindowController: NSWindowController {
     setWindowOnTop(true)
     
     imageView.state = .Normal
+    imageView.uploadHandler = uploadHandler
     
 //    NSOperationQueue.mainQueue().addOperationWithBlock { 
 //      
@@ -38,6 +39,10 @@ class MainWindowController: NSWindowController {
   }
   
   // MARK: Helper
+  
+  func uploadHandler(imageLink: String?, error: NSError?) {
+    print(imageLink)
+  }
   
   func test() {
     let fileList = [

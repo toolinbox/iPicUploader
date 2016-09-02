@@ -33,6 +33,8 @@ class iPicImageView: NSImageView {
     }
   }
   
+  var uploadHandler: iPicUploadHandler?
+  
   // MARK: Init
   
   override init(frame frameRect: NSRect) {
@@ -87,7 +89,8 @@ class iPicImageView: NSImageView {
           self.state = .Normal
         }
         
-        // TODO Call back
+        self.uploadHandler?(imageLink: imageLink, error: error)
+        
       })
       
     } else {
