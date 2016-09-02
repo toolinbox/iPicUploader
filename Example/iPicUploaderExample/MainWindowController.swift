@@ -20,16 +20,21 @@ class MainWindowController: NSWindowController {
   override func windowDidLoad() {
     super.windowDidLoad()
     
-    NSOperationQueue.mainQueue().addOperationWithBlock { 
-      
-      //    let imag3FilePath = "/Users/jason/Downloads/avatar.jpeg"
-      let imageURL = NSURL(string: "https://www.bitgab.com/en/dashboard/img/av2.png")!
-      if let image = NSImage(contentsOfURL: imageURL) {
-        //    if let image = NSImage(contentsOfFile: imageFilePath) {
-        self.imageView.image = image
-      }
-    }
+    setWindowOnTop(true)
     
+    imageView.state = .Normal
+    
+//    NSOperationQueue.mainQueue().addOperationWithBlock { 
+//      
+//      //    let imag3FilePath = "/Users/jason/Downloads/avatar.jpeg"
+//      let imageURL = NSURL(string: "https://www.bitgab.com/en/dashboard/img/av2.png")!
+//      if let image = NSImage(contentsOfURL: imageURL) {
+//        //    if let image = NSImage(contentsOfFile: imageFilePath) {
+//        self.imageView.image = image
+//      }
+//    }
+
+//    test()
   }
   
   // MARK: Helper
@@ -52,5 +57,13 @@ class MainWindowController: NSWindowController {
         print(result)
       }
     }
+  }
+  
+  func setWindowOnTop(onTop: Bool) {
+    NSApp.activateIgnoringOtherApps(onTop)
+    window?.hidesOnDeactivate = !onTop
+    
+    let level = onTop ? CGWindowLevelKey.FloatingWindowLevelKey : CGWindowLevelKey.BaseWindowLevelKey
+    window?.level = Int(CGWindowLevelForKey(level))
   }
 }
