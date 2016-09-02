@@ -43,7 +43,22 @@ class MainWindowController: NSWindowController {
   // MARK: Action
   
   @IBAction func selectImageFiles(sender: NSButton!) {
+    let openPanel = NSOpenPanel()
+    openPanel.canChooseDirectories = false
+    openPanel.canChooseFiles = true
+    openPanel.allowsMultipleSelection = true
+    openPanel.prompt = NSLocalizedString("Select", comment: "Open Panel")
     
+    openPanel.beginSheetModalForWindow(self.window!) { (response) in
+      if response == NSFileHandlingPanelOKButton {
+        for url in openPanel.URLs {
+          if let imageFilePath = url.path {
+            self.imageView.state = .Uploading
+            iPic.uploadImage(imageFilePath, handler: self.uploadHandler)
+          }
+        }
+      }
+    }
   }
   
   @IBAction func pasteImages(sender: NSButton!) {
@@ -58,7 +73,7 @@ class MainWindowController: NSWindowController {
     
     for image in images {
       self.imageView.state = .Uploading
-      iPic.uploadImage(image, handler:uploadHandler)
+      iPic.uploadImage(image, handler: uploadHandler)
     }
   }
   
