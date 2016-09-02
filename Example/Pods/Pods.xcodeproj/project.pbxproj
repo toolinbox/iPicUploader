@@ -7,20 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1942FD572D0DCB2288EB379E6179FA24 /* iPicUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407F0541F44914403B05341FEBB4D9E /* iPicUploader.swift */; };
+		020ACBE03355F6CBC3A92F4CE38624CC /* iPicUploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B42EA318C491893F0900443A2A0670 /* iPicUploadResult.swift */; };
 		195FEDE6B749E03BCC160D32C0877ED1 /* Pods-iPicUploaderExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C98ABF7E90A3F61BFF6E72E8E53A3A23 /* Pods-iPicUploaderExample-dummy.m */; };
 		1B4B7326F161C85DC96E7884EB44CAB9 /* iPicUploader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AF51C505CF059A532A6864A0A6DA88 /* iPicUploader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2154AAE465AF62B9856CFAD5A545EC96 /* iPicUploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B603093EC944EB27D429C3642B0F885 /* iPicUploadResult.swift */; };
 		312D5F3A72B20D8D87E408F1E70511AF /* Pods-iPicUploaderExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8FD2E8EBDB4E6A09A76E826CA045F0 /* Pods-iPicUploaderExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5631C0D0AE504368BB36AA74B51F3F26 /* iPicPasteboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */; };
 		6015FEE7AF444E0A3B338EFDD20E816A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		96402E241D786CF8008E5256 /* iPicUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96402E231D786CF8008E5256 /* iPicUploaderTests.swift */; };
-		96402E261D786CF8008E5256 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */; };
-		96402E2D1D78718B008E5256 /* iPicImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96402E2C1D78718B008E5256 /* iPicImageTests.swift */; };
-		B9EDF9C63CC9267212A781B075530110 /* iPicPasteboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966CD549484CF3BD155DAEB86A3D7CF /* iPicPasteboardHelper.swift */; };
-		C3CFDA4084245FFD7D88807E4F329933 /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
+		6D5C3D883B67B684097866DEEFFFF6AA /* iPicUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */; };
+		71988728DECC7D6CA5051C9A7A94B4CA /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
+		9C3985FDBA243E1B9DD7A2E517BDBD77 /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */; };
 		CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		DEBEA62E5026AA04D6CF281A66F7E730 /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC28B38A8D5BDE4D418FBE30628E00D /* iPicImage.swift */; };
-		E7884B27A3D2EEEA67DD185CFD17AB4B /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A9423B143C7856F2F7F204F158A83 /* iPicUploadHelper.swift */; };
+		D8F21E0B9E1CF78E16E3A8B420C3F1BB /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,37 +28,27 @@
 			remoteGlobalIDString = 05B7F7C75CFDAA8BAF32E04D548E3A7A;
 			remoteInfo = iPicUploader;
 		};
-		96402E271D786CF8008E5256 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 05B7F7C75CFDAA8BAF32E04D548E3A7A;
-			remoteInfo = iPicUploader;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10B42EA318C491893F0900443A2A0670 /* iPicUploadResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadResult.swift; sourceTree = "<group>"; };
 		13BBEC260DFEC059DF25801BDDDF55B3 /* Pods-iPicUploaderExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iPicUploaderExample.modulemap"; sourceTree = "<group>"; };
 		1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		205313F3332997F867D86645050C748E /* Pods-iPicUploaderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPicUploaderExample.release.xcconfig"; sourceTree = "<group>"; };
-		2C3A9423B143C7856F2F7F204F158A83 /* iPicUploadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
 		35CFA2FF1FA094928C9406C2F947C014 /* iPicUploader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iPicUploader.modulemap; sourceTree = "<group>"; };
 		3A660CA2D1E60D83AEDA5E31AC602AAD /* Pods-iPicUploaderExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploaderExample-resources.sh"; sourceTree = "<group>"; };
-		4B603093EC944EB27D429C3642B0F885 /* iPicUploadResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadResult.swift; sourceTree = "<group>"; };
+		3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicImage.swift; sourceTree = "<group>"; };
 		4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPicUploader-dummy.m"; sourceTree = "<group>"; };
 		53AF51C505CF059A532A6864A0A6DA88 /* iPicUploader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPicUploader-umbrella.h"; sourceTree = "<group>"; };
-		5966CD549484CF3BD155DAEB86A3D7CF /* iPicPasteboardHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicPasteboardHelper.swift; sourceTree = "<group>"; };
 		650A536FA73DBFEE64F1ECA14CD7F76E /* Pods-iPicUploaderExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPicUploaderExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B8FD2E8EBDB4E6A09A76E826CA045F0 /* Pods-iPicUploaderExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPicUploaderExample-umbrella.h"; sourceTree = "<group>"; };
 		73686E5028A3488C8AAC224DD9F32E4F /* Pods-iPicUploaderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPicUploaderExample.debug.xcconfig"; sourceTree = "<group>"; };
 		7D2CEB8D01ECB51A0F8DF56E738997DC /* Pods-iPicUploaderExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPicUploaderExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8DC28B38A8D5BDE4D418FBE30628E00D /* iPicImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicImage.swift; sourceTree = "<group>"; };
+		83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploader.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96402E211D786CF8008E5256 /* iPicUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPicUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96402E231D786CF8008E5256 /* iPicUploaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPicUploaderTests.swift; sourceTree = "<group>"; };
-		96402E251D786CF8008E5256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96402E2C1D78718B008E5256 /* iPicImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageTests.swift; sourceTree = "<group>"; };
 		A6D0DCF86077F1C45CC553605670A3AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
+		BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicPasteboardHelper.swift; sourceTree = "<group>"; };
 		C98ABF7E90A3F61BFF6E72E8E53A3A23 /* Pods-iPicUploaderExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPicUploaderExample-dummy.m"; sourceTree = "<group>"; };
 		D225E0E6D8E6E9A6CC1FD8630457D35C /* Pods-iPicUploaderExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploaderExample-frameworks.sh"; sourceTree = "<group>"; };
 		D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPicUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +56,6 @@
 		DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iPicUploader.xcconfig; sourceTree = "<group>"; };
 		DF57DC475DA52C0460578ED7069533E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9E52521CB7A016ACE312200866F05F2 /* iPicUploader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPicUploader-prefix.pch"; sourceTree = "<group>"; };
-		F407F0541F44914403B05341FEBB4D9E /* iPicUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +72,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96402E1E1D786CF8008E5256 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				96402E261D786CF8008E5256 /* iPicUploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +118,18 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
+		32E61614A9C71EB74B023017BA889128 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */,
+				BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */,
+				83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */,
+				A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */,
+				10B42EA318C491893F0900443A2A0670 /* iPicUploadResult.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +153,6 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				8BD6619CD43C1AE999C2BDCABB64CE43 /* Development Pods */,
-				96402E221D786CF8008E5256 /* iPicUploaderTests */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				D23C68AEA436E8ACF971982FAD40F1B4 /* Products */,
 				CDEB7E9023119033449272C721B492B2 /* Targets Support Files */,
@@ -181,19 +170,9 @@
 		8CB402E2B757562A91BFE92721E7C1B5 /* iPicUploader */ = {
 			isa = PBXGroup;
 			children = (
-				CE450DDBB53072000804F18E7CD3217E /* Classes */,
+				32E61614A9C71EB74B023017BA889128 /* Classes */,
 			);
 			path = iPicUploader;
-			sourceTree = "<group>";
-		};
-		96402E221D786CF8008E5256 /* iPicUploaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				96402E2C1D78718B008E5256 /* iPicImageTests.swift */,
-				96402E231D786CF8008E5256 /* iPicUploaderTests.swift */,
-				96402E251D786CF8008E5256 /* Info.plist */,
-			);
-			path = iPicUploaderTests;
 			sourceTree = "<group>";
 		};
 		CDEB7E9023119033449272C721B492B2 /* Targets Support Files */ = {
@@ -204,24 +183,11 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CE450DDBB53072000804F18E7CD3217E /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8DC28B38A8D5BDE4D418FBE30628E00D /* iPicImage.swift */,
-				F407F0541F44914403B05341FEBB4D9E /* iPicUploader.swift */,
-				2C3A9423B143C7856F2F7F204F158A83 /* iPicUploadHelper.swift */,
-				4B603093EC944EB27D429C3642B0F885 /* iPicUploadResult.swift */,
-				5966CD549484CF3BD155DAEB86A3D7CF /* iPicPasteboardHelper.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		D23C68AEA436E8ACF971982FAD40F1B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */,
 				D96D0BC9103D2A3A134FA10E244FB260 /* Pods_iPicUploaderExample.framework */,
-				96402E211D786CF8008E5256 /* iPicUploaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,7 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17F1E7830122502D71E34A9CC639824F /* Build configuration list for PBXNativeTarget "iPicUploader" */;
 			buildPhases = (
-				9F058D060237DB3379BBC8E56B1A2B59 /* Sources */,
+				7127F2A23360323DB6C1B747E13E3AB9 /* Sources */,
 				0030041839B6451B16D57138E60AAE0B /* Frameworks */,
 				914550B6FF6C9899CCCDF7676DE06C90 /* Headers */,
 			);
@@ -283,24 +249,6 @@
 			productReference = D96D0BC9103D2A3A134FA10E244FB260 /* Pods_iPicUploaderExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		96402E201D786CF8008E5256 /* iPicUploaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96402E2B1D786CF8008E5256 /* Build configuration list for PBXNativeTarget "iPicUploaderTests" */;
-			buildPhases = (
-				96402E1D1D786CF8008E5256 /* Sources */,
-				96402E1E1D786CF8008E5256 /* Frameworks */,
-				96402E1F1D786CF8008E5256 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				96402E281D786CF8008E5256 /* PBXTargetDependency */,
-			);
-			name = iPicUploaderTests;
-			productName = iPicUploaderTests;
-			productReference = 96402E211D786CF8008E5256 /* iPicUploaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -309,11 +257,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					96402E201D786CF8008E5256 = {
-						CreatedOnToolsVersion = 7.3;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -329,20 +272,9 @@
 			targets = (
 				05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */,
 				8764F74149ABB60C0B994D09D5B1639A /* Pods-iPicUploaderExample */,
-				96402E201D786CF8008E5256 /* iPicUploaderTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		96402E1F1D786CF8008E5256 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DBD563DABD3946BEBD251D3B67F802A /* Sources */ = {
@@ -353,36 +285,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96402E1D1D786CF8008E5256 /* Sources */ = {
+		7127F2A23360323DB6C1B747E13E3AB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96402E2D1D78718B008E5256 /* iPicImageTests.swift in Sources */,
-				96402E241D786CF8008E5256 /* iPicUploaderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F058D060237DB3379BBC8E56B1A2B59 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEBEA62E5026AA04D6CF281A66F7E730 /* iPicImage.swift in Sources */,
-				C3CFDA4084245FFD7D88807E4F329933 /* iPicUploader-dummy.m in Sources */,
-				1942FD572D0DCB2288EB379E6179FA24 /* iPicUploader.swift in Sources */,
-				E7884B27A3D2EEEA67DD185CFD17AB4B /* iPicUploadHelper.swift in Sources */,
-				2154AAE465AF62B9856CFAD5A545EC96 /* iPicUploadResult.swift in Sources */,
-				B9EDF9C63CC9267212A781B075530110 /* iPicPasteboardHelper.swift in Sources */,
+				9C3985FDBA243E1B9DD7A2E517BDBD77 /* iPicImage.swift in Sources */,
+				5631C0D0AE504368BB36AA74B51F3F26 /* iPicPasteboardHelper.swift in Sources */,
+				71988728DECC7D6CA5051C9A7A94B4CA /* iPicUploader-dummy.m in Sources */,
+				6D5C3D883B67B684097866DEEFFFF6AA /* iPicUploader.swift in Sources */,
+				D8F21E0B9E1CF78E16E3A8B420C3F1BB /* iPicUploadHelper.swift in Sources */,
+				020ACBE03355F6CBC3A92F4CE38624CC /* iPicUploadResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		96402E281D786CF8008E5256 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */;
-			targetProxy = 96402E271D786CF8008E5256 /* PBXContainerItemProxy */;
-		};
 		B977F253EE9307722C4EB1DC729D029A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iPicUploader;
@@ -602,54 +520,6 @@
 			};
 			name = Release;
 		};
-		96402E291D786CF8008E5256 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = iPicUploaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks @executable_path/iPicUploader";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		96402E2A1D786CF8008E5256 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = iPicUploaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks @executable_path/iPicUploader";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -679,14 +549,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		96402E2B1D786CF8008E5256 /* Build configuration list for PBXNativeTarget "iPicUploaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96402E291D786CF8008E5256 /* Debug */,
-				96402E2A1D786CF8008E5256 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
