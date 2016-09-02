@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="iPicUploaderExample" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="bab-rM-GH2" id="XmC-T7-RCd"/>
+                <outlet property="resultTextView" destination="V1Z-Q2-J6L" id="eT8-Pp-38t"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -74,15 +75,6 @@
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <size key="minSize" width="206" height="84"/>
                                     <size key="maxSize" width="463" height="10000000"/>
-                                    <connections>
-                                        <binding destination="-2" name="attributedString" keyPath="self.uploadResultString" id="Pbm-xp-gyg">
-                                            <dictionary key="options">
-                                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                                <bool key="NSConditionallySetsEditable" value="NO"/>
-                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                            </dictionary>
-                                        </binding>
-                                    </connections>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

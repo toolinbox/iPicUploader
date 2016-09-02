@@ -12,8 +12,9 @@ import iPicUploader
 class MainWindowController: NSWindowController {
   
   @IBOutlet weak var imageView: iPicImageView!
+  @IBOutlet var resultTextView: NSTextView!
   
-  dynamic var uploadResultString: NSMutableAttributedString = NSMutableAttributedString(string: "")
+  var uploadedIndex = 0
   
   override var windowNibName: String? {
     return "MainWindowController"
@@ -26,6 +27,9 @@ class MainWindowController: NSWindowController {
     
     imageView.state = .Normal
     imageView.uploadHandler = uploadHandler
+    
+    let attrString = NSAttributedString(string: NSLocalizedString("Image Links:", comment: "Title"))
+    resultTextView.textStorage?.appendAttributedString(attrString)
   }
   
   // MARK: Action
@@ -88,17 +92,14 @@ class MainWindowController: NSWindowController {
   }
   
   private func appendLink(link: String) {
-    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize() - 2)]
+    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize() - 3)]
     let resultStr = NSMutableAttributedString(string: link, attributes: fontAttr)
     let attrs = [NSLinkAttributeName: NSString(string: link)]
     resultStr.addAttributes(attrs, range: NSRange(0..<resultStr.length))
     
-    // TODO Update the logic to refresh NSTextView
-    let copiedString = NSMutableAttributedString(string: "")
-    copiedString.appendAttributedString(uploadResultString)
-    copiedString.appendAttributedString(resultStr)
-    copiedString.appendAttributedString(NSAttributedString(string: "\n"))
-    uploadResultString = copiedString
+    uploadedIndex += 1
+    resultTextView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\(uploadedIndex): "))
+    resultTextView.textStorage?.appendAttributedString(resultStr)
   }
   
   private func showAlert(message: String, information: String) {
