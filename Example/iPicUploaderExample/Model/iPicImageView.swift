@@ -77,7 +77,7 @@ class iPicImageView: NSImageView {
   }
   
   override func performDragOperation(sender: NSDraggingInfo) -> Bool {
-    if let image = NSImage(pasteboard: sender.draggingPasteboard()) {
+    for image in generateImageFromPasteboard(sender.draggingPasteboard()) {
       self.state = .Uploading
       
       iPic.uploadImage(image, handler: { (imageLink, error) in
@@ -90,13 +90,41 @@ class iPicImageView: NSImageView {
         }
         
         self.uploadHandler?(imageLink: imageLink, error: error)
-        
       })
-      
-    } else {
-      // Should not happen, as already use NSImage.canInitWithPasteboard in draggingEntered.
     }
     
     return true
+  }
+  
+  // MARK: Helper
+  
+  private func generateImageFromPasteboard(pasteboard: NSPasteboard) -> [NSImage] {
+    var images = [NSImage]()
+    
+    if let pasteboardItems = pasteboard.pasteboardItems {
+      for pasteboardItem in pasteboardItems {
+        if let image = generateImageFromPasteboardItem(pasteboardItem) {
+          images.append(image)
+        }
+      }
+    }
+    
+    return images
+  }
+  
+  private func generateImageFromPasteboardItem(pasteboardItem: NSPasteboardItem) -> NSImage? {
+    for type in pasteboardItem.types {
+      if let data = pasteboardItem.dataForType(type) {        
+        if type == String(kUTTypeFileURL) {
+          let url = NSURL(dataRepresentation: data, relativeToURL: nil)
+          return NSImage(byReferencingURL: url)
+          
+        } else if let image = NSImage(data: data) {
+          return image
+        }
+      }
+    }
+    
+    return nil
   }
 }
