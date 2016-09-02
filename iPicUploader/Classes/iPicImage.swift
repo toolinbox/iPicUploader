@@ -11,6 +11,7 @@ import Foundation
 public typealias iPicUploadHandler = (imageLink: String?, error: NSError?) -> ()
 
 public class iPicImage: NSObject, NSCoding {
+  // TODO Test it's needed or not
   public static let sharedClassName: String = "net.toolinbox.iPic.iPicImage"
   
   private static let idKey = "id"
@@ -18,7 +19,7 @@ public class iPicImage: NSObject, NSCoding {
   private static let imageDataKey = "imageData"
   
   public var id = NSUUID().UUIDString
-  public var imageFilePath = ""
+  public var imageFilePath: String?
   public var imageData: NSData?
   var handler: iPicUploadHandler?
   
@@ -26,6 +27,12 @@ public class iPicImage: NSObject, NSCoding {
     super.init()
     
     self.imageFilePath = imageFilePath
+  }
+  
+  public init(imageData: NSData) {
+    super.init()
+    
+    self.imageData = imageData
   }
   
   // MARK: - NSCoding
