@@ -7,8 +7,31 @@
 //
 
 import Cocoa
+import iPicUploader
+
+// TODO Add different image for different states
+enum iPicImageViewState: String {
+  case Normal = "NSTrashEmpty" //"NormalStateIcon"
+  case Dragging = "NSTrashFull" //"DraggingStateIcon"
+  case Uploading = "NSSynchronize" //"NSSynchronize"
+  case Uploaded = "UploadedStateIcon"
+}
 
 class iPicImageView: NSImageView {
+  
+  var state: iPicImageViewState = .Normal {
+    didSet {
+      switch state {
+      case .Normal,
+           .Dragging,
+           .Uploading:
+        self.image = NSImage(named: state.rawValue)
+        
+      case .Uploaded:
+        break
+      }
+    }
+  }
   
   // MARK: Init
   
@@ -36,52 +59,41 @@ class iPicImageView: NSImageView {
     self.registerForDraggedTypes(types)
   }
   
-  
   // MARK: - NSDraggingDestination
   
   override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
-//    if let source = sender.draggingSource() as? DiceView {
-//      if source == self {
-//        return .None
-//      } else {
-//        // Backup the source's intValue.
-//        dragSourceIntValue = source.intValue
-//        
-//        source.intValue = self.intValue
-//        source.highlightForDrag = false
-//      }
-//    }
+    if NSImage.canInitWithPasteboard(sender.draggingPasteboard()) {
+      state = .Dragging
+      return .Copy
+    }
     
-    return sender.draggingSourceOperationMask()
+    return .None
   }
   
   override func draggingExited(sender: NSDraggingInfo?) {
-//    if let source = sender?.draggingSource() as? DiceView {
-//      if source != self {
-//        highlightForDrag = false
-//        
-//        // Restore the source's intValue.
-//        source.intValue = dragSourceIntValue
-//        source.highlightForDrag = true
-//      }
-//    }
-  }
-  
-  override func prepareForDragOperation(sender: NSDraggingInfo) -> Bool {
-    return true
+    state = .Normal
   }
   
   override func performDragOperation(sender: NSDraggingInfo) -> Bool {
     if let image = NSImage(pasteboard: sender.draggingPasteboard()) {
-      self.image = image
+      self.state = .Uploading
+      
+      iPic.uploadImage(image, handler: { (imageLink, error) in
+        if imageLink != nil {
+          self.state = .Uploaded
+          self.image = image
+          
+        } else {
+          self.state = .Normal
+        }
+        
+        // TODO Call back
+      })
+      
     } else {
-      NSLog("Not image file")
+      // Should not happen, as already use NSImage.canInitWithPasteboard in draggingEntered.
     }
     
     return true
-  }
-  
-  override func concludeDragOperation(sender: NSDraggingInfo?) {
-    
   }
 }
