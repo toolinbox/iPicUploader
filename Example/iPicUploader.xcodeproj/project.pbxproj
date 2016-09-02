@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96402E301D794EC7008E5256 /* iPicImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96402E2F1D794EC7008E5256 /* iPicImageView.swift */; };
 		968A23EE1D7812B30024A923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A23ED1D7812B30024A923 /* AppDelegate.swift */; };
 		968A23F01D7812B30024A923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A23EF1D7812B30024A923 /* Assets.xcassets */; };
 		968A23F31D7812B30024A923 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968A23F11D7812B30024A923 /* MainMenu.xib */; };
@@ -23,6 +24,7 @@
 		602ED34BF9D06E5D4C48D645 /* Pods-iPicUploaderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploaderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.debug.xcconfig"; sourceTree = "<group>"; };
 		7713B8BC4B035FAADBF02F93 /* Pods-iPicUploaderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPicUploaderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.release.xcconfig"; sourceTree = "<group>"; };
 		8DC419D392221451B9803D18 /* Pods_iPicUploader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPicUploader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96402E2F1D794EC7008E5256 /* iPicImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageView.swift; sourceTree = "<group>"; };
 		968A23EB1D7812B30024A923 /* iPicUploaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPicUploaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A23ED1D7812B30024A923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968A23EF1D7812B30024A923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,9 +79,18 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		96402E2E1D794EB8008E5256 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96402E2F1D794EC7008E5256 /* iPicImageView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		968A23EC1D7812B30024A923 /* iPicUploaderExample */ = {
 			isa = PBXGroup;
 			children = (
+				96402E2E1D794EB8008E5256 /* Model */,
 				968A23F81D7813470024A923 /* MainWindowController.swift */,
 				968A23F91D7813470024A923 /* MainWindowController.xib */,
 				968A23ED1D7812B30024A923 /* AppDelegate.swift */,
@@ -235,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968A23FA1D7813470024A923 /* MainWindowController.swift in Sources */,
+				96402E301D794EC7008E5256 /* iPicImageView.swift in Sources */,
 				968A23EE1D7812B30024A923 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
