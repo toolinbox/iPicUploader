@@ -45,7 +45,9 @@ class MainWindowController: NSWindowController {
       if response == NSFileHandlingPanelOKButton {
         for url in openPanel.URLs {
           if let imageFilePath = url.path {
-            self.imageView.state = .Uploading
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+              self.imageView.state = .Uploading
+            }
             iPic.uploadImage(imageFilePath, handler: self.uploadHandler)
           }
         }

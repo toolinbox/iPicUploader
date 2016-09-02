@@ -51,9 +51,11 @@ class iPicImageView: NSImageView {
   
   override func performDragOperation(sender: NSDraggingInfo) -> Bool {
     for image in iPicUploadHelper.generateImagesFromPasteboard(sender.draggingPasteboard()) {
-      self.state = .Uploading
+      NSOperationQueue.mainQueue().addOperationWithBlock {
+        self.state = .Uploading
+      }
       
-      iPic.uploadImage(image, handler: { (imageLink, error) in        
+      iPic.uploadImage(image, handler: { (imageLink, error) in
         self.uploadHandler?(imageLink: imageLink, error: error)
       })
     }
