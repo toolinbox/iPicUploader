@@ -47,7 +47,19 @@ class MainWindowController: NSWindowController {
   }
   
   @IBAction func pasteImages(sender: NSButton!) {
+    let images = iPicUploadHelper.generateImagesFromPasteboard(NSPasteboard.generalPasteboard())
+    guard !images.isEmpty else {
+      let message = NSLocalizedString("Failed to Upload", comment: "Title")
+      let information = "No image in pasteboard."
+      self.showAlert(message, information: information)
+      
+      return
+    }
     
+    for image in images {
+      self.imageView.state = .Uploading
+      iPic.uploadImage(image, handler:uploadHandler)
+    }
   }
   
   // MARK: Helper
@@ -55,16 +67,19 @@ class MainWindowController: NSWindowController {
   private func uploadHandler(imageLink: String?, error: NSError?) {
     NSOperationQueue.mainQueue().addOperationWithBlock {
       if let imageLink = imageLink {
-        self.appendLink(imageLink)
+        self.imageView.state = .Uploaded
+        if let imageURL = NSURL(string: imageLink) {
+          self.imageView.image = NSImage(contentsOfURL: imageURL)
+        }
+        
+        self.appendLink(imageLink)        
         
       } else if let error = error {
-        let alert = NSAlert()
-        alert.messageText = NSLocalizedString("Failed to Upload", comment: "Title")
-        alert.informativeText = error.localizedDescription
+        self.imageView.state = .Normal
         
-        if let window = self.window {
-          alert.beginSheetModalForWindow(window, completionHandler: nil)
-        }
+        let message = NSLocalizedString("Failed to Upload", comment: "Title")
+        let information = error.localizedDescription
+        self.showAlert(message, information: information)
       }
     }
   }
@@ -100,6 +115,16 @@ class MainWindowController: NSWindowController {
         }
         print(result)
       }
+    }
+  }
+  
+  private func showAlert(message: String, information: String) {
+    let alert = NSAlert()
+    alert.messageText = message
+    alert.informativeText = information
+    
+    if let window = self.window {
+      alert.beginSheetModalForWindow(window, completionHandler: nil)
     }
   }
   

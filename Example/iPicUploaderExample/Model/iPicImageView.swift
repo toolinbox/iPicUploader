@@ -53,15 +53,7 @@ class iPicImageView: NSImageView {
     for image in iPicUploadHelper.generateImagesFromPasteboard(sender.draggingPasteboard()) {
       self.state = .Uploading
       
-      iPic.uploadImage(image, handler: { (imageLink, error) in
-        if imageLink != nil {
-          self.state = .Uploaded
-          self.image = image
-          
-        } else {
-          self.state = .Normal
-        }
-        
+      iPic.uploadImage(image, handler: { (imageLink, error) in        
         self.uploadHandler?(imageLink: imageLink, error: error)
       })
     }
