@@ -27,12 +27,29 @@ public class iPicUploader {
   
   public func uploadImage(imageFilePath: String, handler: iPicUploadHandler) {
     
-    // Generate iPicImage.
     let (theImage, error) = iPicUploadHelper.generateiPicImage(imageFilePath)
     guard let image = theImage else {
       handler(imageLink: nil, error: error)
       return
     }
+    
+    doUploadImage(image, handler: handler)
+  }
+  
+  public func uploadImage(image: NSImage, handler: iPicUploadHandler) {
+    
+    let (theImage, error) = iPicUploadHelper.generateiPicImage(image)
+    guard let image = theImage else {
+      handler(imageLink: nil, error: error)
+      return
+    }
+    
+    doUploadImage(image, handler: handler)
+  }
+  
+  // MARK: Helper
+  
+  private func doUploadImage(image: iPicImage, handler: iPicUploadHandler) {
     
     // Launch iPic if it's not running.
     guard iPicUploadHelper.launchiPic() else {
@@ -59,8 +76,6 @@ public class iPicUploader {
       self.finishUploadImage(uploadResult)
     }
   }
-  
-  // MARK: Helper
   
   private func uploadPendingImages() {
     // NOTE: If write pasteboard too frequently, iPic may miss some image. So upload one by one.
