@@ -12,7 +12,7 @@ import iPicUploader
 enum iPicImageViewState: String {
   case Normal = "NormalStateIcon"
   case Dragging = "DraggingStateIcon"
-  case Uploading = "NSSynchronize"
+  case Uploading = "UploadingStateIcon"
   case Uploaded = "UploadedStateIcon"
 }
 
