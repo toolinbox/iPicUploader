@@ -56,8 +56,8 @@ class MainWindowController: NSWindowController {
   }
   
   @IBAction func pasteImages(sender: NSButton!) {
-    let images = iPicUploadHelper.generateImagesFromPasteboard(NSPasteboard.generalPasteboard())
-    guard !images.isEmpty else {
+    let imageList = iPicUploadHelper.generateImageDataListFrom(NSPasteboard.generalPasteboard())
+    guard !imageList.isEmpty else {
       let message = NSLocalizedString("Failed to Upload", comment: "Title")
       let information = "No image in pasteboard."
       self.showAlert(message, information: information)
@@ -65,9 +65,9 @@ class MainWindowController: NSWindowController {
       return
     }
     
-    for image in images {
+    for imageData in imageList {
       self.imageView.state = .Uploading
-      iPic.uploadImage(image, handler: uploadHandler)
+      iPic.uploadImage(imageData, handler: uploadHandler)
     }
   }
   
