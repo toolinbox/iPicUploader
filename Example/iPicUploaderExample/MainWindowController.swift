@@ -26,18 +26,6 @@ class MainWindowController: NSWindowController {
     
     imageView.state = .Normal
     imageView.uploadHandler = uploadHandler
-    
-//    NSOperationQueue.mainQueue().addOperationWithBlock { 
-//      
-//      //    let imag3FilePath = "/Users/jason/Downloads/avatar.jpeg"
-//      let imageURL = NSURL(string: "https://www.bitgab.com/en/dashboard/img/av2.png")!
-//      if let image = NSImage(contentsOfURL: imageURL) {
-//        //    if let image = NSImage(contentsOfFile: imageFilePath) {
-//        self.imageView.image = image
-//      }
-//    }
-
-//    test()
   }
   
   // MARK: Action
@@ -111,26 +99,6 @@ class MainWindowController: NSWindowController {
     copiedString.appendAttributedString(resultStr)
     copiedString.appendAttributedString(NSAttributedString(string: "\n"))
     uploadResultString = copiedString
-  }
-  
-  private func test() {
-    let fileList = [
-      "/Users/jason/Downloads/1.jpg",
-      //      "/Users/jason/Downloads/TestSource/中文.jpg",
-      //      "/Users/jason/Downloads/TestSource/中文ファ한국~!@#$%^&*()_+`=[]{}|;,.&%< >'.jpg",
-      //      "/Users/jason/Downloads/TestSource/Big.png",
-    ]
-    for imageFilePath in fileList {
-      iPic.uploadImage(imageFilePath) { (imageLink, error) in
-        var result = (NSURL(string: imageFilePath)?.lastPathComponent ?? imageFilePath) + " "
-        if let imageLink = imageLink {
-          result += imageLink
-        } else if let error = error {
-          result += error.localizedDescription
-        }
-        print(result)
-      }
-    }
   }
   
   private func showAlert(message: String, information: String) {
