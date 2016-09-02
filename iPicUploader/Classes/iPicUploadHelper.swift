@@ -41,6 +41,32 @@ class iPicUploadHelper {
     return (image, nil)
   }
   
+  static func generateiPicImage(image: NSImage) -> (iPicImage?, NSError?) {
+    guard let imageData = imageDataOf(image, type: .NSJPEGFileType) else {
+      return (nil, iPicUploadError.CanNotGetImageData) // Should not happen
+    }
+    
+    let image = iPicImage(imageData: imageData)
+    
+    return (image, nil)
+  }
+  
+  static func imageDataOf(image: NSImage, type: NSBitmapImageFileType) -> NSData? {
+    guard let imageData = image.TIFFRepresentation else {
+      return nil
+    }
+    
+    if type == NSBitmapImageFileType.NSTIFFFileType {
+      return imageData
+    }
+    
+    guard let imageRep = NSBitmapImageRep(data: imageData) else {
+      return nil
+    }
+    
+    return imageRep.representationUsingType(type, properties: [:])
+  }
+  
   static func delay(delay:Double, closure:()->()) {
     dispatch_after(
       dispatch_time(

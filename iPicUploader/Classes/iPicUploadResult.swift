@@ -57,7 +57,8 @@ public struct iPicUploadError {
   public static let CanNotLaunchiPic  = iPicUploadError.create(CommonDomain, -1, NSLocalizedString("Can't launch iPic.", comment: "Error"))
   public static let FileInaccessable  = iPicUploadError.create(CommonDomain, -2, NSLocalizedString("File is inaccessable.", comment: "Error"))
   public static let NotImageFile  = iPicUploadError.create(CommonDomain, -3, NSLocalizedString("Not image file.", comment: "Error"))
-  public static let TimeOut  = iPicUploadError.create(CommonDomain, -4, NSLocalizedString("Time out.", comment: "Error"))
+  public static let CanNotGetImageData  = iPicUploadError.create(CommonDomain, -4, NSLocalizedString("Can't get image data.", comment: "Error"))
+  public static let TimeOut  = iPicUploadError.create(CommonDomain, -5, NSLocalizedString("Time out.", comment: "Error"))
   
   // http://developer.qiniu.com/article/developer/response-body.html
   public static let QiniuInvalidToken   = iPicUploadError.create(QiniuDomain, 401, NSLocalizedString("Invalid token.", comment: "Error"))
