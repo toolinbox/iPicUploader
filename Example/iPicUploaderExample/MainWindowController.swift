@@ -13,6 +13,8 @@ class MainWindowController: NSWindowController {
   
   @IBOutlet weak var imageView: iPicImageView!
   
+  dynamic var uploadResultString: NSMutableAttributedString = NSMutableAttributedString(string: "")
+  
   override var windowNibName: String? {
     return "MainWindowController"
   }
@@ -40,11 +42,38 @@ class MainWindowController: NSWindowController {
   
   // MARK: Helper
   
-  func uploadHandler(imageLink: String?, error: NSError?) {
-    print(imageLink)
+  private func uploadHandler(imageLink: String?, error: NSError?) {
+    NSOperationQueue.mainQueue().addOperationWithBlock {
+      if let imageLink = imageLink {
+        self.appendLink(imageLink)
+        
+      } else if let error = error {
+        let alert = NSAlert()
+        alert.messageText = NSLocalizedString("Failed to Upload", comment: "Title")
+        alert.informativeText = error.localizedDescription
+        
+        if let window = self.window {
+          alert.beginSheetModalForWindow(window, completionHandler: nil)
+        }
+      }
+    }
   }
   
-  func test() {
+  private func appendLink(link: String) {
+    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize())]
+    let resultStr = NSMutableAttributedString(string: link, attributes: fontAttr)
+    let attrs = [NSLinkAttributeName: NSString(string: link)]
+    resultStr.addAttributes(attrs, range: NSRange(0..<resultStr.length))
+    
+    // TODO Update the logic to refresh NSTextView
+    let copiedString = NSMutableAttributedString(string: "")
+    copiedString.appendAttributedString(uploadResultString)
+    copiedString.appendAttributedString(resultStr)
+    copiedString.appendAttributedString(NSAttributedString(string: "\n"))
+    uploadResultString = copiedString
+  }
+  
+  private func test() {
     let fileList = [
       "/Users/jason/Downloads/1.jpg",
       //      "/Users/jason/Downloads/TestSource/中文.jpg",
@@ -64,7 +93,7 @@ class MainWindowController: NSWindowController {
     }
   }
   
-  func setWindowOnTop(onTop: Bool) {
+  private func setWindowOnTop(onTop: Bool) {
     NSApp.activateIgnoringOtherApps(onTop)
     window?.hidesOnDeactivate = !onTop
     

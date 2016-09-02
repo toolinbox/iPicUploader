@@ -47,6 +47,15 @@
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <size key="minSize" width="206" height="121"/>
                                     <size key="maxSize" width="463" height="10000000"/>
+                                    <connections>
+                                        <binding destination="-2" name="attributedString" keyPath="self.uploadResultString" id="Pbm-xp-gyg">
+                                            <dictionary key="options">
+                                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,7 +64,7 @@
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CQR-Qj-TXb">
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="CQR-Qj-TXb">
                             <rect key="frame" x="191" y="1" width="16" height="121"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -67,6 +76,7 @@
             </connections>
             <point key="canvasLocation" x="131" y="397"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="zkX-ml-euR"/>
     </objects>
     <resources>
         <image name="NSUser" width="32" height="32"/>
