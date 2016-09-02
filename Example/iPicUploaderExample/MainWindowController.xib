@@ -24,7 +24,7 @@
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bab-rM-GH2" customClass="iPicImageView" customModule="iPicUploaderExample" customModuleProvider="target">
                         <rect key="frame" x="20" y="160" width="208" height="208"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSUser" id="uQv-ci-xat"/>
+                        <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="NSUser" id="uQv-ci-xat"/>
                     </imageView>
                     <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="f5g-Gr-GpX">
                         <rect key="frame" x="20" y="149" width="208" height="5"/>
