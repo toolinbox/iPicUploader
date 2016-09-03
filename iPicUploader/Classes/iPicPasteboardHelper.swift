@@ -13,6 +13,8 @@ public typealias iPicPasteboardHandler = ((NSPasteboard) -> Void)
 public let iPicPasteboardName = "net.toolinbox.ipic.pasteboard"
 public let PasteboardTypeiPicImage = "net.toolinbox.ipic.pasteboard.iPicImage"
 public let PasteboardTypeiPicUploadResult = "net.toolinbox.ipic.pasteboard.iPicUploadResult"
+public let PasteboardTypeiPicUploaderVersion = "net.toolinbox.ipic.pasteboard.iPicUploaderVersion"
+public let PasteboardTypeiPicUploaderVersionResult = "net.toolinbox.ipic.pasteboard.iPicUploaderVersionResult"
 
 let iPicPasteboard = iPicPasteboardHelper.sharedInstance
 
@@ -58,12 +60,29 @@ public class iPicPasteboardHelper {
     return pasteboard.writeObjects([pasteboardItem])
   }
   
+  public func writeiPicUploaderVersionRequest() -> Bool {
+    clearPasteboardContents()
+    
+    let pasteboardItem = NSPasteboardItem()
+    pasteboardItem.setString("", forType: PasteboardTypeiPicUploaderVersion)
+    
+    return pasteboard.writeObjects([pasteboardItem])
+  }
+  
   public func parseUploadResult(pasteboard: NSPasteboard) -> iPicUploadResult? {
     if let type = pasteboard.availableTypeFromArray([PasteboardTypeiPicUploadResult]) {
       if let data = pasteboard.dataForType(type) {
         NSKeyedUnarchiver.setClass(iPicUploadResult.self, forClassName: iPicUploadResult.sharedClassName)
         return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? iPicUploadResult
       }
+    }
+    
+    return nil
+  }
+  
+  public func parseiPicUploaderVersionResult(pasteboard: NSPasteboard) -> Int? {
+    if let versionString = pasteboard.stringForType(PasteboardTypeiPicUploaderVersionResult) {
+      return Int(versionString)
     }
     
     return nil
