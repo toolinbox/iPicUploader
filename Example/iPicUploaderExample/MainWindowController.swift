@@ -23,7 +23,7 @@ class MainWindowController: NSWindowController {
   override func windowDidLoad() {
     super.windowDidLoad()
     
-    setWindowOnTop(true)
+    //setWindowOnTop(true)
     
     imageView.state = .Normal
     imageView.uploadHandler = uploadHandler
