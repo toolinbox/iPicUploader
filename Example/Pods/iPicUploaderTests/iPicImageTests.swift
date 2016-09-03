@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import iPicUploader
+@testable import iPicUploader
 
 class iPicImageTests: XCTestCase {
   
