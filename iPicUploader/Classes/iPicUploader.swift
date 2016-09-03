@@ -17,11 +17,15 @@ public class iPicUploader {
     iPicPasteboard.handler = dealWithUploadResult
   }
   
+  public let version = 1
+  private var versionIniPic: Int?
+  
   private var pendingImages = [String: iPicImage]()
   private let pendingImagesLocker = NSRecursiveLock()
   
   // TODO Change it back to 30 after debug.
   private let uploadTimeoutSeconds: NSTimeInterval = 300
+  private let requestVersionTimeoutSeconds: NSTimeInterval = 3
   
   // MARK: Public Method
   
@@ -71,19 +75,43 @@ public class iPicUploader {
     // Start observing pasteboard.
     iPicPasteboard.startObserving()
     
-    // Start upload.
-    uploadPendingImages()
-    
-    // Remove iPicImage after timeout.
-    iPicUploadHelper.delay(uploadTimeoutSeconds) {
-      let uploadResult = iPicUploadResult(imageLink: nil, error: iPicUploadError.TimeOut)
-      uploadResult.id = image.id
-      self.finishUploadImage(uploadResult)
+    // Check iPicUploader version in iPic
+    if let versionIniPic = versionIniPic {
+      doUploadImage(image, handler: handler, versionIniPic: versionIniPic)
+      
+    } else {
+      // Request iPicUploader version in iPic
+      requestiPicUploaderVersionIniPic()
+      
+      // Remove iPicImage after timeout.
+      iPicUploadHelper.delay(requestVersionTimeoutSeconds) {
+        if let versionIniPic = self.versionIniPic {
+          self.doUploadImage(image, handler: handler, versionIniPic: versionIniPic)
+          
+        } else {
+          self.finishUploadImage(image.id, error: iPicUploadError.iPicIncompatible)
+        }
+      }
+    }
+  }
+  
+  private func doUploadImage(image: iPicImage, handler: iPicUploadHandler, versionIniPic: Int) {
+    if versionIniPic >= version {
+      // Start upload.
+      uploadPendingImages()
+      
+      // Remove iPicImage after timeout.
+      iPicUploadHelper.delay(uploadTimeoutSeconds) {
+        self.finishUploadImage(image.id, error: iPicUploadError.TimeOut)
+      }
+      
+    } else {
+      self.finishUploadImage(image.id, error: iPicUploadError.iPicIncompatible)
     }
   }
   
   private func uploadPendingImages() {
-    // NOTE: If write pasteboard too frequently, iPic may miss some image. So upload one by one.
+    // NOTE: If write pasteboard too frequently, iPic may miss some images. So upload one by one.
     var image: iPicImage?
     
     lock {
@@ -95,6 +123,12 @@ public class iPicUploader {
     if let image = image {
       iPicPasteboard.writeiPicImage(image)
     }
+  }
+  
+  private func finishUploadImage(id: String, error: NSError) {
+    let uploadResult = iPicUploadResult(imageLink: nil, error: error)
+    uploadResult.id = id
+    finishUploadImage(uploadResult)
   }
   
   private func finishUploadImage(uploadResult: iPicUploadResult) {
@@ -127,7 +161,13 @@ public class iPicUploader {
   private func dealWithUploadResult(pasteboard: NSPasteboard) {
     if let uploadResult = iPicPasteboard.parseUploadResult(pasteboard) {
       finishUploadImage(uploadResult)
+    } else if let version = iPicPasteboard.parseiPicUploaderVersionResult(pasteboard) {
+      versionIniPic = version
     }
+  }
+  
+  private func requestiPicUploaderVersionIniPic() {
+    iPicPasteboard.writeiPicUploaderVersionRequest()
   }
   
   private func lock(closure:()->()) {
