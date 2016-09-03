@@ -92,17 +92,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		967DD9311D7ACEB600844689 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				968A23EF1D7812B30024A923 /* Assets.xcassets */,
+				968A23F11D7812B30024A923 /* MainMenu.xib */,
+				968A23F41D7812B30024A923 /* Info.plist */,
+				967DD9301D7ACD2E00844689 /* iPicUploaderExample.entitlements */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		968A23EC1D7812B30024A923 /* iPicUploaderExample */ = {
 			isa = PBXGroup;
 			children = (
-				967DD9301D7ACD2E00844689 /* iPicUploaderExample.entitlements */,
 				96402E2E1D794EB8008E5256 /* Model */,
 				968A23F81D7813470024A923 /* MainWindowController.swift */,
 				968A23F91D7813470024A923 /* MainWindowController.xib */,
 				968A23ED1D7812B30024A923 /* AppDelegate.swift */,
-				968A23EF1D7812B30024A923 /* Assets.xcassets */,
-				968A23F11D7812B30024A923 /* MainMenu.xib */,
-				968A23F41D7812B30024A923 /* Info.plist */,
+				967DD9311D7ACEB600844689 /* Resources */,
 			);
 			path = iPicUploaderExample;
 			sourceTree = "<group>";
