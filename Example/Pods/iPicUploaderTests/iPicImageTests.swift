@@ -12,8 +12,7 @@ import XCTest
 class iPicImageTests: XCTestCase {
   
   func testiPicImage() {
-    let imageFilePath = "/Users/ipic/Downloads/pic.jpg"
-    let image1 = iPicImage(imageFilePath: imageFilePath)
+    let image1 = iPicImage(imageFilePath: UTConstants.imageFilePath)
     XCTAssertTrue(!image1.id.isEmpty)
     XCTAssertEqual(image1.version, 1)
     

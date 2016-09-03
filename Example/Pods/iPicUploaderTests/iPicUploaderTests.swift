@@ -11,27 +11,18 @@ import XCTest
 
 class iPicUploaderTests: XCTestCase {
   var exception: XCTestExpectation?
-  let waitTime: NSTimeInterval = 15
-  var imageFilePath = ""
-  
-  override func setUp() {
-    super.setUp()
-    
-    let bundle = NSBundle(forClass: self.dynamicType)
-    imageFilePath = bundle.pathForResource("iPic", ofType: "png")!
-  }
   
   func testUploadImageByFilePath() {
     exception = expectationWithDescription("testUploadImageByFilePath")
     
-    iPic.uploadImage(imageFilePath) { (imageLink, error) in
+    iPic.uploadImage(UTConstants.imageFilePath) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
       
       self.exception?.fulfill()
     }
     
-    self.waitForExpectationsWithTimeout(waitTime) { (error) in
+    self.waitForExpectationsWithTimeout(UTConstants.waitTime) { (error) in
       XCTAssertNil(error)
     }
   }
@@ -39,7 +30,7 @@ class iPicUploaderTests: XCTestCase {
   func testUploadImageByNSImage() {
     exception = expectationWithDescription("testUploadImageByNSImage")
     
-    let image = NSImage(contentsOfFile: imageFilePath)
+    let image = NSImage(contentsOfFile: UTConstants.imageFilePath)
     iPic.uploadImage(image!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
@@ -47,7 +38,7 @@ class iPicUploaderTests: XCTestCase {
       self.exception?.fulfill()
     }
     
-    self.waitForExpectationsWithTimeout(waitTime) { (error) in
+    self.waitForExpectationsWithTimeout(UTConstants.waitTime) { (error) in
       XCTAssertNil(error)
     }
   }
@@ -55,7 +46,7 @@ class iPicUploaderTests: XCTestCase {
   func testUploadImageByImageData() {
     exception = expectationWithDescription("testUploadImageByImageData")
     
-    let imageData = NSData(contentsOfFile: imageFilePath)
+    let imageData = NSData(contentsOfFile: UTConstants.imageFilePath)
     iPic.uploadImage(imageData!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
@@ -63,7 +54,7 @@ class iPicUploaderTests: XCTestCase {
       self.exception?.fulfill()
     }
     
-    self.waitForExpectationsWithTimeout(waitTime) { (error) in
+    self.waitForExpectationsWithTimeout(UTConstants.waitTime) { (error) in
       XCTAssertNil(error)
     }
   }
