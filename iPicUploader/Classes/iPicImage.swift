@@ -47,8 +47,8 @@ public class iPicImage: NSObject, NSCoding {
     super.init()
     
     id = (aDecoder.decodeObjectForKey(iPicImage.idKey) as? String) ?? ""
-    imageFilePath = (aDecoder.decodeObjectForKey(iPicImage.imageFilePathKey) as? String) ?? ""
-    imageData = (aDecoder.decodeObjectForKey(iPicImage.imageDataKey) as? NSData) ?? nil
+    imageFilePath = aDecoder.decodeObjectForKey(iPicImage.imageFilePathKey) as? String
+    imageData = aDecoder.decodeObjectForKey(iPicImage.imageDataKey) as? NSData
     
     version = aDecoder.decodeIntegerForKey(iPicImage.versionKey)
     json = aDecoder.decodeObjectForKey(iPicImage.jsonKey)
