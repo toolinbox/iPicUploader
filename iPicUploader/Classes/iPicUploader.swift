@@ -68,7 +68,7 @@ public class iPicUploader {
       return
     }
     
-    // Store iPicImage with handler.
+    // Store iPicImage with its handler.
     image.handler = handler
     lock {
       self.pendingImages[image.id] = image
@@ -113,7 +113,6 @@ public class iPicUploader {
   }
   
   private func uploadPendingImages() {
-    // NOTE: If write pasteboard too frequently, iPic may miss some images. So upload one by one.
     var image: iPicImage?
     
     lock {
@@ -144,11 +143,9 @@ public class iPicUploader {
       hasNoPendingImages = self.pendingImages.isEmpty
     }
     
-    // Callback handler in main operate queue.
+    // Callback the handler.
     if image != nil {
-      NSOperationQueue.mainQueue().addOperationWithBlock({ 
         image?.handler?(imageLink: uploadResult.imageLink, error: uploadResult.error)
-      })
     }
     
     if hasNoPendingImages {
