@@ -23,8 +23,7 @@ public class iPicUploader {
   private var pendingImages = [String: iPicImage]()
   private let pendingImagesLocker = NSRecursiveLock()
   
-  // TODO Change it back to 30 after debug.
-  private let uploadTimeoutSeconds: NSTimeInterval = 300
+  private let uploadTimeoutSeconds: NSTimeInterval = 30
   private let requestVersionTimeoutSeconds: NSTimeInterval = 3
   
   // TODO Change it normal download link after latest iPic is online.
