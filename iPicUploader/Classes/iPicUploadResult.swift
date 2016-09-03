@@ -15,9 +15,15 @@ public class iPicUploadResult: NSObject, NSCoding {
   private static let imageLinkKey = "imageLink"
   private static let errorKey = "error"
   
+  private static let versionKey = "version"
+  private static let jsonKey = "json"
+  
   public var id = NSUUID().UUIDString
   public var imageLink: String?
   public var error: NSError?
+  
+  public var version = 1
+  public var json: AnyObject?
   
   public init(imageLink: String?, error: NSError?) {
     super.init()
@@ -34,12 +40,18 @@ public class iPicUploadResult: NSObject, NSCoding {
     id = (aDecoder.decodeObjectForKey(iPicUploadResult.idKey) as? String) ?? ""
     imageLink = (aDecoder.decodeObjectForKey(iPicUploadResult.imageLinkKey) as? String) ?? ""
     error = (aDecoder.decodeObjectForKey(iPicUploadResult.errorKey) as? NSError) ?? nil
+    
+    version = aDecoder.decodeIntegerForKey(iPicUploadResult.versionKey)
+    json = aDecoder.decodeObjectForKey(iPicUploadResult.jsonKey)
   }
   
   public func encodeWithCoder(aCoder: NSCoder) {
     aCoder.encodeObject(id, forKey: iPicUploadResult.idKey)
     aCoder.encodeObject(imageLink, forKey: iPicUploadResult.imageLinkKey)
     aCoder.encodeObject(error, forKey: iPicUploadResult.errorKey)
+    
+    aCoder.encodeInteger(version, forKey: iPicUploadResult.versionKey)
+    aCoder.encodeObject(json, forKey: iPicUploadResult.jsonKey)
   }
 }
 
