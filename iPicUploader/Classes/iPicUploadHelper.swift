@@ -9,21 +9,23 @@
 import Cocoa
 
 public class iPicUploadHelper {
+  private static let iPicBundleIdentifier = "net.toolinbox.ipic"
   
   // MARK: Static Method
   
-  static func isiPicRunning() -> Bool {
-    // TODO
-    return false
-  }
-  
-  static func launchiPic() -> Bool {
-    // TODO
-    guard !isiPicRunning() else {
-      return true
+  static func launchiPic() -> NSError? {
+    if let url = NSWorkspace.sharedWorkspace().URLForApplicationWithBundleIdentifier(iPicBundleIdentifier) {
+      do {
+        try NSWorkspace.sharedWorkspace().launchApplicationAtURL(url, options: NSWorkspaceLaunchOptions.WithoutActivation, configuration: [:])
+        return nil
+        
+      } catch {
+        return iPicUploadError.CanNotLaunchiPic
+      }
+      
+    } else {
+      return iPicUploadError.iPicNotInstalled
     }
-    
-    return true
   }
   
   static func generateiPicImage(imageFilePath: String) -> (iPicImage?, NSError?) {

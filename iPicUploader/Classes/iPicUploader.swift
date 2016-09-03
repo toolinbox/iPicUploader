@@ -56,9 +56,9 @@ public class iPicUploader {
   
   private func doUploadImage(image: iPicImage, handler: iPicUploadHandler) {
     
-    // Launch iPic if it's not running.
-    guard iPicUploadHelper.launchiPic() else {
-      handler(imageLink: nil, error: iPicUploadError.CanNotLaunchiPic)
+    // Launch iPic.
+    if let error = iPicUploadHelper.launchiPic() {
+      handler(imageLink: nil, error: error)
       return
     }
     
