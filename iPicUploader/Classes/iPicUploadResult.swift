@@ -53,7 +53,9 @@ public struct iPicUploadError {
   private static let FlickrDomain = CommonDomain + ".Flickr"
   private static let S3Domain = CommonDomain + ".S3"
   
+  // TODO Clean up all the errors
   public static let Unknown  = iPicUploadError.create(CommonDomain, 0, NSLocalizedString("Unknown error.", comment: "Error"))
+  public static let iPicNotInstalled  = iPicUploadError.create(CommonDomain, -1, NSLocalizedString("iPic isn't installed.", comment: "Error"))
   public static let CanNotLaunchiPic  = iPicUploadError.create(CommonDomain, -1, NSLocalizedString("Can't launch iPic.", comment: "Error"))
   public static let FileInaccessable  = iPicUploadError.create(CommonDomain, -2, NSLocalizedString("File is inaccessable.", comment: "Error"))
   public static let NotImageFile  = iPicUploadError.create(CommonDomain, -3, NSLocalizedString("Not image file.", comment: "Error"))
