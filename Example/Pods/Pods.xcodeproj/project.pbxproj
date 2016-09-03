@@ -19,6 +19,7 @@
 		967DD9711D7AD9D000844689 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */; };
 		967DD9781D7ADB1200844689 /* iPicImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9771D7ADB1200844689 /* iPicImageTests.swift */; };
 		967DD97A1D7AF9B900844689 /* iPicUploadResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9791D7AF9B900844689 /* iPicUploadResultTests.swift */; };
+		967DD97F1D7AFF6100844689 /* iPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 967DD97E1D7AFF6100844689 /* iPic.png */; };
 		9C3985FDBA243E1B9DD7A2E517BDBD77 /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */; };
 		CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 		D8F21E0B9E1CF78E16E3A8B420C3F1BB /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */; };
@@ -62,6 +63,7 @@
 		967DD9701D7AD9D000844689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967DD9771D7ADB1200844689 /* iPicImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageTests.swift; sourceTree = "<group>"; };
 		967DD9791D7AF9B900844689 /* iPicUploadResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicUploadResultTests.swift; sourceTree = "<group>"; };
+		967DD97E1D7AFF6100844689 /* iPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPic.png; path = Resources/iPic.png; sourceTree = "<group>"; };
 		A6D0DCF86077F1C45CC553605670A3AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
 		BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicPasteboardHelper.swift; sourceTree = "<group>"; };
@@ -203,12 +205,21 @@
 		967DD96D1D7AD9D000844689 /* iPicUploaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				967DD97D1D7AFF2400844689 /* Resources */,
 				967DD9771D7ADB1200844689 /* iPicImageTests.swift */,
 				967DD96E1D7AD9D000844689 /* iPicUploaderTests.swift */,
 				967DD9791D7AF9B900844689 /* iPicUploadResultTests.swift */,
 				967DD9701D7AD9D000844689 /* Info.plist */,
 			);
 			path = iPicUploaderTests;
+			sourceTree = "<group>";
+		};
+		967DD97D1D7AFF2400844689 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				967DD97E1D7AFF6100844689 /* iPic.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CDEB7E9023119033449272C721B492B2 /* Targets Support Files */ = {
@@ -342,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967DD97F1D7AFF6100844689 /* iPic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

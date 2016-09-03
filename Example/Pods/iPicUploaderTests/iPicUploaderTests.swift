@@ -12,12 +12,18 @@ import XCTest
 class iPicUploaderTests: XCTestCase {
   var exception: XCTestExpectation?
   let waitTime: NSTimeInterval = 15
+  var imageFilePath = ""
+  
+  override func setUp() {
+    super.setUp()
     
+    let bundle = NSBundle(forClass: self.dynamicType)
+    imageFilePath = bundle.pathForResource("iPic", ofType: "png")!
+  }
+  
   func testUploadImageByFilePath() {
     exception = expectationWithDescription("testUploadImageByFilePath")
     
-    // TODO Change to app's icon
-    let imageFilePath = "/Users/jason/Downloads/avatar.jpeg"
     iPic.uploadImage(imageFilePath) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
@@ -33,8 +39,6 @@ class iPicUploaderTests: XCTestCase {
   func testUploadImageByNSImage() {
     exception = expectationWithDescription("testUploadImageByNSImage")
     
-    //    let image = NSImage(named: "AppIcon")
-    let imageFilePath = "/Users/jason/Downloads/avatar.jpeg"
     let image = NSImage(contentsOfFile: imageFilePath)
     iPic.uploadImage(image!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
@@ -51,8 +55,6 @@ class iPicUploaderTests: XCTestCase {
   func testUploadImageByImageData() {
     exception = expectationWithDescription("testUploadImageByImageData")
     
-    // TODO Change to app's icon
-    let imageFilePath = "/Users/jason/Downloads/avatar.jpeg"
     let imageData = NSData(contentsOfFile: imageFilePath)
     iPic.uploadImage(imageData!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
