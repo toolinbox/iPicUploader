@@ -13,7 +13,15 @@ public class iPicUploadHelper {
   
   // MARK: Static Method
   
+  static func isiPicRunning() -> Bool {
+    return !NSRunningApplication.runningApplicationsWithBundleIdentifier(iPicBundleIdentifier).isEmpty
+  }
+  
   static func launchiPic() -> NSError? {
+    guard !isiPicRunning() else {
+      return nil
+    }
+    
     if let url = NSWorkspace.sharedWorkspace().URLForApplicationWithBundleIdentifier(iPicBundleIdentifier) {
       do {
         try NSWorkspace.sharedWorkspace().launchApplicationAtURL(url, options: NSWorkspaceLaunchOptions.WithoutActivation, configuration: [:])
