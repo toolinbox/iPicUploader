@@ -69,7 +69,7 @@ public struct iPicUploadError {
   
   private static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
   
-  private static func create(_ code: Int, _ description: String) -> NSError {
+  private static func create(code: Int, _ description: String) -> NSError {
     return NSError(domain: iPicUploaderDomain, code: code, userInfo: [NSLocalizedDescriptionKey: description])
   }
 }
