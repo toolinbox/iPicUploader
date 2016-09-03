@@ -15,13 +15,6 @@
 		6015FEE7AF444E0A3B338EFDD20E816A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 		6D5C3D883B67B684097866DEEFFFF6AA /* iPicUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */; };
 		71988728DECC7D6CA5051C9A7A94B4CA /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
-		967DD96F1D7AD9D000844689 /* iPicUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD96E1D7AD9D000844689 /* iPicUploaderTests.swift */; };
-		967DD9711D7AD9D000844689 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */; };
-		967DD9781D7ADB1200844689 /* iPicImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9771D7ADB1200844689 /* iPicImageTests.swift */; };
-		967DD97A1D7AF9B900844689 /* iPicUploadResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9791D7AF9B900844689 /* iPicUploadResultTests.swift */; };
-		967DD97F1D7AFF6100844689 /* iPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 967DD97E1D7AFF6100844689 /* iPic.png */; };
-		967DD9811D7B01B100844689 /* iPicUploadHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9801D7B01B100844689 /* iPicUploadHelperTests.swift */; };
-		967DD9831D7B069400844689 /* UnitTestsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9821D7B069400844689 /* UnitTestsConstants.swift */; };
 		9C3985FDBA243E1B9DD7A2E517BDBD77 /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */; };
 		CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 		D8F21E0B9E1CF78E16E3A8B420C3F1BB /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */; };
@@ -29,13 +22,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		738F9D9052C2269BC2A4B66B5E323A18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 05B7F7C75CFDAA8BAF32E04D548E3A7A;
-			remoteInfo = iPicUploader;
-		};
-		967DD9721D7AD9D000844689 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -60,14 +46,6 @@
 		7D2CEB8D01ECB51A0F8DF56E738997DC /* Pods-iPicUploaderExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPicUploaderExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploader.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		967DD96C1D7AD9D000844689 /* iPicUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPicUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		967DD96E1D7AD9D000844689 /* iPicUploaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPicUploaderTests.swift; sourceTree = "<group>"; };
-		967DD9701D7AD9D000844689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		967DD9771D7ADB1200844689 /* iPicImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageTests.swift; sourceTree = "<group>"; };
-		967DD9791D7AF9B900844689 /* iPicUploadResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicUploadResultTests.swift; sourceTree = "<group>"; };
-		967DD97E1D7AFF6100844689 /* iPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPic.png; path = Resources/iPic.png; sourceTree = "<group>"; };
-		967DD9801D7B01B100844689 /* iPicUploadHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicUploadHelperTests.swift; sourceTree = "<group>"; };
-		967DD9821D7B069400844689 /* UnitTestsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestsConstants.swift; sourceTree = "<group>"; };
 		A6D0DCF86077F1C45CC553605670A3AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
 		BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicPasteboardHelper.swift; sourceTree = "<group>"; };
@@ -94,14 +72,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		967DD9691D7AD9D000844689 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				967DD9711D7AD9D000844689 /* iPicUploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +153,6 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				8BD6619CD43C1AE999C2BDCABB64CE43 /* Development Pods */,
-				967DD96D1D7AD9D000844689 /* iPicUploaderTests */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				D23C68AEA436E8ACF971982FAD40F1B4 /* Products */,
 				CDEB7E9023119033449272C721B492B2 /* Targets Support Files */,
@@ -206,28 +175,6 @@
 			path = iPicUploader;
 			sourceTree = "<group>";
 		};
-		967DD96D1D7AD9D000844689 /* iPicUploaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				967DD97D1D7AFF2400844689 /* Resources */,
-				967DD9821D7B069400844689 /* UnitTestsConstants.swift */,
-				967DD9771D7ADB1200844689 /* iPicImageTests.swift */,
-				967DD96E1D7AD9D000844689 /* iPicUploaderTests.swift */,
-				967DD9801D7B01B100844689 /* iPicUploadHelperTests.swift */,
-				967DD9791D7AF9B900844689 /* iPicUploadResultTests.swift */,
-				967DD9701D7AD9D000844689 /* Info.plist */,
-			);
-			path = iPicUploaderTests;
-			sourceTree = "<group>";
-		};
-		967DD97D1D7AFF2400844689 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				967DD97E1D7AFF6100844689 /* iPic.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		CDEB7E9023119033449272C721B492B2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +188,6 @@
 			children = (
 				D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */,
 				D96D0BC9103D2A3A134FA10E244FB260 /* Pods_iPicUploaderExample.framework */,
-				967DD96C1D7AD9D000844689 /* iPicUploaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,24 +249,6 @@
 			productReference = D96D0BC9103D2A3A134FA10E244FB260 /* Pods_iPicUploaderExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		967DD96B1D7AD9D000844689 /* iPicUploaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 967DD9761D7AD9D000844689 /* Build configuration list for PBXNativeTarget "iPicUploaderTests" */;
-			buildPhases = (
-				967DD9681D7AD9D000844689 /* Sources */,
-				967DD9691D7AD9D000844689 /* Frameworks */,
-				967DD96A1D7AD9D000844689 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				967DD9731D7AD9D000844689 /* PBXTargetDependency */,
-			);
-			name = iPicUploaderTests;
-			productName = iPicUploaderTests;
-			productReference = 967DD96C1D7AD9D000844689 /* iPicUploaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -329,11 +257,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					967DD96B1D7AD9D000844689 = {
-						CreatedOnToolsVersion = 7.3;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -349,21 +272,9 @@
 			targets = (
 				05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */,
 				8764F74149ABB60C0B994D09D5B1639A /* Pods-iPicUploaderExample */,
-				967DD96B1D7AD9D000844689 /* iPicUploaderTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		967DD96A1D7AD9D000844689 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				967DD97F1D7AFF6100844689 /* iPic.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DBD563DABD3946BEBD251D3B67F802A /* Sources */ = {
@@ -387,26 +298,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		967DD9681D7AD9D000844689 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				967DD9781D7ADB1200844689 /* iPicImageTests.swift in Sources */,
-				967DD96F1D7AD9D000844689 /* iPicUploaderTests.swift in Sources */,
-				967DD97A1D7AF9B900844689 /* iPicUploadResultTests.swift in Sources */,
-				967DD9811D7B01B100844689 /* iPicUploadHelperTests.swift in Sources */,
-				967DD9831D7B069400844689 /* UnitTestsConstants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		967DD9731D7AD9D000844689 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */;
-			targetProxy = 967DD9721D7AD9D000844689 /* PBXContainerItemProxy */;
-		};
 		B977F253EE9307722C4EB1DC729D029A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iPicUploader;
@@ -626,56 +520,6 @@
 			};
 			name = Release;
 		};
-		967DD9741D7AD9D000844689 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = iPicUploaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		967DD9751D7AD9D000844689 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = iPicUploaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -705,14 +549,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		967DD9761D7AD9D000844689 /* Build configuration list for PBXNativeTarget "iPicUploaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				967DD9741D7AD9D000844689 /* Debug */,
-				967DD9751D7AD9D000844689 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
