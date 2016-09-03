@@ -11,7 +11,6 @@ import Foundation
 public typealias iPicUploadHandler = (imageLink: String?, error: NSError?) -> ()
 
 public class iPicImage: NSObject, NSCoding {
-  // TODO Test it's needed or not
   public static let sharedClassName: String = "net.toolinbox.iPic.iPicImage"
   
   private static let idKey = "id"
