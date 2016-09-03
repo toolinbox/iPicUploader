@@ -88,7 +88,25 @@ class MainWindowController: NSWindowController {
         
         let message = NSLocalizedString("Failed to Upload", comment: "Title")
         let information = error.localizedDescription
-        self.showAlert(message, information: information)
+        
+        if error == iPicUploadError.iPicNotInstalled || error == iPicUploadError.iPicIncompatible {
+          let alert = NSAlert()
+          alert.messageText = message
+          alert.informativeText = information
+          
+          alert.addButtonWithTitle(NSLocalizedString("Download iPic", comment: "Title"))
+          alert.addButtonWithTitle(NSLocalizedString("Cancel", comment: "Title"))
+          
+          alert.beginSheetModalForWindow(self.window!, completionHandler: { (response) in
+            if response == NSAlertFirstButtonReturn {
+              if let url = NSURL(string: iPic.iPicDownloadLink) {
+                NSWorkspace.sharedWorkspace().openURL(url)
+              }
+            }
+          })
+        } else {
+          self.showAlert(message, information: information)
+        }
       }
     }
   }
