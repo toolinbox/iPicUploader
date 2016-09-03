@@ -28,6 +28,7 @@
 		96402E2F1D794EC7008E5256 /* iPicImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageView.swift; sourceTree = "<group>"; };
 		96402E311D796280008E5256 /* iPicUploader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iPicUploader.framework; path = "../../../../../../BigData/XCode/DerivedData/iPicUploader-bfkiawblvsvrpxfhpmpcrdctabuu/Build/Products/Debug/iPicUploader/iPicUploader.framework"; sourceTree = "<group>"; };
 		96402E361D79629B008E5256 /* Pods_iPicUploaderExample.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_iPicUploaderExample.framework; path = "../../../../../../BigData/XCode/DerivedData/iPicUploader-bfkiawblvsvrpxfhpmpcrdctabuu/Build/Products/Debug/Pods_iPicUploaderExample.framework"; sourceTree = "<group>"; };
+		967DD9301D7ACD2E00844689 /* iPicUploaderExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iPicUploaderExample.entitlements; sourceTree = "<group>"; };
 		968A23EB1D7812B30024A923 /* iPicUploaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPicUploaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A23ED1D7812B30024A923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968A23EF1D7812B30024A923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		968A23EC1D7812B30024A923 /* iPicUploaderExample */ = {
 			isa = PBXGroup;
 			children = (
+				967DD9301D7ACD2E00844689 /* iPicUploaderExample.entitlements */,
 				96402E2E1D794EB8008E5256 /* Model */,
 				968A23F81D7813470024A923 /* MainWindowController.swift */,
 				968A23F91D7813470024A923 /* MainWindowController.xib */,
@@ -164,6 +166,11 @@
 				TargetAttributes = {
 					968A23EA1D7812B30024A923 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -359,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = iPicUploaderExample/iPicUploaderExample.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -382,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = iPicUploaderExample/iPicUploaderExample.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
