@@ -27,6 +27,9 @@ public class iPicUploader {
   private let uploadTimeoutSeconds: NSTimeInterval = 300
   private let requestVersionTimeoutSeconds: NSTimeInterval = 3
   
+  // TODO Change it normal download link after latest iPic is online.
+  public let iPicDownloadLink = "http://toolinbox.net/html/DownloadiPicWithService.html"
+  
   // MARK: Public Method
   
   public func uploadImage(imageFilePath: String, handler: iPicUploadHandler) {
