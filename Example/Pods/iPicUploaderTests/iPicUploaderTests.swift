@@ -7,29 +7,62 @@
 //
 
 import XCTest
+@testable import iPicUploader
 
 class iPicUploaderTests: XCTestCase {
+  var exception: XCTestExpectation?
+  let waitTime: NSTimeInterval = 15
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  func testUploadImageByFilePath() {
+    exception = expectationWithDescription("testUploadImageByFilePath")
+    
+    // TODO Change to app's icon
+    let imageFilePath = "/Users/jason/Downloads/avatar.jpeg"
+    iPic.uploadImage(imageFilePath) { (imageLink, error) in
+      XCTAssertNotNil(imageLink)
+      XCTAssertNil(error)
+      
+      self.exception?.fulfill()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    self.waitForExpectationsWithTimeout(waitTime) { (error) in
+      XCTAssertNil(error)
+    }
+  }
+  
+  func testUploadImageByNSImage() {
+    exception = expectationWithDescription("testUploadImageByNSImage")
+    
+    //    let image = NSImage(named: "AppIcon")
+    let imageFilePath = "/Users/jason/Downloads/avatar.jpeg"
+    let image = NSImage(contentsOfFile: imageFilePath)
+    iPic.uploadImage(image!) { (imageLink, error) in
+      XCTAssertNotNil(imageLink)
+      XCTAssertNil(error)
+      
+      self.exception?.fulfill()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    self.waitForExpectationsWithTimeout(waitTime) { (error) in
+      XCTAssertNil(error)
+    }
+  }
+  
+  func testUploadImageByImageData() {
+    exception = expectationWithDescription("testUploadImageByImageData")
+    
+    // TODO Change to app's icon
+    let imageFilePath = "/Users/jason/Downloads/avatar.jpeg"
+    let imageData = NSData(contentsOfFile: imageFilePath)
+    iPic.uploadImage(imageData!) { (imageLink, error) in
+      XCTAssertNotNil(imageLink)
+      XCTAssertNil(error)
+      
+      self.exception?.fulfill()
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    self.waitForExpectationsWithTimeout(waitTime) { (error) in
+      XCTAssertNil(error)
     }
-    
+  }
 }
