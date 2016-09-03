@@ -11,7 +11,7 @@ import XCTest
 
 class iPicImageTests: XCTestCase {
   
-  func testImageHost() {
+  func testiPicImage() {
     let imageFilePath = "/Users/ipic/Downloads/pic.jpg"
     let image1 = iPicImage(imageFilePath: imageFilePath)
     XCTAssertTrue(!image1.id.isEmpty)
