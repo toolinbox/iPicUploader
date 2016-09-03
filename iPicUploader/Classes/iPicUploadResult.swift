@@ -64,6 +64,7 @@ public struct iPicUploadError {
   public static let FileInaccessable    = iPicUploadError.create(-21, "The file isn't accessable.")
   public static let InvalidImageFile    = iPicUploadError.create(-22, "Invalid image file.")
   public static let InvalidImageHost    = iPicUploadError.create(-31, "Invalid image host.")
+  public static let FailedToUpload      = iPicUploadError.create(-32, "Failed to upload.")
   public static let TimeOut             = iPicUploadError.create(-41, "Time out.")
   
   private static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
