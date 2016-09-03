@@ -28,7 +28,7 @@ public class iPicUploadHelper {
         return nil
         
       } catch {
-        return iPicUploadError.CanNotLaunchiPic
+        return iPicUploadError.iPicFailedToLaunch
       }
       
     } else {
@@ -42,7 +42,7 @@ public class iPicUploadHelper {
     }
     
     guard let _ = NSImage(data: data) else {
-      return (nil, iPicUploadError.NotImageFile)
+      return (nil, iPicUploadError.InvalidImageFile)
     }
     
     let image = iPicImage(imageFilePath: imageFilePath)
@@ -53,7 +53,7 @@ public class iPicUploadHelper {
   
   static func generateiPicImage(image: NSImage) -> (iPicImage?, NSError?) {
     guard let imageData = imageDataOf(image, type: .NSJPEGFileType) else {
-      return (nil, iPicUploadError.CanNotGetImageData) // Should not happen
+      return (nil, iPicUploadError.Unknown) // Should not happen
     }
     
     let image = iPicImage(imageData: imageData)

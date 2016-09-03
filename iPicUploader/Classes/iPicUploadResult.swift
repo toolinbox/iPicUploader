@@ -38,8 +38,8 @@ public class iPicUploadResult: NSObject, NSCoding {
     super.init()
     
     id = (aDecoder.decodeObjectForKey(iPicUploadResult.idKey) as? String) ?? ""
-    imageLink = (aDecoder.decodeObjectForKey(iPicUploadResult.imageLinkKey) as? String) ?? ""
-    error = (aDecoder.decodeObjectForKey(iPicUploadResult.errorKey) as? NSError) ?? nil
+    imageLink = aDecoder.decodeObjectForKey(iPicUploadResult.imageLinkKey) as? String
+    error = aDecoder.decodeObjectForKey(iPicUploadResult.errorKey) as? NSError
     
     version = aDecoder.decodeIntegerForKey(iPicUploadResult.versionKey)
     json = aDecoder.decodeObjectForKey(iPicUploadResult.jsonKey)
@@ -56,51 +56,19 @@ public class iPicUploadResult: NSObject, NSCoding {
 }
 
 public struct iPicUploadError {
-  private static let CommonDomain = "net.toolinbox.ipic"
-  private static let WeiboDomain = CommonDomain + ".Weibo"
-  private static let QiniuDomain = CommonDomain + ".Qiniu"
-  private static let UpYunDomain = CommonDomain + ".UpYun"
-  private static let AliOSSDomain = CommonDomain + ".AliOSS"
-  private static let ImgurDomain = CommonDomain + ".Imgur"
-  private static let FlickrDomain = CommonDomain + ".Flickr"
-  private static let S3Domain = CommonDomain + ".S3"
   
-  // TODO Clean up all the errors
-  public static let Unknown  = iPicUploadError.create(CommonDomain, 0, NSLocalizedString("Unknown error.", comment: "Error"))
-  public static let iPicNotInstalled  = iPicUploadError.create(CommonDomain, -1, NSLocalizedString("iPic isn't installed.", comment: "Error"))
-  public static let CanNotLaunchiPic  = iPicUploadError.create(CommonDomain, -1, NSLocalizedString("Can't launch iPic.", comment: "Error"))
-  public static let iPicIncompatible  = iPicUploadError.create(CommonDomain, -4, NSLocalizedString("iPic isn't compatible.", comment: "Error"))
-  public static let FileInaccessable  = iPicUploadError.create(CommonDomain, -2, NSLocalizedString("File is inaccessable.", comment: "Error"))
-  public static let NotImageFile  = iPicUploadError.create(CommonDomain, -3, NSLocalizedString("Not image file.", comment: "Error"))
-  public static let CanNotGetImageData  = iPicUploadError.create(CommonDomain, -4, NSLocalizedString("Can't get image data.", comment: "Error"))
-  public static let TimeOut  = iPicUploadError.create(CommonDomain, -5, NSLocalizedString("Time out.", comment: "Error"))
+  public static let Unknown             = iPicUploadError.create(0, "Unknown error.")
+  public static let iPicNotInstalled    = iPicUploadError.create(-11, "iPic wasn't installed.")
+  public static let iPicFailedToLaunch  = iPicUploadError.create(-12, "Failed to launch iPic.")
+  public static let iPicIncompatible    = iPicUploadError.create(-13, "iPic isn't compatible.")
+  public static let FileInaccessable    = iPicUploadError.create(-21, "The file isn't accessable.")
+  public static let InvalidImageFile    = iPicUploadError.create(-22, "Invalid image file.")
+  public static let InvalidImageHost    = iPicUploadError.create(-31, "Invalid image host.")
+  public static let TimeOut             = iPicUploadError.create(-41, "Time out.")
   
-  // http://developer.qiniu.com/article/developer/response-body.html
-  public static let QiniuInvalidToken   = iPicUploadError.create(QiniuDomain, 401, NSLocalizedString("Invalid token.", comment: "Error"))
-  public static let QiniuBucketNotExist = iPicUploadError.create(QiniuDomain, 631, NSLocalizedString("Bucket doesn't exist.", comment: "Error"))
+  private static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
   
-  // http://docs.upyun.com/api/errno/
-  public static let UpYunAuthorizationFailed  = iPicUploadError.create(UpYunDomain, 40100005, NSLocalizedString("Authorization failed.", comment: "Error"))
-  public static let UpYunBucketNotExist       = iPicUploadError.create(UpYunDomain, 40100012, NSLocalizedString("Bucket doesn't exist.", comment: "Error"))
-  public static let UpYunUserNotExist         = iPicUploadError.create(UpYunDomain, 40100006, NSLocalizedString("Operator doesn't exist.", comment: "Error"))
-  public static let UpYunUserNeedPermission   = iPicUploadError.create(UpYunDomain, 40100017, NSLocalizedString("Operator needs permission.", comment: "Error"))
-  
-  // https://help.aliyun.com/knowledge_detail/39597.html
-  public static let AliOSSAccessDenied     = iPicUploadError.create(AliOSSDomain, 403, NSLocalizedString("No Permission.", comment: "Error"))
-  public static let AliOSSInvalidAccessKey = iPicUploadError.create(AliOSSDomain, 403, NSLocalizedString("Invalid access key.", comment: "Error"))
-  public static let AliOSSNoSuchBucket     = iPicUploadError.create(AliOSSDomain, 404, NSLocalizedString("Bucket doesn't exist.", comment: "Error"))
-  
-  // https://api.imgur.com/errorhandling
-  public static let ImgurInvalidToken   = iPicUploadError.create(ImgurDomain, 403, NSLocalizedString("Invalid token.", comment: "Error"))
-  
-  // https://www.flickr.com/services/api/upload.api.html
-  public static let FlickrInvalidToken   = iPicUploadError.create(FlickrDomain, 98, NSLocalizedString("Invalid token.", comment: "Error"))
-  
-  // http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
-  public static let S3AccessDenied     = iPicUploadError.create(S3Domain, 403, NSLocalizedString("No Permission.", comment: "Error"))
-  public static let S3InvalidAccessKey = iPicUploadError.create(S3Domain, 403, NSLocalizedString("Invalid access key.", comment: "Error"))
-  
-  private static func create(domain: String, _ code: Int, _ description: String) -> NSError {
-    return NSError(domain: domain, code: code, userInfo: [NSLocalizedDescriptionKey: description])
+  private static func create(_ code: Int, _ description: String) -> NSError {
+    return NSError(domain: iPicUploaderDomain, code: code, userInfo: [NSLocalizedDescriptionKey: description])
   }
 }
