@@ -10,6 +10,7 @@ import Cocoa
 
 public class iPicUploadHelper {
   private static let iPicBundleIdentifier = "net.toolinbox.ipic"
+  private static let iPicURLScheme = "ipic://"
   
   // MARK: Static Method
   
@@ -22,16 +23,15 @@ public class iPicUploadHelper {
       return nil
     }
     
-    if let url = NSWorkspace.sharedWorkspace().URLForApplicationWithBundleIdentifier(iPicBundleIdentifier) {
-      do {
-        try NSWorkspace.sharedWorkspace().launchApplicationAtURL(url, options: NSWorkspaceLaunchOptions.WithoutActivation, configuration: [:])
+    do {
+      if let schemeURL = NSURL(string: iPicURLScheme) {
+        try NSWorkspace.sharedWorkspace().openURL(schemeURL, options: .WithoutActivation, configuration: [:])
         return nil
-        
-      } catch {
-        return iPicUploadError.iPicFailedToLaunch
+      } else {
+        return iPicUploadError.iPicNotInstalled
       }
       
-    } else {
+    } catch {
       return iPicUploadError.iPicNotInstalled
     }
   }
