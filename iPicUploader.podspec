@@ -1,9 +1,7 @@
 #
-# Be sure to run `pod lib lint iPicUploader.podspec' to ensure this is a
-# valid spec before submitting.
+# Be sure to run `pod lib lint iPicUploader.podspec' to validate before submitting.
 #
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+# Podspec Syntax Reference http://guides.cocoapods.org/syntax/podspec.html
 #
 
 Pod::Spec.new do |s|
@@ -36,12 +34,4 @@ iPicUploader also includes a full example. It shows how to use iPicUploader to u
   s.osx.deployment_target = "10.11"
 
   s.source_files = 'iPicUploader/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'iPicUploader' => ['iPicUploader/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
