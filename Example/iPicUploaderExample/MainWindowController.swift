@@ -23,8 +23,6 @@ class MainWindowController: NSWindowController {
   override func windowDidLoad() {
     super.windowDidLoad()
     
-    //setWindowOnTop(true)
-    
     imageView.state = .Normal
     imageView.uploadHandler = uploadHandler
     
@@ -131,13 +129,5 @@ class MainWindowController: NSWindowController {
     if let window = self.window {
       alert.beginSheetModalForWindow(window, completionHandler: nil)
     }
-  }
-  
-  private func setWindowOnTop(onTop: Bool) {
-    NSApp.activateIgnoringOtherApps(onTop)
-    window?.hidesOnDeactivate = !onTop
-    
-    let level = onTop ? CGWindowLevelKey.FloatingWindowLevelKey : CGWindowLevelKey.BaseWindowLevelKey
-    window?.level = Int(CGWindowLevelForKey(level))
   }
 }
