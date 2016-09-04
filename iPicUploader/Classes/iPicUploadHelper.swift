@@ -24,13 +24,9 @@ public class iPicUploadHelper {
     }
     
     do {
-      if let schemeURL = NSURL(string: iPicURLScheme) {
-        try NSWorkspace.sharedWorkspace().openURL(schemeURL, options: .WithoutActivation, configuration: [:])
-        return nil
-      } else {
-        return iPicUploadError.iPicNotInstalled
-      }
-      
+      let schemeURL = NSURL(string: iPicURLScheme)!
+      try NSWorkspace.sharedWorkspace().openURL(schemeURL, options: .WithoutActivation, configuration: [:])
+      return nil
     } catch {
       return iPicUploadError.iPicNotInstalled
     }
