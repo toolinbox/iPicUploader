@@ -9,8 +9,9 @@ iPic could automatically upload images and save Markdown links on macOS.
 - Upload copied images with shortcut [Shift + Command + U].
 - Support Imgur, Flickr, Amazon S3 and other image hosts.
 - Support image link of Markdown format.
+- [Video introduction](http://toolinbox.net/en/iPic/)
 
-Video introduction: http://toolinbox.net/en/iPic/
+[Download iPic](https://itunes.apple.com/app/id1101244278?ls=1&mt=12) and have a try.
 
 # iPicUploader
 
@@ -30,7 +31,7 @@ iPic.uploadImage(imageFilePath, handler: { (imageLink, error) in
 	} else if let error = error {
 		// Some error happened
 	}
- })
+})
 
 ```
 
@@ -47,7 +48,7 @@ iPic.uploadImage(imageData, handler: { (imageLink, error) in
 	} else if let error = error {
 		// Some error happened
 	}
- })
+})
 
 ```
 
@@ -64,7 +65,7 @@ iPic.uploadImage(image, handler: { (imageLink, error) in
 	} else if let error = error {
 		// Some error happened
 	}
- })
+})
 
 ```
 
