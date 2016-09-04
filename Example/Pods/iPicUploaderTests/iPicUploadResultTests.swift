@@ -32,8 +32,7 @@ class iPicUploadResultTests: XCTestCase {
   func testiPicUploadError() {
     XCTAssertEqual(iPicUploadError.Unknown.code, -1)
     XCTAssertEqual(iPicUploadError.iPicNotInstalled.code, -11)
-    XCTAssertEqual(iPicUploadError.iPicFailedToLaunch.code, -12)
-    XCTAssertEqual(iPicUploadError.iPicIncompatible.code, -13)
+    XCTAssertEqual(iPicUploadError.iPicIncompatible.code, -12)
     XCTAssertEqual(iPicUploadError.FileInaccessable.code, -21)
     XCTAssertEqual(iPicUploadError.InvalidImageFile.code, -22)
     XCTAssertEqual(iPicUploadError.InvalidImageHost.code, -31)
