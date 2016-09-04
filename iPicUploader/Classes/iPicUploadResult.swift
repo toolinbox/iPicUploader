@@ -59,8 +59,7 @@ public struct iPicUploadError {
   
   public static let Unknown             = iPicUploadError.create(-1, "Unknown error.")
   public static let iPicNotInstalled    = iPicUploadError.create(-11, "iPic wasn't installed.")
-  public static let iPicFailedToLaunch  = iPicUploadError.create(-12, "Failed to launch iPic.")
-  public static let iPicIncompatible    = iPicUploadError.create(-13, "iPic isn't compatible.")
+  public static let iPicIncompatible    = iPicUploadError.create(-12, "iPic isn't compatible.")
   public static let FileInaccessable    = iPicUploadError.create(-21, "The file isn't accessable.")
   public static let InvalidImageFile    = iPicUploadError.create(-22, "Invalid image file.")
   public static let InvalidImageHost    = iPicUploadError.create(-31, "Invalid image host.")
