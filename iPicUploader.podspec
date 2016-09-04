@@ -6,7 +6,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'iPicUploader'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'iPicUploader could help you to upload images by iPic on macOS.'
   s.description      = <<-DESC
 iPic could automatically upload images and save Markdown links on macOS.
