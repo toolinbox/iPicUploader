@@ -1,6 +1,6 @@
+
 use_frameworks!
+
 target 'iPicUploaderExample' do
   pod 'iPicUploader', :path => '../'
-  
-  
 end
