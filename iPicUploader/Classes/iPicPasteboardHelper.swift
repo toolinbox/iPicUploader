@@ -10,11 +10,11 @@ import Cocoa
 
 internal typealias iPicPasteboardHandler = ((NSPasteboard) -> Void)
 
-internal let iPicPasteboardName = "net.toolinbox.ipic.pasteboard"
-internal let PasteboardTypeiPicImage = "net.toolinbox.ipic.pasteboard.iPicImage"
-internal let PasteboardTypeiPicUploadResult = "net.toolinbox.ipic.pasteboard.iPicUploadResult"
-internal let PasteboardTypeiPicUploaderVersion = "net.toolinbox.ipic.pasteboard.iPicUploaderVersion"
-internal let PasteboardTypeiPicUploaderVersionResult = "net.toolinbox.ipic.pasteboard.iPicUploaderVersionResult"
+public let iPicPasteboardName = "net.toolinbox.ipic.pasteboard"
+public let PasteboardTypeiPicImage = "net.toolinbox.ipic.pasteboard.iPicImage"
+public let PasteboardTypeiPicUploadResult = "net.toolinbox.ipic.pasteboard.iPicUploadResult"
+public let PasteboardTypeiPicUploaderVersion = "net.toolinbox.ipic.pasteboard.iPicUploaderVersion"
+public let PasteboardTypeiPicUploaderVersionResult = "net.toolinbox.ipic.pasteboard.iPicUploaderVersionResult"
 
 internal let iPicPasteboard = iPicPasteboardHelper.sharedInstance
 

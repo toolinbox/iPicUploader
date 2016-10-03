@@ -19,7 +19,7 @@ public class iPicUploader {
     iPicPasteboard.handler = dealWithUploadResult
   }
   
-  internal let version = 1
+  public let version = 1
   private var versionIniPic: Int?
   
   private var pendingImages = [String: iPicImage]()

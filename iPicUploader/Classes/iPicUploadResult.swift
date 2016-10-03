@@ -8,8 +8,8 @@
 
 import Foundation
 
-internal class iPicUploadResult: NSObject, NSCoding {
-  internal static let sharedClassName: String = "net.toolinbox.iPic.iPicUploadResult"
+public class iPicUploadResult: NSObject, NSCoding {
+  public static let sharedClassName: String = "net.toolinbox.iPic.iPicUploadResult"
   
   private static let idKey = "id"
   private static let imageLinkKey = "imageLink"
@@ -18,14 +18,14 @@ internal class iPicUploadResult: NSObject, NSCoding {
   private static let versionKey = "version"
   private static let jsonKey = "json"
   
-  internal var id = UUID().uuidString
-  internal var imageLink: String?
-  internal var error: NSError?
+  public var id = UUID().uuidString
+  public var imageLink: String?
+  public var error: NSError?
   
-  internal var version = 1
-  internal var json: AnyObject?
+  public var version = 1
+  public var json: Any?
   
-  internal init(imageLink: String?, error: NSError?) {
+  public init(imageLink: String?, error: NSError?) {
     super.init()
     
     self.imageLink = imageLink
@@ -34,7 +34,7 @@ internal class iPicUploadResult: NSObject, NSCoding {
   
   // MARK: - NSCoding
   
-  internal required init?(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     super.init()
     
     id = (aDecoder.decodeObject(forKey: iPicUploadResult.idKey) as? String) ?? ""
@@ -45,7 +45,7 @@ internal class iPicUploadResult: NSObject, NSCoding {
     json = aDecoder.decodeObject(forKey: iPicUploadResult.jsonKey) as AnyObject?
   }
   
-  internal func encode(with aCoder: NSCoder) {
+  public func encode(with aCoder: NSCoder) {
     aCoder.encode(id, forKey: iPicUploadResult.idKey)
     aCoder.encode(imageLink, forKey: iPicUploadResult.imageLinkKey)
     aCoder.encode(error, forKey: iPicUploadResult.errorKey)

@@ -9,7 +9,7 @@
 import Foundation
 
 public class iPicImage: NSObject, NSCoding {
-  internal static let sharedClassName: String = "net.toolinbox.iPic.iPicImage"
+  public static let sharedClassName: String = "net.toolinbox.iPic.iPicImage"
   
   private static let idKey = "id"
   private static let imageFilePathKey = "imageFilePath"
@@ -18,22 +18,22 @@ public class iPicImage: NSObject, NSCoding {
   private static let versionKey = "version"
   private static let jsonKey = "json"
   
-  internal var id = UUID().uuidString
-  internal var imageFilePath: String?
-  internal var imageData: Data?
+  public var id = UUID().uuidString
+  public var imageFilePath: String?
+  public var imageData: Data?
   
-  internal var version = 1
-  internal var json: AnyObject?
+  public var version = 1
+  public var json: Any?
   
-  internal var handler: iPicUploadHandler?
+  public var handler: iPicUploadHandler?
   
-  internal init(imageFilePath: String) {
+  public init(imageFilePath: String) {
     super.init()
     
     self.imageFilePath = imageFilePath
   }
   
-  internal init(imageData: Data) {
+  public init(imageData: Data) {
     super.init()
     
     self.imageData = imageData
