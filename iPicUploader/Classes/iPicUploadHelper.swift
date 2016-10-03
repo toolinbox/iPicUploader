@@ -8,17 +8,17 @@
 
 import Cocoa
 
-open class iPicUploadHelper {
-  fileprivate static let iPicBundleIdentifier = "net.toolinbox.ipic"
-  fileprivate static let iPicURLScheme = "ipic://"
+public class iPicUploadHelper {
+  private static let iPicBundleIdentifier = "net.toolinbox.ipic"
+  private static let iPicURLScheme = "ipic://"
   
   // MARK: Static Method
   
-  static func isiPicRunning() -> Bool {
+  internal static func isiPicRunning() -> Bool {
     return !NSRunningApplication.runningApplications(withBundleIdentifier: iPicBundleIdentifier).isEmpty
   }
   
-  static func launchiPic() -> NSError? {
+  internal static func launchiPic() -> NSError? {
     guard !isiPicRunning() else {
       return nil
     }
@@ -32,7 +32,7 @@ open class iPicUploadHelper {
     }
   }
   
-  static func generateiPicImage(_ imageFilePath: String) -> (iPicImage?, NSError?) {
+  public static func generateiPicImage(_ imageFilePath: String) -> (iPicImage?, NSError?) {
     guard let data = try? Data(contentsOf: URL(fileURLWithPath: imageFilePath)) else {
       return (nil, iPicUploadError.FileInaccessable)
     }
@@ -47,7 +47,7 @@ open class iPicUploadHelper {
     return (image, nil)
   }
   
-  static func generateiPicImage(_ image: NSImage) -> (iPicImage?, NSError?) {
+  public static func generateiPicImage(_ image: NSImage) -> (iPicImage?, NSError?) {
     guard let imageData = imageDataOf(image, type: .JPEG) else {
       return (nil, iPicUploadError.Unknown) // Should not happen
     }
@@ -57,7 +57,7 @@ open class iPicUploadHelper {
     return (image, nil)
   }
   
-  static open func generateImageDataListFrom(_ pasteboard: NSPasteboard) -> [Data] {
+  public static func generateImageDataListFrom(_ pasteboard: NSPasteboard) -> [Data] {
     var imageDataList = [Data]()
     
     if let pasteboardItems = pasteboard.pasteboardItems {
@@ -71,7 +71,7 @@ open class iPicUploadHelper {
     return imageDataList
   }
   
-  static fileprivate func generateImageDataFrom(_ pasteboardItem: NSPasteboardItem) -> Data? {
+  private static func generateImageDataFrom(_ pasteboardItem: NSPasteboardItem) -> Data? {
     for type in pasteboardItem.types {
       if let data = pasteboardItem.data(forType: type) {
         if type == String(kUTTypeFileURL) {
@@ -89,7 +89,7 @@ open class iPicUploadHelper {
     return nil
   }
   
-  static func imageDataOf(_ image: NSImage, type: NSBitmapImageFileType) -> Data? {
+  internal static func imageDataOf(_ image: NSImage, type: NSBitmapImageFileType) -> Data? {
     guard let imageData = image.tiffRepresentation else {
       return nil
     }
@@ -105,7 +105,7 @@ open class iPicUploadHelper {
     return imageRep.representation(using: type, properties: [:])
   }
   
-  static func delay(_ delay:Double, closure:@escaping ()->()) {
+  internal static func delay(_ delay:Double, closure:@escaping ()->()) {
     DispatchQueue.main.asyncAfter(
       deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
   }

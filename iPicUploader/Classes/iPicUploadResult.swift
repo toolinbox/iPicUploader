@@ -8,24 +8,24 @@
 
 import Foundation
 
-open class iPicUploadResult: NSObject, NSCoding {
-  open static let sharedClassName: String = "net.toolinbox.iPic.iPicUploadResult"
+internal class iPicUploadResult: NSObject, NSCoding {
+  internal static let sharedClassName: String = "net.toolinbox.iPic.iPicUploadResult"
   
-  fileprivate static let idKey = "id"
-  fileprivate static let imageLinkKey = "imageLink"
-  fileprivate static let errorKey = "error"
+  private static let idKey = "id"
+  private static let imageLinkKey = "imageLink"
+  private static let errorKey = "error"
   
-  fileprivate static let versionKey = "version"
-  fileprivate static let jsonKey = "json"
+  private static let versionKey = "version"
+  private static let jsonKey = "json"
   
-  open var id = UUID().uuidString
-  open var imageLink: String?
-  open var error: NSError?
+  internal var id = UUID().uuidString
+  internal var imageLink: String?
+  internal var error: NSError?
   
-  open var version = 1
-  open var json: AnyObject?
+  internal var version = 1
+  internal var json: AnyObject?
   
-  public init(imageLink: String?, error: NSError?) {
+  internal init(imageLink: String?, error: NSError?) {
     super.init()
     
     self.imageLink = imageLink
@@ -34,7 +34,7 @@ open class iPicUploadResult: NSObject, NSCoding {
   
   // MARK: - NSCoding
   
-  public required init?(coder aDecoder: NSCoder) {
+  internal required init?(coder aDecoder: NSCoder) {
     super.init()
     
     id = (aDecoder.decodeObject(forKey: iPicUploadResult.idKey) as? String) ?? ""
@@ -45,7 +45,7 @@ open class iPicUploadResult: NSObject, NSCoding {
     json = aDecoder.decodeObject(forKey: iPicUploadResult.jsonKey) as AnyObject?
   }
   
-  open func encode(with aCoder: NSCoder) {
+  internal func encode(with aCoder: NSCoder) {
     aCoder.encode(id, forKey: iPicUploadResult.idKey)
     aCoder.encode(imageLink, forKey: iPicUploadResult.imageLinkKey)
     aCoder.encode(error, forKey: iPicUploadResult.errorKey)
@@ -66,9 +66,9 @@ public struct iPicUploadError {
   public static let FailedToUpload      = iPicUploadError.create(-32, "Failed to upload.")
   public static let TimeOut             = iPicUploadError.create(-41, "Time out.")
   
-  fileprivate static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
+  private static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
   
-  fileprivate static func create(_ code: Int, _ description: String) -> NSError {
+  private static func create(_ code: Int, _ description: String) -> NSError {
     return NSError(domain: iPicUploaderDomain, code: code, userInfo: [NSLocalizedDescriptionKey: description])
   }
 }
