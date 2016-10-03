@@ -18,28 +18,28 @@ public let PasteboardTypeiPicUploaderVersionResult = "net.toolinbox.ipic.pastebo
 
 let iPicPasteboard = iPicPasteboardHelper.sharedInstance
 
-public class iPicPasteboardHelper {
+open class iPicPasteboardHelper {
   // Singleton
   static let sharedInstance = iPicPasteboardHelper()
-  private init() {}
+  fileprivate init() {}
   
-  private let pasteboard = NSPasteboard(name: iPicPasteboardName)
+  fileprivate let pasteboard = NSPasteboard(name: iPicPasteboardName)
   
-  private weak var pasteboardObservingTimer: NSTimer?
-  private var pasteboardObservingTimerInterval: NSTimeInterval = 0.75
-  private var pasteboardChangedCount = 0
+  fileprivate weak var pasteboardObservingTimer: Timer?
+  fileprivate var pasteboardObservingTimerInterval: TimeInterval = 0.75
+  fileprivate var pasteboardChangedCount = 0
   
-  public var handler: iPicPasteboardHandler?
+  open var handler: iPicPasteboardHandler?
   
   // MARK: Public Method
   
-  public func startObserving() {
+  open func startObserving() {
     guard pasteboardObservingTimer == nil else {
       return
     }
     
-    pasteboardObservingTimer = NSTimer.scheduledTimerWithTimeInterval(
-      pasteboardObservingTimerInterval,
+    pasteboardObservingTimer = Timer.scheduledTimer(
+      timeInterval: pasteboardObservingTimerInterval,
       target: self,
       selector: #selector(iPicPasteboardHelper.observePasteboard),
       userInfo: nil,
@@ -48,19 +48,19 @@ public class iPicPasteboardHelper {
     pasteboardObservingTimer?.fire()
   }
   
-  public func stopObserving() {
+  open func stopObserving() {
     pasteboardObservingTimer?.invalidate()
     pasteboardObservingTimer = nil
   }
   
-  public func writeiPicImage(image: iPicImage) -> Bool {
+  open func writeiPicImage(_ image: iPicImage) -> Bool {
     clearPasteboardContents()
     
     let pasteboardItem = parseiPicImageToPasteboardItem(image)
     return pasteboard.writeObjects([pasteboardItem])
   }
   
-  public func writeiPicUploaderVersionRequest() -> Bool {
+  open func writeiPicUploaderVersionRequest() -> Bool {
     clearPasteboardContents()
     
     let pasteboardItem = NSPasteboardItem()
@@ -69,19 +69,19 @@ public class iPicPasteboardHelper {
     return pasteboard.writeObjects([pasteboardItem])
   }
   
-  public func parseUploadResult(pasteboard: NSPasteboard) -> iPicUploadResult? {
-    if let type = pasteboard.availableTypeFromArray([PasteboardTypeiPicUploadResult]) {
-      if let data = pasteboard.dataForType(type) {
+  open func parseUploadResult(_ pasteboard: NSPasteboard) -> iPicUploadResult? {
+    if let type = pasteboard.availableType(from: [PasteboardTypeiPicUploadResult]) {
+      if let data = pasteboard.data(forType: type) {
         NSKeyedUnarchiver.setClass(iPicUploadResult.self, forClassName: iPicUploadResult.sharedClassName)
-        return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? iPicUploadResult
+        return NSKeyedUnarchiver.unarchiveObject(with: data) as? iPicUploadResult
       }
     }
     
     return nil
   }
   
-  public func parseiPicUploaderVersionResult(pasteboard: NSPasteboard) -> Int? {
-    if let versionString = pasteboard.stringForType(PasteboardTypeiPicUploaderVersionResult) {
+  open func parseiPicUploaderVersionResult(_ pasteboard: NSPasteboard) -> Int? {
+    if let versionString = pasteboard.string(forType: PasteboardTypeiPicUploaderVersionResult) {
       return Int(versionString)
     }
     
@@ -90,7 +90,7 @@ public class iPicPasteboardHelper {
   
   // MARK: Helper
   
-  @objc private func observePasteboard() {
+  @objc fileprivate func observePasteboard() {
     let count = pasteboard.changeCount
     if pasteboardChangedCount < count {
       pasteboardChangedCount = count
@@ -99,17 +99,17 @@ public class iPicPasteboardHelper {
     }
   }
   
-  private func parseiPicImageToPasteboardItem(image: iPicImage) -> NSPasteboardItem {
+  fileprivate func parseiPicImageToPasteboardItem(_ image: iPicImage) -> NSPasteboardItem {
     let pasteboardItem = NSPasteboardItem()
     
-    NSKeyedArchiver.setClassName(iPicImage.sharedClassName, forClass: iPicImage.self)
-    let data = NSKeyedArchiver.archivedDataWithRootObject(image)
+    NSKeyedArchiver.setClassName(iPicImage.sharedClassName, for: iPicImage.self)
+    let data = NSKeyedArchiver.archivedData(withRootObject: image)
     pasteboardItem.setData(data, forType: PasteboardTypeiPicImage)
     
     return pasteboardItem
   }
   
-  private func clearPasteboardContents() {
+  fileprivate func clearPasteboardContents() {
     pasteboard.clearContents()
   }
 }

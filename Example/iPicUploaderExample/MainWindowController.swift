@@ -27,34 +27,32 @@ class MainWindowController: NSWindowController {
     imageView.uploadHandler = uploadHandler
     
     let attrString = NSAttributedString(string: NSLocalizedString("Image Links:", comment: "Title"))
-    resultTextView.textStorage?.appendAttributedString(attrString)
+    resultTextView.textStorage?.append(attrString)
   }
   
   // MARK: Action
   
-  @IBAction func selectImageFiles(sender: NSButton!) {
+  @IBAction func selectImageFiles(_ sender: NSButton!) {
     let openPanel = NSOpenPanel()
     openPanel.canChooseDirectories = false
     openPanel.canChooseFiles = true
     openPanel.allowsMultipleSelection = true
     openPanel.prompt = NSLocalizedString("Select", comment: "Open Panel")
     
-    openPanel.beginSheetModalForWindow(self.window!) { (response) in
+    openPanel.beginSheetModal(for: self.window!) { (response) in
       if response == NSFileHandlingPanelOKButton {
-        for url in openPanel.URLs {
-          if let imageFilePath = url.path {
-            NSOperationQueue.mainQueue().addOperationWithBlock {
-              self.imageView.state = .Uploading
-            }
-            iPic.uploadImage(imageFilePath, handler: self.uploadHandler)
+        for url in openPanel.urls {
+          OperationQueue.main.addOperation {
+            self.imageView.state = .Uploading
           }
+          iPic.uploadImage(url.path, handler: self.uploadHandler)
         }
       }
     }
   }
   
-  @IBAction func pasteImages(sender: NSButton!) {
-    let imageList = iPicUploadHelper.generateImageDataListFrom(NSPasteboard.generalPasteboard())
+  @IBAction func pasteImages(_ sender: NSButton!) {
+    let imageList = iPicUploadHelper.generateImageDataListFrom(NSPasteboard.general())
     guard !imageList.isEmpty else {
       let message = NSLocalizedString("Failed to Upload", comment: "Title")
       let information = "No image in pasteboard."
@@ -71,12 +69,12 @@ class MainWindowController: NSWindowController {
   
   // MARK: Helper
   
-  private func uploadHandler(imageLink: String?, error: NSError?) {
-    NSOperationQueue.mainQueue().addOperationWithBlock {
+  fileprivate func uploadHandler(_ imageLink: String?, error: NSError?) {
+    OperationQueue.main.addOperation {
       if let imageLink = imageLink {
         self.imageView.state = .Uploaded
-        if let imageURL = NSURL(string: imageLink) {
-          self.imageView.image = NSImage(contentsOfURL: imageURL)
+        if let imageURL = URL(string: imageLink) {
+          self.imageView.image = NSImage(contentsOf: imageURL)
         }
         
         self.appendLink(imageLink)        
@@ -92,13 +90,13 @@ class MainWindowController: NSWindowController {
           alert.messageText = message
           alert.informativeText = information
           
-          alert.addButtonWithTitle(NSLocalizedString("Download iPic", comment: "Title"))
-          alert.addButtonWithTitle(NSLocalizedString("Cancel", comment: "Title"))
+          alert.addButton(withTitle: NSLocalizedString("Download iPic", comment: "Title"))
+          alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "Title"))
           
-          alert.beginSheetModalForWindow(self.window!, completionHandler: { (response) in
+          alert.beginSheetModal(for: self.window!, completionHandler: { (response) in
             if response == NSAlertFirstButtonReturn {
-              if let url = NSURL(string: iPic.iPicDownloadLink) {
-                NSWorkspace.sharedWorkspace().openURL(url)
+              if let url = URL(string: iPic.iPicDownloadLink) {
+                NSWorkspace.shared().open(url)
               }
             }
           })
@@ -109,25 +107,25 @@ class MainWindowController: NSWindowController {
     }
   }
   
-  private func appendLink(link: String) {
-    let fontAttr = [NSFontAttributeName: NSFont.systemFontOfSize(NSFont.systemFontSize() - 2)]
+  fileprivate func appendLink(_ link: String) {
+    let fontAttr = [NSFontAttributeName: NSFont.systemFont(ofSize: NSFont.systemFontSize() - 2)]
     let resultStr = NSMutableAttributedString(string: link, attributes: fontAttr)
     let attrs = [NSLinkAttributeName: NSString(string: link)]
     resultStr.addAttributes(attrs, range: NSRange(0..<resultStr.length))
     
     uploadedIndex += 1
-    resultTextView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\(uploadedIndex): "))
-    resultTextView.textStorage?.appendAttributedString(resultStr)
+    resultTextView.textStorage?.append(NSAttributedString(string: "\n\(uploadedIndex): "))
+    resultTextView.textStorage?.append(resultStr)
     resultTextView.scrollToEndOfDocument(self)
   }
   
-  private func showAlert(message: String, information: String) {
+  fileprivate func showAlert(_ message: String, information: String) {
     let alert = NSAlert()
     alert.messageText = message
     alert.informativeText = information
     
     if let window = self.window {
-      alert.beginSheetModalForWindow(window, completionHandler: nil)
+      alert.beginSheetModal(for: window, completionHandler: nil)
     }
   }
 }

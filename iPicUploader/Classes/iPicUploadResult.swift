@@ -8,22 +8,22 @@
 
 import Foundation
 
-public class iPicUploadResult: NSObject, NSCoding {
-  public static let sharedClassName: String = "net.toolinbox.iPic.iPicUploadResult"
+open class iPicUploadResult: NSObject, NSCoding {
+  open static let sharedClassName: String = "net.toolinbox.iPic.iPicUploadResult"
   
-  private static let idKey = "id"
-  private static let imageLinkKey = "imageLink"
-  private static let errorKey = "error"
+  fileprivate static let idKey = "id"
+  fileprivate static let imageLinkKey = "imageLink"
+  fileprivate static let errorKey = "error"
   
-  private static let versionKey = "version"
-  private static let jsonKey = "json"
+  fileprivate static let versionKey = "version"
+  fileprivate static let jsonKey = "json"
   
-  public var id = NSUUID().UUIDString
-  public var imageLink: String?
-  public var error: NSError?
+  open var id = UUID().uuidString
+  open var imageLink: String?
+  open var error: NSError?
   
-  public var version = 1
-  public var json: AnyObject?
+  open var version = 1
+  open var json: AnyObject?
   
   public init(imageLink: String?, error: NSError?) {
     super.init()
@@ -37,21 +37,21 @@ public class iPicUploadResult: NSObject, NSCoding {
   public required init?(coder aDecoder: NSCoder) {
     super.init()
     
-    id = (aDecoder.decodeObjectForKey(iPicUploadResult.idKey) as? String) ?? ""
-    imageLink = aDecoder.decodeObjectForKey(iPicUploadResult.imageLinkKey) as? String
-    error = aDecoder.decodeObjectForKey(iPicUploadResult.errorKey) as? NSError
+    id = (aDecoder.decodeObject(forKey: iPicUploadResult.idKey) as? String) ?? ""
+    imageLink = aDecoder.decodeObject(forKey: iPicUploadResult.imageLinkKey) as? String
+    error = aDecoder.decodeObject(forKey: iPicUploadResult.errorKey) as? NSError
     
-    version = aDecoder.decodeIntegerForKey(iPicUploadResult.versionKey)
-    json = aDecoder.decodeObjectForKey(iPicUploadResult.jsonKey)
+    version = aDecoder.decodeInteger(forKey: iPicUploadResult.versionKey)
+    json = aDecoder.decodeObject(forKey: iPicUploadResult.jsonKey) as AnyObject?
   }
   
-  public func encodeWithCoder(aCoder: NSCoder) {
-    aCoder.encodeObject(id, forKey: iPicUploadResult.idKey)
-    aCoder.encodeObject(imageLink, forKey: iPicUploadResult.imageLinkKey)
-    aCoder.encodeObject(error, forKey: iPicUploadResult.errorKey)
+  open func encode(with aCoder: NSCoder) {
+    aCoder.encode(id, forKey: iPicUploadResult.idKey)
+    aCoder.encode(imageLink, forKey: iPicUploadResult.imageLinkKey)
+    aCoder.encode(error, forKey: iPicUploadResult.errorKey)
     
-    aCoder.encodeInteger(version, forKey: iPicUploadResult.versionKey)
-    aCoder.encodeObject(json, forKey: iPicUploadResult.jsonKey)
+    aCoder.encode(version, forKey: iPicUploadResult.versionKey)
+    aCoder.encode(json, forKey: iPicUploadResult.jsonKey)
   }
 }
 
@@ -66,9 +66,9 @@ public struct iPicUploadError {
   public static let FailedToUpload      = iPicUploadError.create(-32, "Failed to upload.")
   public static let TimeOut             = iPicUploadError.create(-41, "Time out.")
   
-  private static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
+  fileprivate static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
   
-  private static func create(code: Int, _ description: String) -> NSError {
+  fileprivate static func create(_ code: Int, _ description: String) -> NSError {
     return NSError(domain: iPicUploaderDomain, code: code, userInfo: [NSLocalizedDescriptionKey: description])
   }
 }

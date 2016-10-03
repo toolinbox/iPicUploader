@@ -10,61 +10,61 @@ import Cocoa
 
 public let iPic = iPicUploader.sharedInstance
 
-public class iPicUploader {
+open class iPicUploader {
   // Singleton
-  public static let sharedInstance = iPicUploader()
-  private init() {
+  open static let sharedInstance = iPicUploader()
+  fileprivate init() {
     iPicPasteboard.handler = dealWithUploadResult
   }
   
-  public let version = 1
-  private var versionIniPic: Int?
+  open let version = 1
+  fileprivate var versionIniPic: Int?
   
-  private var pendingImages = [String: iPicImage]()
-  private let pendingImagesLocker = NSRecursiveLock()
+  fileprivate var pendingImages = [String: iPicImage]()
+  fileprivate let pendingImagesLocker = NSRecursiveLock()
   
-  private let uploadTimeoutSeconds: NSTimeInterval = 30
-  private let requestVersionTimeoutSeconds: NSTimeInterval = 3
+  fileprivate let uploadTimeoutSeconds: TimeInterval = 30
+  fileprivate let requestVersionTimeoutSeconds: TimeInterval = 3
   
   // TODO Change it normal download link after latest iPic is online.
-  public let iPicDownloadLink = "http://toolinbox.net/html/DownloadiPicWithService.html"
+  open let iPicDownloadLink = "http://toolinbox.net/html/DownloadiPicWithService.html"
   
   // MARK: Public Method
   
-  public func uploadImage(imageFilePath: String, handler: iPicUploadHandler) {
+  open func uploadImage(_ imageFilePath: String, handler: @escaping iPicUploadHandler) {
     
     let (theImage, error) = iPicUploadHelper.generateiPicImage(imageFilePath)
     guard let image = theImage else {
-      handler(imageLink: nil, error: error)
+      handler(nil, error)
       return
     }
     
     doUploadImage(image, handler: handler)
   }
   
-  public func uploadImage(image: NSImage, handler: iPicUploadHandler) {
+  open func uploadImage(_ image: NSImage, handler: @escaping iPicUploadHandler) {
     
     let (theImage, error) = iPicUploadHelper.generateiPicImage(image)
     guard let image = theImage else {
-      handler(imageLink: nil, error: error)
+      handler(nil, error)
       return
     }
     
     doUploadImage(image, handler: handler)
   }
   
-  public func uploadImage(imageData: NSData, handler: iPicUploadHandler) {    
+  open func uploadImage(_ imageData: Data, handler: @escaping iPicUploadHandler) {
     let image = iPicImage(imageData: imageData)
     doUploadImage(image, handler: handler)
   }
   
   // MARK: Helper
   
-  private func doUploadImage(image: iPicImage, handler: iPicUploadHandler) {
+  fileprivate func doUploadImage(_ image: iPicImage, handler: @escaping iPicUploadHandler) {
     
     // Launch iPic.
     if let error = iPicUploadHelper.launchiPic() {
-      handler(imageLink: nil, error: error)
+      handler(nil, error)
       return
     }
     
@@ -97,7 +97,7 @@ public class iPicUploader {
     }
   }
   
-  private func doUploadImage(image: iPicImage, handler: iPicUploadHandler, versionIniPic: Int) {
+  fileprivate func doUploadImage(_ image: iPicImage, handler: iPicUploadHandler, versionIniPic: Int) {
     if versionIniPic >= version {
       // Start upload.
       uploadPendingImages()
@@ -112,7 +112,7 @@ public class iPicUploader {
     }
   }
   
-  private func uploadPendingImages() {
+  fileprivate func uploadPendingImages() {
     var image: iPicImage?
     
     lock {
@@ -126,13 +126,13 @@ public class iPicUploader {
     }
   }
   
-  private func finishUploadImage(id: String, error: NSError) {
+  fileprivate func finishUploadImage(_ id: String, error: NSError) {
     let uploadResult = iPicUploadResult(imageLink: nil, error: error)
     uploadResult.id = id
     finishUploadImage(uploadResult)
   }
   
-  private func finishUploadImage(uploadResult: iPicUploadResult) {
+  fileprivate func finishUploadImage(_ uploadResult: iPicUploadResult) {
     var image: iPicImage?
     var hasNoPendingImages = false
     
@@ -145,7 +145,7 @@ public class iPicUploader {
     
     // Callback the handler.
     if image != nil {
-        image?.handler?(imageLink: uploadResult.imageLink, error: uploadResult.error)
+        image?.handler?(uploadResult.imageLink, uploadResult.error)
     }
     
     if hasNoPendingImages {
@@ -157,7 +157,7 @@ public class iPicUploader {
     }
   }
   
-  private func dealWithUploadResult(pasteboard: NSPasteboard) {
+  fileprivate func dealWithUploadResult(_ pasteboard: NSPasteboard) {
     if let uploadResult = iPicPasteboard.parseUploadResult(pasteboard) {
       finishUploadImage(uploadResult)
     } else if let version = iPicPasteboard.parseiPicUploaderVersionResult(pasteboard) {
@@ -165,11 +165,11 @@ public class iPicUploader {
     }
   }
   
-  private func requestiPicUploaderVersionIniPic() {
+  fileprivate func requestiPicUploaderVersionIniPic() {
     iPicPasteboard.writeiPicUploaderVersionRequest()
   }
   
-  private func lock(closure:()->()) {
+  fileprivate func lock(_ closure:()->()) {
     pendingImagesLocker.lock()
     closure()
     pendingImagesLocker.unlock()

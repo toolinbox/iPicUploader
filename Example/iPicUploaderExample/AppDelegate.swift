@@ -12,7 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
   var mainWindowController: MainWindowController?
 
-  func applicationDidFinishLaunching(aNotification: NSNotification) {
+  func applicationDidFinishLaunching(aNotification: Notification) {
       
     let mainWindowController = MainWindowController()
     mainWindowController.showWindow(self)

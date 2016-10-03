@@ -8,24 +8,24 @@
 
 import Foundation
 
-public typealias iPicUploadHandler = (imageLink: String?, error: NSError?) -> ()
+public typealias iPicUploadHandler = (_ imageLink: String?, _ error: NSError?) -> ()
 
-public class iPicImage: NSObject, NSCoding {
-  public static let sharedClassName: String = "net.toolinbox.iPic.iPicImage"
+open class iPicImage: NSObject, NSCoding {
+  open static let sharedClassName: String = "net.toolinbox.iPic.iPicImage"
   
-  private static let idKey = "id"
-  private static let imageFilePathKey = "imageFilePath"
-  private static let imageDataKey = "imageData"
+  fileprivate static let idKey = "id"
+  fileprivate static let imageFilePathKey = "imageFilePath"
+  fileprivate static let imageDataKey = "imageData"
   
-  private static let versionKey = "version"
-  private static let jsonKey = "json"
+  fileprivate static let versionKey = "version"
+  fileprivate static let jsonKey = "json"
   
-  public var id = NSUUID().UUIDString
-  public var imageFilePath: String?
-  public var imageData: NSData?
+  open var id = UUID().uuidString
+  open var imageFilePath: String?
+  open var imageData: Data?
   
-  public var version = 1
-  public var json: AnyObject?
+  open var version = 1
+  open var json: AnyObject?
   
   var handler: iPicUploadHandler?
   
@@ -35,7 +35,7 @@ public class iPicImage: NSObject, NSCoding {
     self.imageFilePath = imageFilePath
   }
   
-  public init(imageData: NSData) {
+  public init(imageData: Data) {
     super.init()
     
     self.imageData = imageData
@@ -46,20 +46,20 @@ public class iPicImage: NSObject, NSCoding {
   public required init?(coder aDecoder: NSCoder) {
     super.init()
     
-    id = (aDecoder.decodeObjectForKey(iPicImage.idKey) as? String) ?? ""
-    imageFilePath = aDecoder.decodeObjectForKey(iPicImage.imageFilePathKey) as? String
-    imageData = aDecoder.decodeObjectForKey(iPicImage.imageDataKey) as? NSData
+    id = (aDecoder.decodeObject(forKey: iPicImage.idKey) as? String) ?? ""
+    imageFilePath = aDecoder.decodeObject(forKey: iPicImage.imageFilePathKey) as? String
+    imageData = aDecoder.decodeObject(forKey: iPicImage.imageDataKey) as? Data
     
-    version = aDecoder.decodeIntegerForKey(iPicImage.versionKey)
-    json = aDecoder.decodeObjectForKey(iPicImage.jsonKey)
+    version = aDecoder.decodeInteger(forKey: iPicImage.versionKey)
+    json = aDecoder.decodeObject(forKey: iPicImage.jsonKey) as AnyObject?
   }
   
-  public func encodeWithCoder(aCoder: NSCoder) {
-    aCoder.encodeObject(id, forKey: iPicImage.idKey)
-    aCoder.encodeObject(imageFilePath, forKey: iPicImage.imageFilePathKey)
-    aCoder.encodeObject(imageData, forKey: iPicImage.imageDataKey)
+  open func encode(with aCoder: NSCoder) {
+    aCoder.encode(id, forKey: iPicImage.idKey)
+    aCoder.encode(imageFilePath, forKey: iPicImage.imageFilePathKey)
+    aCoder.encode(imageData, forKey: iPicImage.imageDataKey)
     
-    aCoder.encodeInteger(version, forKey: iPicImage.versionKey)
-    aCoder.encodeObject(json, forKey: iPicImage.jsonKey)
+    aCoder.encode(version, forKey: iPicImage.versionKey)
+    aCoder.encode(json, forKey: iPicImage.jsonKey)
   }
 }

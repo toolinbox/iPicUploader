@@ -8,14 +8,14 @@
 
 import Cocoa
 
-public class iPicUploadHelper {
-  private static let iPicBundleIdentifier = "net.toolinbox.ipic"
-  private static let iPicURLScheme = "ipic://"
+open class iPicUploadHelper {
+  fileprivate static let iPicBundleIdentifier = "net.toolinbox.ipic"
+  fileprivate static let iPicURLScheme = "ipic://"
   
   // MARK: Static Method
   
   static func isiPicRunning() -> Bool {
-    return !NSRunningApplication.runningApplicationsWithBundleIdentifier(iPicBundleIdentifier).isEmpty
+    return !NSRunningApplication.runningApplications(withBundleIdentifier: iPicBundleIdentifier).isEmpty
   }
   
   static func launchiPic() -> NSError? {
@@ -24,16 +24,16 @@ public class iPicUploadHelper {
     }
     
     do {
-      let schemeURL = NSURL(string: iPicURLScheme)!
-      try NSWorkspace.sharedWorkspace().openURL(schemeURL, options: .WithoutActivation, configuration: [:])
+      let schemeURL = URL(string: iPicURLScheme)!
+      try NSWorkspace.shared().open(schemeURL, options: .withoutActivation, configuration: [:])
       return nil
     } catch {
       return iPicUploadError.iPicNotInstalled
     }
   }
   
-  static func generateiPicImage(imageFilePath: String) -> (iPicImage?, NSError?) {
-    guard let data = NSData(contentsOfFile: imageFilePath) else {
+  static func generateiPicImage(_ imageFilePath: String) -> (iPicImage?, NSError?) {
+    guard let data = try? Data(contentsOf: URL(fileURLWithPath: imageFilePath)) else {
       return (nil, iPicUploadError.FileInaccessable)
     }
     
@@ -47,8 +47,8 @@ public class iPicUploadHelper {
     return (image, nil)
   }
   
-  static func generateiPicImage(image: NSImage) -> (iPicImage?, NSError?) {
-    guard let imageData = imageDataOf(image, type: .NSJPEGFileType) else {
+  static func generateiPicImage(_ image: NSImage) -> (iPicImage?, NSError?) {
+    guard let imageData = imageDataOf(image, type: .JPEG) else {
       return (nil, iPicUploadError.Unknown) // Should not happen
     }
     
@@ -57,8 +57,8 @@ public class iPicUploadHelper {
     return (image, nil)
   }
   
-  static public func generateImageDataListFrom(pasteboard: NSPasteboard) -> [NSData] {
-    var imageDataList = [NSData]()
+  static open func generateImageDataListFrom(_ pasteboard: NSPasteboard) -> [Data] {
+    var imageDataList = [Data]()
     
     if let pasteboardItems = pasteboard.pasteboardItems {
       for pasteboardItem in pasteboardItems {
@@ -71,12 +71,12 @@ public class iPicUploadHelper {
     return imageDataList
   }
   
-  static private func generateImageDataFrom(pasteboardItem: NSPasteboardItem) -> NSData? {
+  static fileprivate func generateImageDataFrom(_ pasteboardItem: NSPasteboardItem) -> Data? {
     for type in pasteboardItem.types {
-      if let data = pasteboardItem.dataForType(type) {
+      if let data = pasteboardItem.data(forType: type) {
         if type == String(kUTTypeFileURL) {
-          let url = NSURL(dataRepresentation: data, relativeToURL: nil)
-          if let imageData = NSData(contentsOfURL: url), _ = NSImage(data: imageData) {
+          let url = URL(dataRepresentation: data, relativeTo: nil)
+          if let imageData = try? Data(contentsOf: url!), let _ = NSImage(data: imageData) {
             return imageData
           }
           
@@ -89,12 +89,12 @@ public class iPicUploadHelper {
     return nil
   }
   
-  static func imageDataOf(image: NSImage, type: NSBitmapImageFileType) -> NSData? {
-    guard let imageData = image.TIFFRepresentation else {
+  static func imageDataOf(_ image: NSImage, type: NSBitmapImageFileType) -> Data? {
+    guard let imageData = image.tiffRepresentation else {
       return nil
     }
     
-    if type == NSBitmapImageFileType.NSTIFFFileType {
+    if type == NSBitmapImageFileType.TIFF {
       return imageData
     }
     
@@ -102,15 +102,11 @@ public class iPicUploadHelper {
       return nil
     }
     
-    return imageRep.representationUsingType(type, properties: [:])
+    return imageRep.representation(using: type, properties: [:])
   }
   
-  static func delay(delay:Double, closure:()->()) {
-    dispatch_after(
-      dispatch_time(
-        DISPATCH_TIME_NOW,
-        Int64(delay * Double(NSEC_PER_SEC))
-      ),
-      dispatch_get_main_queue(), closure)
+  static func delay(_ delay:Double, closure:@escaping ()->()) {
+    DispatchQueue.main.asyncAfter(
+      deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
   }
 }
