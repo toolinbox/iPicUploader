@@ -15,10 +15,10 @@ class UnitTestsConstants {
   static let sharedInstance = UnitTestsConstants()
   private init() {}
   
-  let waitTime: NSTimeInterval = 15
+  let waitTime: TimeInterval = 15
   
   var imageFilePath: String {
-    let bundle = NSBundle(forClass: self.dynamicType)
-    return bundle.pathForResource("iPic", ofType: "png")!
+    let bundle = Bundle(for: type(of: self))
+    return bundle.path(forResource: "iPic", ofType: "png")!
   }
 }

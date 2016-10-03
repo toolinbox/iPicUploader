@@ -13,7 +13,7 @@ class iPicUploaderTests: XCTestCase {
   var exception: XCTestExpectation?
   
   func testUploadImageByFilePath() {
-    exception = expectationWithDescription("testUploadImageByFilePath")
+    exception = expectation(description: "testUploadImageByFilePath")
     
     iPic.uploadImage(UTConstants.imageFilePath) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
@@ -22,13 +22,13 @@ class iPicUploaderTests: XCTestCase {
       self.exception?.fulfill()
     }
     
-    self.waitForExpectationsWithTimeout(UTConstants.waitTime) { (error) in
+    self.waitForExpectations(timeout: UTConstants.waitTime) { (error) in
       XCTAssertNil(error)
     }
   }
   
   func testUploadImageByNSImage() {
-    exception = expectationWithDescription("testUploadImageByNSImage")
+    exception = expectation(description: "testUploadImageByNSImage")
     
     let image = NSImage(contentsOfFile: UTConstants.imageFilePath)
     iPic.uploadImage(image!) { (imageLink, error) in
@@ -38,15 +38,15 @@ class iPicUploaderTests: XCTestCase {
       self.exception?.fulfill()
     }
     
-    self.waitForExpectationsWithTimeout(UTConstants.waitTime) { (error) in
+    self.waitForExpectations(timeout: UTConstants.waitTime) { (error) in
       XCTAssertNil(error)
     }
   }
   
   func testUploadImageByImageData() {
-    exception = expectationWithDescription("testUploadImageByImageData")
+    exception = expectation(description: "testUploadImageByImageData")
     
-    let imageData = NSData(contentsOfFile: UTConstants.imageFilePath)
+    let imageData = try? Data(contentsOf: URL(fileURLWithPath: UTConstants.imageFilePath))
     iPic.uploadImage(imageData!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
@@ -54,7 +54,7 @@ class iPicUploaderTests: XCTestCase {
       self.exception?.fulfill()
     }
     
-    self.waitForExpectationsWithTimeout(UTConstants.waitTime) { (error) in
+    self.waitForExpectations(timeout: UTConstants.waitTime) { (error) in
       XCTAssertNil(error)
     }
   }

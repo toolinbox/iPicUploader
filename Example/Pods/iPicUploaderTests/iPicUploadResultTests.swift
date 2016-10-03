@@ -15,13 +15,13 @@ class iPicUploadResultTests: XCTestCase {
     let imageLink = "http://test.com/pic.jpg"
     let error = iPicUploadError.FailedToUpload
     let result1 = iPicUploadResult(imageLink: imageLink, error: error)
-    result1.json = NSUUID().UUIDString
+    result1.json = UUID().uuidString as AnyObject
     
     XCTAssertTrue(!result1.id.isEmpty)
     XCTAssertEqual(result1.version, 1)
     
-    let data = NSKeyedArchiver.archivedDataWithRootObject(result1)
-    let result2 = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! iPicUploadResult
+    let data = NSKeyedArchiver.archivedData(withRootObject: result1)
+    let result2 = NSKeyedUnarchiver.unarchiveObject(with: data) as! iPicUploadResult
     XCTAssertEqual(result1.id, result2.id)
     XCTAssertEqual(result1.imageLink, result2.imageLink)
     XCTAssertEqual(result1.error, result2.error)

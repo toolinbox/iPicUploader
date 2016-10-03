@@ -29,10 +29,10 @@ class iPicUploadHelperTests: XCTestCase {
     XCTAssertNotNil(image)
     XCTAssertNil(error)
     
-    let pasteboard = NSPasteboard.generalPasteboard()
+    let pasteboard = NSPasteboard.general()
     pasteboard.clearContents()
-    let url = NSURL(fileURLWithPath: UTConstants.imageFilePath)
-    pasteboard.writeObjects([url])
+    let url = URL(fileURLWithPath: UTConstants.imageFilePath)
+    pasteboard.writeObjects([url as NSPasteboardWriting])
     let imageDataList = iPicUploadHelper.generateImageDataListFrom(pasteboard)
     XCTAssertTrue(!imageDataList.isEmpty)
   }
