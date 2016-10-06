@@ -6,7 +6,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'iPicUploader'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'iPicUploader could help you to upload images by iPic on macOS.'
   s.description      = <<-DESC
 iPic could automatically upload images and save Markdown links on macOS.
@@ -19,7 +19,7 @@ iPic could automatically upload images and save Markdown links on macOS.
 
 Video introduction: http://toolinbox.net/en/iPic/
 
-In the same time, iPic open the ability to upload images. It means if you App also needs to upload images, you don't need to build from scratch. Just use iPicUploader, you App could also upload images to Imgur, Flickr, Amazon S3 and other image hosts.
+In the same time, iPic open the ability to upload images. It means if your App also needs to upload images, you don't need to build from scratch. Just use iPicUploader, your App could also upload images to Imgur, Flickr, Amazon S3 and other image hosts.
 
 iPicUploader also includes a full example. It shows how to use iPicUploader to upload images by drag and drop, by selecting image files, and by paste to upload images. You will feel easy to start.
                        DESC
