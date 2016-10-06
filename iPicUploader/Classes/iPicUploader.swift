@@ -28,8 +28,7 @@ public class iPicUploader {
   private let uploadTimeoutSeconds: TimeInterval = 30
   private let requestVersionTimeoutSeconds: TimeInterval = 3
   
-  // TODO Change it normal download link after latest iPic is online.
-  public let iPicDownloadLink = "http://toolinbox.net/html/DownloadiPicWithService.html"
+  public let iPicDownloadLink = "macappstore://itunes.apple.com/app/id1101244278"
   
   // MARK: Public Method
   
