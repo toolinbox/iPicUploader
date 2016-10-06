@@ -49,7 +49,7 @@ public class iPicImage: NSObject, NSCoding {
     imageData = aDecoder.decodeObject(forKey: iPicImage.imageDataKey) as? Data
     
     version = aDecoder.decodeInteger(forKey: iPicImage.versionKey)
-    json = aDecoder.decodeObject(forKey: iPicImage.jsonKey) as AnyObject?
+    json = aDecoder.decodeObject(forKey: iPicImage.jsonKey)
   }
   
   public func encode(with aCoder: NSCoder) {

@@ -42,7 +42,7 @@ public class iPicUploadResult: NSObject, NSCoding {
     error = aDecoder.decodeObject(forKey: iPicUploadResult.errorKey) as? NSError
     
     version = aDecoder.decodeInteger(forKey: iPicUploadResult.versionKey)
-    json = aDecoder.decodeObject(forKey: iPicUploadResult.jsonKey) as AnyObject?
+    json = aDecoder.decodeObject(forKey: iPicUploadResult.jsonKey)
   }
   
   public func encode(with aCoder: NSCoder) {

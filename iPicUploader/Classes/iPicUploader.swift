@@ -146,7 +146,7 @@ public class iPicUploader {
     
     // Callback the handler.
     if image != nil {
-        image?.handler?(uploadResult.imageLink, uploadResult.error)
+      image?.handler?(uploadResult.imageLink, uploadResult.error)
     }
     
     if hasNoPendingImages {
