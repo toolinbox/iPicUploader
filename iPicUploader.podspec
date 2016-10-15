@@ -31,7 +31,7 @@ iPicUploader also includes a full example. It shows how to use iPicUploader to u
   s.source           = { :git => 'https://github.com/toolinbox/iPicUploader.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/hereisjason'
 
-  s.osx.deployment_target = "10.11"
+  s.osx.deployment_target = "10.9"
 
   s.source_files = 'iPicUploader/Classes/**/*'
 end
