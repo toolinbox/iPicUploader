@@ -45,7 +45,7 @@ class MainWindowController: NSWindowController {
           OperationQueue.main.addOperation {
             self.imageView.state = .Uploading
           }
-          iPic.uploadImage(url.path, handler: self.uploadHandler)
+          iPic.uploadImage(imageFilePath: url.path, handler: self.uploadHandler)
         }
       }
     }
@@ -63,7 +63,7 @@ class MainWindowController: NSWindowController {
     
     for imageData in imageList {
       self.imageView.state = .Uploading
-      iPic.uploadImage(imageData, handler: uploadHandler)
+      iPic.uploadImage(imageData: imageData, handler: uploadHandler)
     }
   }
   

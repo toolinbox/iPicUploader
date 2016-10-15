@@ -55,7 +55,7 @@ class iPicImageView: NSImageView {
         self.state = .Uploading
       }
       
-      iPic.uploadImage(imageData, handler: { (imageLink, error) in
+      iPic.uploadImage(imageData: imageData, handler: { (imageLink, error) in
         self.uploadHandler?(imageLink, error)
       })
     }
