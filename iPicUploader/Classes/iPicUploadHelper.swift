@@ -14,6 +14,11 @@ public class iPicUploadHelper {
   
   // MARK: Static Method
   
+  internal static func ismacOSCompatible() -> Bool {
+    let version = ProcessInfo.processInfo.operatingSystemVersion
+    return (version.majorVersion >= 10) && (version.minorVersion >= 11)
+  }
+  
   internal static func isiPicRunning() -> Bool {
     return !NSRunningApplication.runningApplications(withBundleIdentifier: iPicBundleIdentifier).isEmpty
   }
