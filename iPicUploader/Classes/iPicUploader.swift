@@ -26,11 +26,20 @@ public class iPicUploader {
   private let pendingImagesLocker = NSRecursiveLock()
   
   private let uploadTimeoutSeconds: TimeInterval = 30
-  private let requestVersionTimeoutSeconds: TimeInterval = 3
+  private let requestVersionTimeoutSeconds: TimeInterval = 2
   
   public let iPicDownloadLink = "macappstore://itunes.apple.com/app/id1101244278"
   
   // MARK: Public Method
+  
+  /* Validate if macOS is compatible and iPic is installed. Launch iPic if both are yes. */
+  public func validate() -> NSError? {
+    if !iPicUploadHelper.ismacOSCompatible() {
+      return iPicUploadError.macOSIncompatible
+    }
+    
+    return iPicUploadHelper.launchiPic()
+  }
   
   public func uploadImage(_ imageFilePath: String, handler: @escaping iPicUploadHandler) {
     
@@ -63,8 +72,8 @@ public class iPicUploader {
   
   private func doUploadImage(_ image: iPicImage, handler: @escaping iPicUploadHandler) {
     
-    // Launch iPic.
-    if let error = iPicUploadHelper.launchiPic() {
+    // Validate and launch iPic.
+    if let error = validate() {
       handler(nil, error)
       return
     }
