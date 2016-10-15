@@ -12,10 +12,12 @@ public let iPic = iPicUploader.sharedInstance
 
 public typealias iPicUploadHandler = (_ imageLink: String?, _ error: NSError?) -> ()
 
-public class iPicUploader {
+@objc public class iPicUploader: NSObject {
   // Singleton
   internal static let sharedInstance = iPicUploader()
-  private init() {
+  private override init() {
+    super.init()
+    
     iPicPasteboard.handler = dealWithUploadResult
   }
   
@@ -41,7 +43,7 @@ public class iPicUploader {
     return iPicUploadHelper.launchiPic()
   }
   
-  public func uploadImage(_ imageFilePath: String, handler: @escaping iPicUploadHandler) {
+  public func uploadImage(imageFilePath: String, handler: @escaping iPicUploadHandler) {
     
     let (theImage, error) = iPicUploadHelper.generateiPicImage(imageFilePath)
     guard let image = theImage else {
@@ -52,7 +54,7 @@ public class iPicUploader {
     doUploadImage(image, handler: handler)
   }
   
-  public func uploadImage(_ image: NSImage, handler: @escaping iPicUploadHandler) {
+  public func uploadImage(image: NSImage, handler: @escaping iPicUploadHandler) {
     
     let (theImage, error) = iPicUploadHelper.generateiPicImage(image)
     guard let image = theImage else {
@@ -63,7 +65,7 @@ public class iPicUploader {
     doUploadImage(image, handler: handler)
   }
   
-  public func uploadImage(_ imageData: Data, handler: @escaping iPicUploadHandler) {
+  public func uploadImage(imageData: Data, handler: @escaping iPicUploadHandler) {
     let image = iPicImage(imageData: imageData)
     doUploadImage(image, handler: handler)
   }
