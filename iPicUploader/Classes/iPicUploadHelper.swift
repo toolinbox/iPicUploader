@@ -15,8 +15,11 @@ public class iPicUploadHelper {
   // MARK: Static Method
   
   internal static func ismacOSCompatible() -> Bool {
-    let version = ProcessInfo.processInfo.operatingSystemVersion
-    return (version.majorVersion >= 10) && (version.minorVersion >= 11)
+    if #available(OSX 10.11, *) {
+      return true
+    } else {
+      return false
+    }
   }
   
   internal static func isiPicRunning() -> Bool {
@@ -24,6 +27,10 @@ public class iPicUploadHelper {
   }
   
   internal static func launchiPic() -> NSError? {
+    guard #available(OSX 10.11, *) else {
+      return iPicUploadError.macOSIncompatible
+    }
+    
     guard !isiPicRunning() else {
       return nil
     }
@@ -77,11 +84,16 @@ public class iPicUploadHelper {
   }
   
   private static func generateImageDataFrom(_ pasteboardItem: NSPasteboardItem) -> Data? {
+    guard #available(OSX 10.11, *) else {
+      return nil
+    }
+    
     for type in pasteboardItem.types {
       if let data = pasteboardItem.data(forType: type) {
         if type == String(kUTTypeFileURL) {
-          let url = URL(dataRepresentation: data, relativeTo: nil)
-          if let imageData = try? Data(contentsOf: url!), let _ = NSImage(data: imageData) {
+          if let url = URL(dataRepresentation: data, relativeTo: nil),
+              let imageData = try? Data(contentsOf: url),
+              let _ = NSImage(data: imageData) {
             return imageData
           }
           
