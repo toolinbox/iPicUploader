@@ -53,14 +53,14 @@ internal class iPicPasteboardHelper {
     pasteboardObservingTimer = nil
   }
   
-  internal func writeiPicImage(_ image: iPicImage) -> Bool {
+  @discardableResult internal func writeiPicImage(_ image: iPicImage) -> Bool {
     clearPasteboardContents()
     
     let pasteboardItem = parseiPicImageToPasteboardItem(image)
     return pasteboard.writeObjects([pasteboardItem])
   }
   
-  internal func writeiPicUploaderVersionRequest() -> Bool {
+  @discardableResult internal func writeiPicUploaderVersionRequest() -> Bool {
     clearPasteboardContents()
     
     let pasteboardItem = NSPasteboardItem()
