@@ -55,7 +55,7 @@ public class iPicUploadResult: NSObject, NSCoding {
   }
 }
 
-public struct iPicUploadError {
+@objc public class iPicUploadError: NSObject {
   
   public static let Unknown             = iPicUploadError.create(-1, "Unknown error.")
   public static let iPicNotInstalled    = iPicUploadError.create(-11, "iPic wasn't installed.")
