@@ -101,6 +101,12 @@ As you can see, iPicUploader supports upload of multiple images at a time.
 
 Beside copy image files, you can also copy the image in other Apps to upload.
 
+
+
+# iPicUploader Integration Demo
+
+Now, [Typora](http://www.typora.io/) already integrate iPicUploader. You can easily insert images to Typora by drag & drop.
+
 ## Requirements
 
 As iPic runs on macOS 10.11 and newer version, iPicUploader also needs macOS 10.11+
