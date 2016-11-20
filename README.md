@@ -15,7 +15,7 @@ iPic could automatically upload images and save Markdown links on macOS.
 
 # iPicUploader
 
-iPic open the ability to upload images. It means if you App also needs to upload images, no need to build from scratch. Just use iPicUploader, you App could also upload images to Imgur, Flickr, Amazon S3 and other image hosts.
+iPic opens the ability to upload images. It means if your App also needs to upload images, no need to build from scratch. Just use iPicUploader, your App could also upload images to Imgur, Flickr, Amazon S3 and other image hosts.
 
 ## iPicUploader Usage
 
@@ -89,7 +89,7 @@ Now, let's have a look how the example upload images.
 
 ![](https://farm9.staticflickr.com/8085/29362952261_29d4282e7d_o.gif)
 
-As you can see, iPicUploader support uploads multi-images at a time.
+As you can see, iPicUploader supports upload of multiple images at a time.
 
 ### 2. Upload Images by Select Images Files
 
