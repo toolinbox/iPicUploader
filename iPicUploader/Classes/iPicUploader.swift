@@ -146,27 +146,21 @@ public typealias iPicUploadHandler = (_ imageLink: String?, _ error: NSError?) -
   
   private func finishUploadImage(_ uploadResult: iPicUploadResult) {
     var image: iPicImage?
-    var hasNoPendingImages = false
     
     lock {
       image = self.pendingImages[uploadResult.id]
-      
       self.pendingImages[uploadResult.id] = nil
-      hasNoPendingImages = self.pendingImages.isEmpty
+      
+      if self.pendingImages.isEmpty {
+        iPicPasteboard.stopObserving()
+      }
     }
     
     // Callback the handler.
-    if image != nil {
-      image?.handler?(uploadResult.imageLink, uploadResult.error)
-    }
+    image?.handler?(uploadResult.imageLink, uploadResult.error)
     
-    if hasNoPendingImages {
-      // Stop pasteboard observing if has not pending images.
-      iPicPasteboard.stopObserving()
-    } else {
-      // Continue to upload other pending images.
-      uploadPendingImages()
-    }
+    // Continue to upload other pending images.
+    uploadPendingImages()
   }
   
   private func dealWithUploadResult(_ pasteboard: NSPasteboard) {
