@@ -65,6 +65,7 @@ public class iPicUploadResult: NSObject, NSCoding {
   public static let InvalidImageFile    = iPicUploadError.create(-22, "Invalid image file.")
   public static let InvalidImageHost    = iPicUploadError.create(-31, "Invalid image host.")
   public static let FailedToUpload      = iPicUploadError.create(-32, "Failed to upload.")
+  public static let ImageHostNotFound   = iPicUploadError.create(-33, "Image host not found.")
   public static let TimeOut             = iPicUploadError.create(-41, "Time out.")
   
   private static let iPicUploaderDomain = "net.toolinbox.ipic.uploader"
