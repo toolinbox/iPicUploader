@@ -15,7 +15,7 @@ class iPicUploaderTests: XCTestCase {
   func testUploadImageByFilePath() {
     exception = expectation(description: "testUploadImageByFilePath")
     
-    iPic.uploadImage(UTConstants.imageFilePath) { (imageLink, error) in
+    iPic.uploadImage(imageFilePath: UTConstants.imageFilePath) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
       
@@ -31,7 +31,7 @@ class iPicUploaderTests: XCTestCase {
     exception = expectation(description: "testUploadImageByNSImage")
     
     let image = NSImage(contentsOfFile: UTConstants.imageFilePath)
-    iPic.uploadImage(image!) { (imageLink, error) in
+    iPic.uploadImage(image: image!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
       
@@ -47,7 +47,7 @@ class iPicUploaderTests: XCTestCase {
     exception = expectation(description: "testUploadImageByImageData")
     
     let imageData = try? Data(contentsOf: URL(fileURLWithPath: UTConstants.imageFilePath))
-    iPic.uploadImage(imageData!) { (imageLink, error) in
+    iPic.uploadImage(imageData: imageData!) { (imageLink, error) in
       XCTAssertNotNil(imageLink)
       XCTAssertNil(error)
       

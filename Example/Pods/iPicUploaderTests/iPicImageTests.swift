@@ -16,7 +16,12 @@ class iPicImageTests: XCTestCase {
     XCTAssertTrue(!image1.id.isEmpty)
     XCTAssertEqual(image1.version, 1)
     
-    image1.json = UUID().uuidString as AnyObject
+    let jsonString = "{\"imageHostId\": \"ABC-123\"}"
+    let jsonData = jsonString.data(using: String.Encoding.utf8)!
+    let json = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+    image1.json = json
+    
+    XCTAssertEqual(image1.parseImageHostId(), "ABC-123")
     
     let data = NSKeyedArchiver.archivedData(withRootObject: image1)
     let image2 = NSKeyedUnarchiver.unarchiveObject(with: data) as! iPicImage
