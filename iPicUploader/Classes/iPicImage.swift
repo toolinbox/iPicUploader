@@ -18,6 +18,8 @@ public class iPicImage: NSObject, NSCoding {
   private static let versionKey = "version"
   private static let jsonKey = "json"
   
+  private static let imageHostIdKey = "imageHostId"
+  
   public var id = UUID().uuidString
   public var imageFilePath: String?
   public var imageData: Data?
@@ -59,5 +61,16 @@ public class iPicImage: NSObject, NSCoding {
     
     aCoder.encode(version, forKey: iPicImage.versionKey)
     aCoder.encode(json, forKey: iPicImage.jsonKey)
+  }
+  
+  // MARK: - Public Method
+  
+  public func parseImageHostId() -> String? {
+    
+    if let json = json as? [String: Any] {
+      return json[iPicImage.imageHostIdKey] as? String
+    }
+
+    return nil
   }
 }
