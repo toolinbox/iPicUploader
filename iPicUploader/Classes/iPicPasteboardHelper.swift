@@ -15,6 +15,8 @@ public let PasteboardTypeiPicImage = "net.toolinbox.ipic.pasteboard.iPicImage"
 public let PasteboardTypeiPicUploadResult = "net.toolinbox.ipic.pasteboard.iPicUploadResult"
 public let PasteboardTypeiPicUploaderVersion = "net.toolinbox.ipic.pasteboard.iPicUploaderVersion"
 public let PasteboardTypeiPicUploaderVersionResult = "net.toolinbox.ipic.pasteboard.iPicUploaderVersionResult"
+public let PasteboardTypeImageHostList = "net.toolinbox.ipic.pasteboard.PasteboardTypeImageHostList"
+public let PasteboardTypeImageHostListResult = "net.toolinbox.ipic.pasteboard.PasteboardTypeImageHostListResult"
 
 internal let iPicPasteboard = iPicPasteboardHelper.sharedInstance
 
@@ -61,12 +63,11 @@ internal class iPicPasteboardHelper {
   }
   
   @discardableResult internal func writeiPicUploaderVersionRequest() -> Bool {
-    clearPasteboardContents()
-    
-    let pasteboardItem = NSPasteboardItem()
-    pasteboardItem.setString("", forType: PasteboardTypeiPicUploaderVersion)
-    
-    return pasteboard.writeObjects([pasteboardItem])
+    return writeString("", type: PasteboardTypeiPicUploaderVersion)
+  }
+  
+  @discardableResult internal func writeImageHostListRequest() -> Bool {
+    return writeString("", type: PasteboardTypeImageHostList)
   }
   
   internal func parseUploadResult(_ pasteboard: NSPasteboard) -> iPicUploadResult? {
@@ -88,6 +89,22 @@ internal class iPicPasteboardHelper {
     return nil
   }
   
+  internal func parseImageHostListResult(_ pasteboard: NSPasteboard) -> [iPicImageHost] {
+    var imageHostList = [iPicImageHost]()
+    
+    if let type = pasteboard.availableType(from: [PasteboardTypeImageHostListResult]) {
+      if let data = pasteboard.data(forType: type) {
+        NSKeyedUnarchiver.setClass(iPicImageHost.self, forClassName: iPicImageHost.sharedClassName)
+        
+        if let list = NSKeyedUnarchiver.unarchiveObject(with: data) as? [iPicImageHost] {
+          imageHostList = list
+        }
+      }
+    }
+    
+    return imageHostList
+  }
+  
   // MARK: Helper
   
   @objc private func observePasteboard() {
@@ -107,6 +124,15 @@ internal class iPicPasteboardHelper {
     pasteboardItem.setData(data, forType: PasteboardTypeiPicImage)
     
     return pasteboardItem
+  }
+  
+  private func writeString(_ str: String, type: String) -> Bool {
+    clearPasteboardContents()
+    
+    let pasteboardItem = NSPasteboardItem()
+    pasteboardItem.setString(str, forType: type)
+    
+    return pasteboard.writeObjects([pasteboardItem])
   }
   
   private func clearPasteboardContents() {
