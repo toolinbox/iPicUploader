@@ -7,72 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020ACBE03355F6CBC3A92F4CE38624CC /* iPicUploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B42EA318C491893F0900443A2A0670 /* iPicUploadResult.swift */; };
-		195FEDE6B749E03BCC160D32C0877ED1 /* Pods-iPicUploaderExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C98ABF7E90A3F61BFF6E72E8E53A3A23 /* Pods-iPicUploaderExample-dummy.m */; };
-		1B4B7326F161C85DC96E7884EB44CAB9 /* iPicUploader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AF51C505CF059A532A6864A0A6DA88 /* iPicUploader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		312D5F3A72B20D8D87E408F1E70511AF /* Pods-iPicUploaderExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8FD2E8EBDB4E6A09A76E826CA045F0 /* Pods-iPicUploaderExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5631C0D0AE504368BB36AA74B51F3F26 /* iPicPasteboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */; };
-		6015FEE7AF444E0A3B338EFDD20E816A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		6D5C3D883B67B684097866DEEFFFF6AA /* iPicUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */; };
-		71988728DECC7D6CA5051C9A7A94B4CA /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
-		967DD9A81D7C054B00844689 /* iPicUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9A71D7C054B00844689 /* iPicUploaderTests.swift */; };
-		967DD9AA1D7C054B00844689 /* iPicUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */; };
-		967DD9B21D7C058D00844689 /* iPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 967DD9B11D7C058D00844689 /* iPic.png */; };
-		967DD9B71D7C059900844689 /* iPicImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9B31D7C059900844689 /* iPicImageTests.swift */; };
-		967DD9B81D7C059900844689 /* iPicUploadHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9B41D7C059900844689 /* iPicUploadHelperTests.swift */; };
-		967DD9B91D7C059900844689 /* iPicUploadResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9B51D7C059900844689 /* iPicUploadResultTests.swift */; };
-		967DD9BA1D7C059900844689 /* UnitTestsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DD9B61D7C059900844689 /* UnitTestsConstants.swift */; };
-		96CC02611E03F732003D7F0E /* iPicImageHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CC02601E03F732003D7F0E /* iPicImageHost.swift */; };
-		9C3985FDBA243E1B9DD7A2E517BDBD77 /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */; };
-		CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		D8F21E0B9E1CF78E16E3A8B420C3F1BB /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */; };
+		2908466816E785DB52F8259C56BA5ACE /* iPicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FD689E25AEE775C3BD2A442214217D /* iPicImage.swift */; };
+		2CB786AC59F5DBD5CD4EA4423B8743CD /* Pods-iPicUploaderExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C98ABF7E90A3F61BFF6E72E8E53A3A23 /* Pods-iPicUploaderExample-dummy.m */; };
+		323F4078E84E9C1B6CD0FDF976C61581 /* iPicUploader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */; };
+		3C260B3F687BB71C5309EDB04CC7162A /* iPicUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE01C1125C955E0F9D9F194B94C3CA66 /* iPicUploader.swift */; };
+		4B7C857DE65CE7DA118CBFAC5CE1CFCA /* iPicUploader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AF51C505CF059A532A6864A0A6DA88 /* iPicUploader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53170E645AEC0AB7A5C619518FD40630 /* iPicUploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEBC50216217E650746BC73A5A2387 /* iPicUploadResult.swift */; };
+		5BE0B4B272A33AADBA815E876A15DEEF /* iPicPasteboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4077BDCFC21E1428D8F42423C2FFF4 /* iPicPasteboardHelper.swift */; };
+		88FF1F4BA5B136D0DA4764C89C9E0619 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		9280E404CBA89D6122F0FE4D7A4CCDC5 /* Pods-iPicUploaderExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B8FD2E8EBDB4E6A09A76E826CA045F0 /* Pods-iPicUploaderExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95F59C7D4E3D4A9440266087142AB5AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		D835E8916DFEA822CB3B67DF859431FF /* iPicImageHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49187694380390DD0C352721AFC488E6 /* iPicImageHost.swift */; };
+		F15E8232D38F76325E93AD3D647208A4 /* iPicUploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9107AC662FC0095A4D52F59840525E8 /* iPicUploadHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		738F9D9052C2269BC2A4B66B5E323A18 /* PBXContainerItemProxy */ = {
+		D734E4972283C54A70FBCB6C060DB6AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 05B7F7C75CFDAA8BAF32E04D548E3A7A;
-			remoteInfo = iPicUploader;
-		};
-		967DD9AB1D7C054B00844689 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 05B7F7C75CFDAA8BAF32E04D548E3A7A;
+			remoteGlobalIDString = 8C7D20DA154E0705646FC51CD3B82B94;
 			remoteInfo = iPicUploader;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10B42EA318C491893F0900443A2A0670 /* iPicUploadResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadResult.swift; sourceTree = "<group>"; };
 		13BBEC260DFEC059DF25801BDDDF55B3 /* Pods-iPicUploaderExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iPicUploaderExample.modulemap"; sourceTree = "<group>"; };
-		1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		205313F3332997F867D86645050C748E /* Pods-iPicUploaderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPicUploaderExample.release.xcconfig"; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		35CFA2FF1FA094928C9406C2F947C014 /* iPicUploader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iPicUploader.modulemap; sourceTree = "<group>"; };
+		39BEBC50216217E650746BC73A5A2387 /* iPicUploadResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadResult.swift; sourceTree = "<group>"; };
 		3A660CA2D1E60D83AEDA5E31AC602AAD /* Pods-iPicUploaderExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploaderExample-resources.sh"; sourceTree = "<group>"; };
-		3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicImage.swift; sourceTree = "<group>"; };
+		49187694380390DD0C352721AFC488E6 /* iPicImageHost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicImageHost.swift; sourceTree = "<group>"; };
 		4EE36716029DC30F8C00801C3066CDF6 /* iPicUploader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPicUploader-dummy.m"; sourceTree = "<group>"; };
 		53AF51C505CF059A532A6864A0A6DA88 /* iPicUploader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPicUploader-umbrella.h"; sourceTree = "<group>"; };
 		650A536FA73DBFEE64F1ECA14CD7F76E /* Pods-iPicUploaderExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPicUploaderExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B8FD2E8EBDB4E6A09A76E826CA045F0 /* Pods-iPicUploaderExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPicUploaderExample-umbrella.h"; sourceTree = "<group>"; };
 		73686E5028A3488C8AAC224DD9F32E4F /* Pods-iPicUploaderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPicUploaderExample.debug.xcconfig"; sourceTree = "<group>"; };
 		7D2CEB8D01ECB51A0F8DF56E738997DC /* Pods-iPicUploaderExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPicUploaderExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploader.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		967DD9A51D7C054B00844689 /* iPicUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPicUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		967DD9A71D7C054B00844689 /* iPicUploaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPicUploaderTests.swift; sourceTree = "<group>"; };
-		967DD9A91D7C054B00844689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		967DD9B11D7C058D00844689 /* iPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPic.png; sourceTree = "<group>"; };
-		967DD9B31D7C059900844689 /* iPicImageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPicImageTests.swift; path = iPicUploaderTests/iPicImageTests.swift; sourceTree = SOURCE_ROOT; };
-		967DD9B41D7C059900844689 /* iPicUploadHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPicUploadHelperTests.swift; path = iPicUploaderTests/iPicUploadHelperTests.swift; sourceTree = SOURCE_ROOT; };
-		967DD9B51D7C059900844689 /* iPicUploadResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPicUploadResultTests.swift; path = iPicUploaderTests/iPicUploadResultTests.swift; sourceTree = SOURCE_ROOT; };
-		967DD9B61D7C059900844689 /* UnitTestsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitTestsConstants.swift; path = iPicUploaderTests/UnitTestsConstants.swift; sourceTree = SOURCE_ROOT; };
-		96CC02601E03F732003D7F0E /* iPicImageHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPicImageHost.swift; sourceTree = "<group>"; };
+		94FD689E25AEE775C3BD2A442214217D /* iPicImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicImage.swift; sourceTree = "<group>"; };
 		A6D0DCF86077F1C45CC553605670A3AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
-		BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicPasteboardHelper.swift; sourceTree = "<group>"; };
+		C9107AC662FC0095A4D52F59840525E8 /* iPicUploadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploadHelper.swift; sourceTree = "<group>"; };
 		C98ABF7E90A3F61BFF6E72E8E53A3A23 /* Pods-iPicUploaderExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPicUploaderExample-dummy.m"; sourceTree = "<group>"; };
 		D225E0E6D8E6E9A6CC1FD8630457D35C /* Pods-iPicUploaderExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPicUploaderExample-frameworks.sh"; sourceTree = "<group>"; };
 		D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPicUploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,36 +56,38 @@
 		DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iPicUploader.xcconfig; sourceTree = "<group>"; };
 		DF57DC475DA52C0460578ED7069533E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9E52521CB7A016ACE312200866F05F2 /* iPicUploader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPicUploader-prefix.pch"; sourceTree = "<group>"; };
+		FE01C1125C955E0F9D9F194B94C3CA66 /* iPicUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicUploader.swift; sourceTree = "<group>"; };
+		FE4077BDCFC21E1428D8F42423C2FFF4 /* iPicPasteboardHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = iPicPasteboardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0030041839B6451B16D57138E60AAE0B /* Frameworks */ = {
+		38AA2669ECD06CCF565DD569F5739B35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6015FEE7AF444E0A3B338EFDD20E816A /* Cocoa.framework in Frameworks */,
+				88FF1F4BA5B136D0DA4764C89C9E0619 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08C4E747466680898501FFE4B77E9353 /* Frameworks */ = {
+		8DEC08E782E34EDA4B32423898C896F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF87129F9EFCDD874C481BC48E99BCC /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		967DD9A21D7C054B00844689 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				967DD9AA1D7C054B00844689 /* iPicUploader.framework in Frameworks */,
+				95F59C7D4E3D4A9440266087142AB5AF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
 		0CA9237C481B5367C77554398DAC953C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,39 +120,31 @@
 			path = "Target Support Files/Pods-iPicUploaderExample";
 			sourceTree = "<group>";
 		};
-		28C17CEF104526ACA07B6EEE217EC43E /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		32E61614A9C71EB74B023017BA889128 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				3FDC1765C999EABBA21DC67C556993B4 /* iPicImage.swift */,
-				96CC02601E03F732003D7F0E /* iPicImageHost.swift */,
-				BC3B85543423F9699C26E86FB1E33DBD /* iPicPasteboardHelper.swift */,
-				83F160A3C90D6FFB14F907CEE9ADDB06 /* iPicUploader.swift */,
-				A7F5FAB53A39654AAF849EC746441E3B /* iPicUploadHelper.swift */,
-				10B42EA318C491893F0900443A2A0670 /* iPicUploadResult.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				28C17CEF104526ACA07B6EEE217EC43E /* OS X */,
+				04C068A18C5413F804A2959126093416 /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F2B38E5176FA2EBED857D270286BA2C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				94FD689E25AEE775C3BD2A442214217D /* iPicImage.swift */,
+				49187694380390DD0C352721AFC488E6 /* iPicImageHost.swift */,
+				FE4077BDCFC21E1428D8F42423C2FFF4 /* iPicPasteboardHelper.swift */,
+				FE01C1125C955E0F9D9F194B94C3CA66 /* iPicUploader.swift */,
+				C9107AC662FC0095A4D52F59840525E8 /* iPicUploadHelper.swift */,
+				39BEBC50216217E650746BC73A5A2387 /* iPicUploadResult.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		512DC1CCD79E854E14D520CFECAA4A0F /* iPicUploader */ = {
 			isa = PBXGroup;
 			children = (
-				8CB402E2B757562A91BFE92721E7C1B5 /* iPicUploader */,
+				9A882F69ECF1064599124CEE811EDEFD /* iPicUploader */,
 				0CA9237C481B5367C77554398DAC953C /* Support Files */,
 			);
 			name = iPicUploader;
@@ -186,7 +156,6 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				8BD6619CD43C1AE999C2BDCABB64CE43 /* Development Pods */,
-				967DD9A61D7C054B00844689 /* iPicUploaderTests */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				D23C68AEA436E8ACF971982FAD40F1B4 /* Products */,
 				CDEB7E9023119033449272C721B492B2 /* Targets Support Files */,
@@ -201,34 +170,12 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		8CB402E2B757562A91BFE92721E7C1B5 /* iPicUploader */ = {
+		9A882F69ECF1064599124CEE811EDEFD /* iPicUploader */ = {
 			isa = PBXGroup;
 			children = (
-				32E61614A9C71EB74B023017BA889128 /* Classes */,
+				3F2B38E5176FA2EBED857D270286BA2C /* Classes */,
 			);
 			path = iPicUploader;
-			sourceTree = "<group>";
-		};
-		967DD9A61D7C054B00844689 /* iPicUploaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				967DD9B01D7C058D00844689 /* Resources */,
-				967DD9B31D7C059900844689 /* iPicImageTests.swift */,
-				967DD9A71D7C054B00844689 /* iPicUploaderTests.swift */,
-				967DD9B41D7C059900844689 /* iPicUploadHelperTests.swift */,
-				967DD9B51D7C059900844689 /* iPicUploadResultTests.swift */,
-				967DD9B61D7C059900844689 /* UnitTestsConstants.swift */,
-				967DD9A91D7C054B00844689 /* Info.plist */,
-			);
-			path = iPicUploaderTests;
-			sourceTree = "<group>";
-		};
-		967DD9B01D7C058D00844689 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				967DD9B11D7C058D00844689 /* iPic.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		CDEB7E9023119033449272C721B492B2 /* Targets Support Files */ = {
@@ -244,7 +191,6 @@
 			children = (
 				D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */,
 				D96D0BC9103D2A3A134FA10E244FB260 /* Pods_iPicUploaderExample.framework */,
-				967DD9A51D7C054B00844689 /* iPicUploaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,32 +198,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		914550B6FF6C9899CCCDF7676DE06C90 /* Headers */ = {
+		ACEED6CF7365CB0C8F28FF7E25CF40B8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B4B7326F161C85DC96E7884EB44CAB9 /* iPicUploader-umbrella.h in Headers */,
+				4B7C857DE65CE7DA118CBFAC5CE1CFCA /* iPicUploader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF863E36E48FE60CE0AE611167CF6974 /* Headers */ = {
+		D4EC4E9BBEE9D1F6FF681C3ECAF7EF0B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312D5F3A72B20D8D87E408F1E70511AF /* Pods-iPicUploaderExample-umbrella.h in Headers */,
+				9280E404CBA89D6122F0FE4D7A4CCDC5 /* Pods-iPicUploaderExample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */ = {
+		8C7D20DA154E0705646FC51CD3B82B94 /* iPicUploader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17F1E7830122502D71E34A9CC639824F /* Build configuration list for PBXNativeTarget "iPicUploader" */;
+			buildConfigurationList = 1101D4E62526D3BEE09CEA4DA8B37D91 /* Build configuration list for PBXNativeTarget "iPicUploader" */;
 			buildPhases = (
-				7127F2A23360323DB6C1B747E13E3AB9 /* Sources */,
-				0030041839B6451B16D57138E60AAE0B /* Frameworks */,
-				914550B6FF6C9899CCCDF7676DE06C90 /* Headers */,
+				E664511132E9756251EACE3F1C1521B4 /* Sources */,
+				8DEC08E782E34EDA4B32423898C896F6 /* Frameworks */,
+				ACEED6CF7365CB0C8F28FF7E25CF40B8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -288,41 +234,23 @@
 			productReference = D85A5F6E5087917F1E325E041A5E35AF /* iPicUploader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8764F74149ABB60C0B994D09D5B1639A /* Pods-iPicUploaderExample */ = {
+		E88DC51C927956F260FFD3BD4CDF9D49 /* Pods-iPicUploaderExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2000544414190B154DAC3D71829C1098 /* Build configuration list for PBXNativeTarget "Pods-iPicUploaderExample" */;
+			buildConfigurationList = 74FBD6423B3867F74687DB2DA2B44F92 /* Build configuration list for PBXNativeTarget "Pods-iPicUploaderExample" */;
 			buildPhases = (
-				4DBD563DABD3946BEBD251D3B67F802A /* Sources */,
-				08C4E747466680898501FFE4B77E9353 /* Frameworks */,
-				EF863E36E48FE60CE0AE611167CF6974 /* Headers */,
+				83E023B1E9D79A62305DA18B100F112E /* Sources */,
+				38AA2669ECD06CCF565DD569F5739B35 /* Frameworks */,
+				D4EC4E9BBEE9D1F6FF681C3ECAF7EF0B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B977F253EE9307722C4EB1DC729D029A /* PBXTargetDependency */,
+				BC963EEC05AE1A3208CE9D30660BE1F3 /* PBXTargetDependency */,
 			);
 			name = "Pods-iPicUploaderExample";
 			productName = "Pods-iPicUploaderExample";
 			productReference = D96D0BC9103D2A3A134FA10E244FB260 /* Pods_iPicUploaderExample.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		967DD9A41D7C054B00844689 /* iPicUploaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 967DD9AF1D7C054B00844689 /* Build configuration list for PBXNativeTarget "iPicUploaderTests" */;
-			buildPhases = (
-				967DD9A11D7C054B00844689 /* Sources */,
-				967DD9A21D7C054B00844689 /* Frameworks */,
-				967DD9A31D7C054B00844689 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				967DD9AC1D7C054B00844689 /* PBXTargetDependency */,
-			);
-			name = iPicUploaderTests;
-			productName = iPicUploaderTests;
-			productReference = 967DD9A51D7C054B00844689 /* iPicUploaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -331,19 +259,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0810;
-				TargetAttributes = {
-					05B7F7C75CFDAA8BAF32E04D548E3A7A = {
-						LastSwiftMigration = 0800;
-					};
-					8764F74149ABB60C0B994D09D5B1639A = {
-						LastSwiftMigration = 0800;
-					};
-					967DD9A41D7C054B00844689 = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
-					};
-				};
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -357,77 +273,82 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */,
-				8764F74149ABB60C0B994D09D5B1639A /* Pods-iPicUploaderExample */,
-				967DD9A41D7C054B00844689 /* iPicUploaderTests */,
+				8C7D20DA154E0705646FC51CD3B82B94 /* iPicUploader */,
+				E88DC51C927956F260FFD3BD4CDF9D49 /* Pods-iPicUploaderExample */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		967DD9A31D7C054B00844689 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				967DD9B21D7C058D00844689 /* iPic.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4DBD563DABD3946BEBD251D3B67F802A /* Sources */ = {
+		83E023B1E9D79A62305DA18B100F112E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				195FEDE6B749E03BCC160D32C0877ED1 /* Pods-iPicUploaderExample-dummy.m in Sources */,
+				2CB786AC59F5DBD5CD4EA4423B8743CD /* Pods-iPicUploaderExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7127F2A23360323DB6C1B747E13E3AB9 /* Sources */ = {
+		E664511132E9756251EACE3F1C1521B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3985FDBA243E1B9DD7A2E517BDBD77 /* iPicImage.swift in Sources */,
-				5631C0D0AE504368BB36AA74B51F3F26 /* iPicPasteboardHelper.swift in Sources */,
-				71988728DECC7D6CA5051C9A7A94B4CA /* iPicUploader-dummy.m in Sources */,
-				6D5C3D883B67B684097866DEEFFFF6AA /* iPicUploader.swift in Sources */,
-				D8F21E0B9E1CF78E16E3A8B420C3F1BB /* iPicUploadHelper.swift in Sources */,
-				96CC02611E03F732003D7F0E /* iPicImageHost.swift in Sources */,
-				020ACBE03355F6CBC3A92F4CE38624CC /* iPicUploadResult.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		967DD9A11D7C054B00844689 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				967DD9B71D7C059900844689 /* iPicImageTests.swift in Sources */,
-				967DD9BA1D7C059900844689 /* UnitTestsConstants.swift in Sources */,
-				967DD9B81D7C059900844689 /* iPicUploadHelperTests.swift in Sources */,
-				967DD9B91D7C059900844689 /* iPicUploadResultTests.swift in Sources */,
-				967DD9A81D7C054B00844689 /* iPicUploaderTests.swift in Sources */,
+				2908466816E785DB52F8259C56BA5ACE /* iPicImage.swift in Sources */,
+				D835E8916DFEA822CB3B67DF859431FF /* iPicImageHost.swift in Sources */,
+				5BE0B4B272A33AADBA815E876A15DEEF /* iPicPasteboardHelper.swift in Sources */,
+				323F4078E84E9C1B6CD0FDF976C61581 /* iPicUploader-dummy.m in Sources */,
+				3C260B3F687BB71C5309EDB04CC7162A /* iPicUploader.swift in Sources */,
+				F15E8232D38F76325E93AD3D647208A4 /* iPicUploadHelper.swift in Sources */,
+				53170E645AEC0AB7A5C619518FD40630 /* iPicUploadResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		967DD9AC1D7C054B00844689 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */;
-			targetProxy = 967DD9AB1D7C054B00844689 /* PBXContainerItemProxy */;
-		};
-		B977F253EE9307722C4EB1DC729D029A /* PBXTargetDependency */ = {
+		BC963EEC05AE1A3208CE9D30660BE1F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iPicUploader;
-			target = 05B7F7C75CFDAA8BAF32E04D548E3A7A /* iPicUploader */;
-			targetProxy = 738F9D9052C2269BC2A4B66B5E323A18 /* PBXContainerItemProxy */;
+			target = 8C7D20DA154E0705646FC51CD3B82B94 /* iPicUploader */;
+			targetProxy = D734E4972283C54A70FBCB6C060DB6AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0577E960F68FF02722D75DA2D211E3A8 /* Debug */ = {
+		32D9F8554D3E5E3A05372EC885BD2115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iPicUploader/iPicUploader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iPicUploader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/iPicUploader/iPicUploader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = iPicUploader;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4ECF5F3A7DCBE32E59B23B0C7F362504 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -441,18 +362,167 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62BA7506CD3BBE2C35C74AD4CF804CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73686E5028A3488C8AAC224DD9F32E4F /* Pods-iPicUploaderExample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-iPicUploaderExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_iPicUploaderExample;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75538234C692FAF4AE1F3241116AF0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 205313F3332997F867D86645050C748E /* Pods-iPicUploaderExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-iPicUploaderExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_iPicUploaderExample;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B55F8380C0C8B1DF0B393259BE9AA53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iPicUploader/iPicUploader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iPicUploader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/iPicUploader/iPicUploader.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = iPicUploader;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C269F16C69C874215FB299057455A930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -468,261 +538,20 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_VERSION = 3.0.1;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		2DB25C769151B0EEA5D84D5A020F809E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/iPicUploader/iPicUploader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iPicUploader/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/iPicUploader/iPicUploader.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = iPicUploader;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0.1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2FAF9FD4C2114CFB8751D904F1ECE5C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73686E5028A3488C8AAC224DD9F32E4F /* Pods-iPicUploaderExample.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-iPicUploaderExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iPicUploaderExample;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		42067A795A6FA0B02D55EA00EC0DE0DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 205313F3332997F867D86645050C748E /* Pods-iPicUploaderExample.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-iPicUploaderExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Pods-iPicUploaderExample/Pods-iPicUploaderExample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iPicUploaderExample;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		578820E498FFD85CA5D93A33D365FBED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0.1;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		910960B6D65FD8A11FC86F26C72698BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/iPicUploader/iPicUploader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iPicUploader/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/iPicUploader/iPicUploader.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = iPicUploader;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0.1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		967DD9AD1D7C054B00844689 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = iPicUploaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0.1;
-			};
-			name = Debug;
-		};
-		967DD9AE1D7C054B00844689 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD06A8354E754C44FD8C33083D89CE07 /* iPicUploader.xcconfig */;
-			buildSettings = {
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = iPicUploaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = net.toolinbox.pod.iPicUploaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0.1;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17F1E7830122502D71E34A9CC639824F /* Build configuration list for PBXNativeTarget "iPicUploader" */ = {
+		1101D4E62526D3BEE09CEA4DA8B37D91 /* Build configuration list for PBXNativeTarget "iPicUploader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2DB25C769151B0EEA5D84D5A020F809E /* Debug */,
-				910960B6D65FD8A11FC86F26C72698BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2000544414190B154DAC3D71829C1098 /* Build configuration list for PBXNativeTarget "Pods-iPicUploaderExample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2FAF9FD4C2114CFB8751D904F1ECE5C5 /* Debug */,
-				42067A795A6FA0B02D55EA00EC0DE0DB /* Release */,
+				7B55F8380C0C8B1DF0B393259BE9AA53 /* Debug */,
+				32D9F8554D3E5E3A05372EC885BD2115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -730,17 +559,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0577E960F68FF02722D75DA2D211E3A8 /* Debug */,
-				578820E498FFD85CA5D93A33D365FBED /* Release */,
+				C269F16C69C874215FB299057455A930 /* Debug */,
+				4ECF5F3A7DCBE32E59B23B0C7F362504 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		967DD9AF1D7C054B00844689 /* Build configuration list for PBXNativeTarget "iPicUploaderTests" */ = {
+		74FBD6423B3867F74687DB2DA2B44F92 /* Build configuration list for PBXNativeTarget "Pods-iPicUploaderExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				967DD9AD1D7C054B00844689 /* Debug */,
-				967DD9AE1D7C054B00844689 /* Release */,
+				62BA7506CD3BBE2C35C74AD4CF804CB3 /* Debug */,
+				75538234C692FAF4AE1F3241116AF0EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

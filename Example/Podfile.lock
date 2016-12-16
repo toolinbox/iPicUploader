@@ -1,5 +1,5 @@
 PODS:
-  - iPicUploader (0.1.0)
+  - iPicUploader (1.2.2)
 
 DEPENDENCIES:
   - iPicUploader (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  iPicUploader: 018193faa98b2ec9a1ac9595caaf4ab9e9727f19
+  iPicUploader: 48b09f22b9f79abcdff7c2945179e632ff23420a
 
-PODFILE CHECKSUM: abf6a768567e8282e8b143756ecc732a563ca51e
+PODFILE CHECKSUM: 6ce13e731cd3aee60b1597ec555eea90e40d8dca
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
