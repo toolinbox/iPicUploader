@@ -37,7 +37,7 @@ class iPicImageView: NSImageView {
   // MARK: - NSDraggingDestination
   
   override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-    if NSImage.canInit(with: sender.draggingPasteboard()) {
+    if NSImage.canInit(with: sender.draggingPasteboard) {
       state = .Dragging
       return .copy
     }
@@ -50,7 +50,7 @@ class iPicImageView: NSImageView {
   }
   
   override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-    for imageData in iPicUploadHelper.generateImageDataListFrom(sender.draggingPasteboard()) {
+    for imageData in iPicUploadHelper.generateImageDataListFrom(sender.draggingPasteboard) {
       OperationQueue.main.addOperation {
         self.state = .Uploading
       }

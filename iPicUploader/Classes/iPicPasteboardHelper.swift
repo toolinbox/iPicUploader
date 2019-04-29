@@ -25,7 +25,7 @@ internal class iPicPasteboardHelper {
   internal static let sharedInstance = iPicPasteboardHelper()
   private init() {}
   
-  private let pasteboard = NSPasteboard(name: iPicPasteboardName)
+  private let pasteboard = NSPasteboard(name: NSPasteboard.Name(rawValue: iPicPasteboardName))
   
   private weak var pasteboardObservingTimer: Timer?
   private var pasteboardObservingTimerInterval: TimeInterval = 0.75
@@ -71,7 +71,7 @@ internal class iPicPasteboardHelper {
   }
   
   internal func parseUploadResult(_ pasteboard: NSPasteboard) -> iPicUploadResult? {
-    if let type = pasteboard.availableType(from: [PasteboardTypeiPicUploadResult]) {
+    if let type = pasteboard.availableType(from: [NSPasteboard.PasteboardType(rawValue: PasteboardTypeiPicUploadResult)]) {
       if let data = pasteboard.data(forType: type) {
         NSKeyedUnarchiver.setClass(iPicUploadResult.self, forClassName: iPicUploadResult.sharedClassName)
         return NSKeyedUnarchiver.unarchiveObject(with: data) as? iPicUploadResult
@@ -82,7 +82,7 @@ internal class iPicPasteboardHelper {
   }
   
   internal func parseiPicUploaderVersionResult(_ pasteboard: NSPasteboard) -> Int? {
-    if let versionString = pasteboard.string(forType: PasteboardTypeiPicUploaderVersionResult) {
+    if let versionString = pasteboard.string(forType: NSPasteboard.PasteboardType(rawValue: PasteboardTypeiPicUploaderVersionResult)) {
       return Int(versionString)
     }
     
@@ -92,7 +92,7 @@ internal class iPicPasteboardHelper {
   internal func parseImageHostListResult(_ pasteboard: NSPasteboard) -> [iPicImageHost] {
     var imageHostList = [iPicImageHost]()
     
-    if let type = pasteboard.availableType(from: [PasteboardTypeImageHostListResult]) {
+    if let type = pasteboard.availableType(from: [NSPasteboard.PasteboardType(rawValue: PasteboardTypeImageHostListResult)]) {
       if let data = pasteboard.data(forType: type) {
         NSKeyedUnarchiver.setClass(iPicImageHost.self, forClassName: iPicImageHost.sharedClassName)
         
@@ -121,7 +121,7 @@ internal class iPicPasteboardHelper {
     
     NSKeyedArchiver.setClassName(iPicImage.sharedClassName, for: iPicImage.self)
     let data = NSKeyedArchiver.archivedData(withRootObject: image)
-    pasteboardItem.setData(data, forType: PasteboardTypeiPicImage)
+    pasteboardItem.setData(data, forType: NSPasteboard.PasteboardType(rawValue: PasteboardTypeiPicImage))
     
     return pasteboardItem
   }
@@ -130,7 +130,7 @@ internal class iPicPasteboardHelper {
     clearPasteboardContents()
     
     let pasteboardItem = NSPasteboardItem()
-    pasteboardItem.setString(str, forType: type)
+    pasteboardItem.setString(str, forType: NSPasteboard.PasteboardType(rawValue: type))
     
     return pasteboard.writeObjects([pasteboardItem])
   }

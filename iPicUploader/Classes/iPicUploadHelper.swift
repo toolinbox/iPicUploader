@@ -37,7 +37,7 @@ public class iPicUploadHelper {
     
     do {
       let schemeURL = URL(string: iPicURLScheme)!
-      try NSWorkspace.shared().open(schemeURL, options: .withoutActivation, configuration: [:])
+      try NSWorkspace.shared.open(schemeURL, options: .withoutActivation, configuration: [:])
       return nil
     } catch {
       return iPicUploadError.iPicNotInstalled
@@ -60,7 +60,7 @@ public class iPicUploadHelper {
   }
   
   public static func generateiPicImage(_ image: NSImage) -> (iPicImage?, NSError?) {
-    guard let imageData = imageDataOf(image, type: .JPEG) else {
+    guard let imageData = imageDataOf(image, type: .jpeg) else {
       return (nil, iPicUploadError.Unknown) // Should not happen
     }
     
@@ -90,7 +90,7 @@ public class iPicUploadHelper {
     
     for type in pasteboardItem.types {
       if let data = pasteboardItem.data(forType: type) {
-        if type == String(kUTTypeFileURL) {
+        if type.rawValue == String(kUTTypeFileURL) {
           if let url = URL(dataRepresentation: data, relativeTo: nil),
               let imageData = try? Data(contentsOf: url),
               let _ = NSImage(data: imageData) {
@@ -106,12 +106,12 @@ public class iPicUploadHelper {
     return nil
   }
   
-  internal static func imageDataOf(_ image: NSImage, type: NSBitmapImageFileType) -> Data? {
+  internal static func imageDataOf(_ image: NSImage, type: NSBitmapImageRep.FileType) -> Data? {
     guard let imageData = image.tiffRepresentation else {
       return nil
     }
     
-    if type == NSBitmapImageFileType.TIFF {
+    if type == NSBitmapImageRep.FileType.tiff {
       return imageData
     }
     

@@ -40,7 +40,7 @@ class MainWindowController: NSWindowController {
     openPanel.prompt = NSLocalizedString("Select", comment: "Open Panel")
     
     openPanel.beginSheetModal(for: self.window!) { (response) in
-      if response == NSFileHandlingPanelOKButton {
+      if response.rawValue == NSFileHandlingPanelOKButton {
         for url in openPanel.urls {
           OperationQueue.main.addOperation {
             self.imageView.state = .Uploading
@@ -52,7 +52,7 @@ class MainWindowController: NSWindowController {
   }
   
   @IBAction func pasteImages(_ sender: NSButton!) {
-    let imageList = iPicUploadHelper.generateImageDataListFrom(NSPasteboard.general())
+    let imageList = iPicUploadHelper.generateImageDataListFrom(NSPasteboard.general)
     guard !imageList.isEmpty else {
       let message = NSLocalizedString("Failed to Upload", comment: "Title")
       let information = "No image in pasteboard."
@@ -94,9 +94,9 @@ class MainWindowController: NSWindowController {
           alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "Title"))
           
           alert.beginSheetModal(for: self.window!, completionHandler: { (response) in
-            if response == NSAlertFirstButtonReturn {
+            if response == NSApplication.ModalResponse.alertFirstButtonReturn {
               if let url = URL(string: iPic.iPicDownloadLink) {
-                NSWorkspace.shared().open(url)
+                NSWorkspace.shared.open(url)
               }
             }
           })
@@ -108,9 +108,9 @@ class MainWindowController: NSWindowController {
   }
   
   fileprivate func appendLink(_ link: String) {
-    let fontAttr = [NSFontAttributeName: NSFont.systemFont(ofSize: NSFont.systemFontSize() - 2)]
+    let fontAttr = [NSAttributedString.Key.font: NSFont.systemFont(ofSize: NSFont.systemFontSize - 2)]
     let resultStr = NSMutableAttributedString(string: link, attributes: fontAttr)
-    let attrs = [NSLinkAttributeName: NSString(string: link)]
+    let attrs = [NSAttributedString.Key.link: NSString(string: link)]
     resultStr.addAttributes(attrs, range: NSRange(0..<resultStr.length))
     
     uploadedIndex += 1
